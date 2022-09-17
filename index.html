@@ -23,6 +23,8 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -267,6 +269,17 @@
                     publishable-key="pk_live_51LiJO1G8zxFOFpe6GnvEF1P0PGvXvTEqqkUpUWxojMqbJ3CA2dhHX2nRjmNWxSjikJFnmi9Vurzq4rnE9CjRj41V00qLaZeiFK">
                 </stripe-pricing-table>
                             </form>
+                        </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary py-md-3 px-md-5 mt-2" data-toggle="modal" data-target="#myModal">How It Works</button>
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" src="/img/howtopopup.jpg" id="img01">
+        <div id="caption"></div>
+      </div>
+      
+  
+</div>
                         </div>
                     </div>
                 </div>
@@ -280,8 +293,30 @@
     <div>
         <h1 class="m-0 text-primary"><span class="text-dark">FARM</span><span>n</span><span class="text-dark">RANCH</span>hands<span class="text-dark">.com</span>
         <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a></h1>
-    </div>
-  
+    
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("myImg");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+            </script>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
