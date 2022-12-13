@@ -319,6 +319,7 @@ h6 {
   background: url("/assets/img/testimonials-bg.jpg");
   background-size: cover;
   position: relative;
+  justify-content: center;
 }
 
 #hero:before {
