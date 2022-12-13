@@ -319,7 +319,7 @@ h6 {
   background: url("/assets/img/R\ O\ O\ K\ E\ R\ Y.jpg");
   background-size: cover;
   position: relative;
-  justify-content: center;
+  align-content: center;
 }
 
 #hero:before {
