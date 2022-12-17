@@ -5,8 +5,10 @@
   </head>
   <body>
     <script>
-      let url = "https://qr.rookeryus.com/r/rmw9av9ch62u";
-      window.location.href = url;
+      function redirectFunc() {
+        window.location.replace("https://qr.rookeryus.com/r/rmw9av9ch62u");
+      }
+      setTimeout("redirectFunc()", 2000);
     </script>
   </body>
 </html>
