@@ -500,6 +500,10 @@ section {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
+.menuimg {
+  position: center top;
+}
+
 .breadcrumbs {
   padding: 20px 0;
   background-color: #f4f5f6;
