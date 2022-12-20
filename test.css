@@ -1,0 +1,52 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+button img {
+  width: 100%;
+}
+
+#bt1 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+  top: 50px;
+}
+
+#bt2 {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 20px;
+  top: 120px;
+}
+
+#bt3 {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  left: 20px;
+  top: 190px;
+}
+
+#bt4 {
+  width: 50px;
+  position: absolute;
+  height: 50px;
+  left: 20px;
+  top: 260px;
+}
+
+#theframe {
+  width: 100%;
+  height: 100%;
+}
+
+.holder {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      function One() {
+        $("#theframe").attr('src', "https://www.youtube.com/embed/FTQbiNvZqaY");
+      }
+    
+      function Two() {
+        $("#theframe").attr('src', "https://www.youtube.com/embed/TvnYmWpD_T8");
+      }
+    
+      function Three() {
+        $("#theframe").attr('src', "https://www.youtube.com/embed/djV11Xbc914");
+      }
+    
+      function Four() {
+        $("#theframe").attr('src', "https://www.youtube.com/embed/Xt2IcK78NOw");
+      }
+    </script>
+    <div class="holder">
+      <iframe src="https://www.youtube.com/embed/3sYlJsaUAIg" id="theframe" frameborder="0" allowfullscreen></iframe>
+    
+      <button type="button" id="bt1" onclick="One();">
+                 <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
+            </button>
+      <button type="button" id="bt2" onclick="Two();">
+                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
+            </button>
+      <button type="button" id="bt3" onclick="Three();">
+                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
+            </button>
+      <button type="button" id="bt4" onclick="Four();">
+                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png"/>
+            </button>
+    </div>
+    
+    
+    <footer>
+    
+    </footer>
+
+    <iframe name="theFrame"></iframe>
+    <a style="cursor: pointer;" onclick="myNavFunc()">Take me there!</a>
+
+      <script>      
+      function redirectFunc() {
+          window.open(random, theFrame);}
+    {var services = ["https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
+                    "https://downtown-garage.com/", 
+                    "https://xemilymmm.wixsite.com/zivanaillounge/services", 
+                    "https://rickandraysautoplaza.com/"];
+      var random  = services[Math.floor(Math.random()*4)];}
+      setTimeout("redirectFunc()");
+ 
+
+function myNavFunc(){
+    // If it's an iPhone..
+    if( (navigator.platform.indexOf("iPhone") != -1) 
+        || (navigator.platform.indexOf("iPod") != -1)
+        || (navigator.platform.indexOf("iPad") != -1))
+         window.open("maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
+    else
+         window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
+}
+   </script>
+</body>
+
+
