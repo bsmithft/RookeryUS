@@ -22,17 +22,12 @@ button img {
   left: 20px;
   bottom: 100px;
 }
-#map {
-  background: transparent;
-  border: transparent;
-  position: absolute; 
-  width: 150px;
-  height: 100px;
-  right: 20px;
-  bottom: 100px;
-}
+
 #frame{
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
   </style>
 </head>
@@ -40,13 +35,12 @@ button img {
 
 <div id="content">
   <img id=frame src="" alt="">
-  </div>
+</div>
 
 
 
   </body>
   <button type="button" id="cycle" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
-  <button type="button" id="map" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
   </html>
 
 <script>
