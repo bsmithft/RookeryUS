@@ -4,11 +4,17 @@
       html {
           overflow: auto;
       }
-        
+        div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
       html,
       body,
       div,
       iframe {
+        background-image: url('preloader.gif');
+          background-position: center center; 
           margin: 0px;
           padding: 0px;
           height: 100%;
@@ -16,6 +22,9 @@
       }
         
       iframe {
+          background-image: url('preloader.gif');
+          background-position: center center; 
+          background-repeat: no-repeat;
           display: block;
           width: 100%;
           border: none;
@@ -52,7 +61,8 @@
 
     <div class="holder">
 
-  <iframe id="frame" src="" ></iframe></div>
+  <iframe id="frame" src="" ></iframe>
+</div>
   <button type="button" id="btn" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
   <button type="button" id="btn1" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
 
@@ -63,10 +73,8 @@
 
 <script>
 
-  var cat1 = ["assets\img\ccftw\ccftw\food\Hoffbrau50percentoff.jpg", 
-                    "assets\img\ccftw\ccftw\food\bahammabucksbogo.jpg", 
-                    "assets\img\ccftw\ccftw\food\deltacodeluxfree.png", 
-                    "assets\img\ccftw\ccftw\food\dickeyskidsfree.png"];
+  var cat1 = ["/assets/ccftw/bahammabucksbogo.jpg",
+              "/assets/ccftw/deltacodeluxfree.png"];
   
   var myFrame = document.getElementById("frame");
   getRandomUrl(myFrame);
