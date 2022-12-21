@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+  
+  
+
+<IMG SRC="/assets/ccftw/bahammabucksbogo.jpg" name="VCRImage" 
+
+     data-altsrc="http://2.bp.blogspot.com/-DNISePZjJ4g/U9bSB5NjEzI/AAAAAAAARCw/K7OGOPjQd0Q/s1600/2.png, http://4.bp.blogspot.com/-MoL1MHN12Eo/U9bSB6EIS-I/AAAAAAAARCs/gUSKbzsg05g/s1600/3.png"
+>
+
+  <IMG SRC="/assets/ccftw/deltacodeluxfree.png" name="VCRImage" 
+
+     data-altsrc="http://www.fillmurray.com/100/100, http://www.fillmurray.com/100/110"
+>
+
+
+  
+</body>
+</html>
+
+  <script>
+//Select all elements on the page with the name attribute equal to VCRImage
+var images = document.querySelectorAll('[name=VCRImage]');
+
+//For each image bind the click event
+for(var i=0; i < images.length; i++)
+{
+  var image = images[i];
+  //https://developer.mozilla.org/en-US/docs/Web/API/EventTarget.addEventListener
+  image.addEventListener('click', imageClicked.call(image), false);
+}
+
+function imageClicked()
+{
+  //get images in the set
+  var imageSet = this.getAttribute('data-altsrc').split(',');
+  
+  //Use a closure to wrap the counter variable
+  //so each image element has their own unique counter
+  var counter = 0;
+  return function(event)
+  {
+    //Increment counter
+    counter++;
+    //The context of "this" is the image element
+    //Use a modulus
+    this.src = imageSet[counter % imageSet.length];
+  }
+}
+    </script> 
+
+<style type="text/css">
+body, html {
+  margin: 0; padding: 0; height: 100%; overflow: hidden;
+}
+
+#content {
+  position: relative; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+
+button img {
+  width: 100%;
+}
+#cycle {
+  background: transparent;
+  border: transparent;
+  position: absolute; 
+  width: 150px;
+  height: 100px;
+  left: 20px;
+  bottom: 100px;
+}
+
+#result{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+  </style>
+
+
+
+  
+ 
+
+
+
+
+

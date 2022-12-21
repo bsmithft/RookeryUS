@@ -1,52 +1,72 @@
 <!DOCTYPE html>
-<html>
 <head>
-<style type="text/css">
-body, html {
-  margin: 0; padding: 0; height: 100%; overflow: hidden;
-}
-
-#content {
-  position: relative; left: 0; right: 0; bottom: 0; top: 0px; 
-}
-
-button img {
+  <style type="text/css">
+      html {
+          overflow: auto;
+      }
+        
+      html,
+      body,
+      div,
+      iframe {
+          margin: 0px;
+          padding: 0px;
+          height: 100%;
+          border: none;
+      }
+        
+      iframe {
+          width: 100%;
+          border: none;
+          overflow-y: auto;
+          overflow-x: hidden;
+      }
+      button img {
   width: 100%;
 }
-#cycle {
+
+#btn {
   background: transparent;
   border: transparent;
   position: absolute; 
-  width: 150px;
+  width: 100px;
   height: 100px;
   left: 20px;
-  bottom: 100px;
+  bottom: 50px;
+}
+#btn1 {
+  background: transparent;
+  border: transparent;
+  position: absolute; 
+  width: 100px;
+  height: 100px;
+  right: 20px;
+  bottom: 50px;
 }
 
-#frame{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
+
   </style>
 </head>
   <body>
 
-<div id="content">
-  <img id=frame src="" alt="">
-</div>
+    <div class="holder">
+
+  <iframe id="frame" src="" ></iframe></div>
+  <button type="button" id="btn" onclick="One();"><img src="/assets/img/Retry.png"/></button>
 
 
 
   </body>
-  <button type="button" id="cycle" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
   </html>
 
 <script>
 
-  var cat1 = ["assets/ccftw/deltacodeluxfree.png",
-              "assets/ccftw/bahammabucksbogo.jpg"];
+  var cat1 = [
+    src="/assets/ccftw/deltacodeluxfree.png",
+    "https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
+                    "https://downtown-garage.com/", 
+                    "https://xemilymmm.wixsite.com/zivanaillounge/services", 
+                    "https://rickandraysautoplaza.com/"];
   
   var myFrame = document.getElementById("frame");
   getRandomUrl(myFrame);
@@ -67,15 +87,7 @@ button img {
   getRandomUrl(myFrame); 
 
 });
-function redirectFunc() {
-          window.location.replace(random);}
-    {var atf = [    "https://www.ricksfortworth.com/", 
-                    "https://www.bucksclubs.com/bucks-cabaret/fort-worth", 
-                    "https://fridayssmokeshop.com/", 
-                    "https://www.ricksfortworth.com/", 
-                    "https://www.bucksclubs.com/bucks-cabaret/fort-worth"];
-      var random  = atf[Math.floor(Math.random()*47)];}
-      setTimeout("redirectFunc()");
+
   </script>
 
 
