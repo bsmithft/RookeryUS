@@ -1,61 +1,50 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <style type="text/css">
-      html {
-          overflow: auto;
-      }
-        
-      html,
-      body,
-      div,
-      iframe {
-          margin: 0px;
-          padding: 0px;
-          height: 100%;
-          border: none;
-      }
-        
-      iframe {
-          display: block;
-          width: 100%;
-          border: none;
-          overflow-y: auto;
-          overflow-x: hidden;
-      }
-      button img {
-  width: 100%;
+<style type="text/css">
+body, html {
+  margin: 0; padding: 0; height: 100%; overflow: hidden;
 }
 
-#btn {
+#content {
+  position: relative; left: 0; right: 0; bottom: 0; top: 0px; 
+}
+
+button img {
+  width: 100%;
+}
+#cycle {
   background: transparent;
   border: transparent;
   position: absolute; 
   width: 150px;
   height: 100px;
   left: 20px;
-  bottom: 50px;
+  bottom: 25px;
 }
-#btn1 {
+#map {
   background: transparent;
   border: transparent;
   position: absolute; 
   width: 150px;
   height: 100px;
   right: 20px;
-  bottom: 50px;
+  bottom: 0px;
 }
+#iframe {
 
+        border: none;
+      } 
 
   </style>
 </head>
   <body>
 
-    <div class="holder">
-
-  <iframe id="frame" src="" ></iframe></div>
-  <button type="button" id="btn" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
-  <button type="button" id="btn1" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
-
+    <div id="content">
+  <iframe style="max-zoom: 500%;"; width="800px" height="800px" frameborder="0" id="frame" src="" ></iframe>
+  <button type="button" id="cycle" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
+  <button type="button" id="map" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
+</div>
 
 
   </body>
