@@ -43,7 +43,9 @@
   left: 20px;
   bottom: 40px;
 }
-
+.center {
+text-align:center;
+}
 
   </style>
 </head>
@@ -51,7 +53,7 @@
 
     <div class="holder">
 
-  <iframe id="frame" src="" ></iframe></div>
+  <iframe class="center" id="frame" src="" ></iframe></div>
   <button type="button" id="btn" onclick="One();"><img src="/assets/img/Retry.png"/></button>
   <button type="button" id="chest" onclick="window.location.href='ccftw-main.html'"><img src="/assets/img/chest.png"/></button>
 
@@ -62,10 +64,7 @@
 <script>
 
   var cat1 = [
-    src="/assets/ccftw/deltacodeluxfree.png",
-    "https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
-                    "https://downtown-garage.com/", 
-                    "https://rickandraysautoplaza.com/"];
+    src="/assets/ccftw/deltacodeluxfree.png"];
   
   var myFrame = document.getElementById("frame");
   getRandomUrl(myFrame);
