@@ -1,19 +1,63 @@
 <!DOCTYPE html>
-<iframe id="random" scrolling="yes" src=""></iframe>
-
+<head>
+  <title>full screen iframe</title>
+  <style type="text/css">
+      html {
+          overflow: auto;
+      }
+        
+      html,
+      body,
+      div,
+      iframe {
+          margin: 0px;
+          padding: 0px;
+          height: 100%;
+          border: none;
+      }
+        
+      iframe {
+          display: block;
+          width: 100%;
+          border: none;
+          overflow-y: auto;
+          overflow-x: hidden;
+      }
+  </style>
+</head>
+  <body>
+  <button id="btn">Click</button>
+  <br>
+  <iframe id="frame" src="" ></iframe>
+  
+  
+  </body>
+  </html>
 
 <script>
-    document.getElementById("random").src = random;
-      
-      function redirectFunc() {
-          window.location.replace(random);}
-    {var services = ["https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
+
+  var cat1 = ["https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
                     "https://downtown-garage.com/", 
                     "https://xemilymmm.wixsite.com/zivanaillounge/services", 
                     "https://rickandraysautoplaza.com/"];
-      var random  = services[Math.floor(Math.random()*4)];}
-      setTimeout("redirectFunc()");
-   </script>
+  
+  var myFrame = document.getElementById("frame");
+  getRandomUrl(myFrame);
+  
+  function getRandomUrl(myFrame) {
+     var index = Math.floor(Math.random()*cat1.length);
+     var url = cat1[index];
+     document.getElementById('frame').src = url;
+  }
+  
+  btn.addEventListener("click", function() {
+  
+     getRandomUrl(myFrame); 
+  
+  });
+  </script>
+
+
 
 
 
