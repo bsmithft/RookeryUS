@@ -1,47 +1,23 @@
 <!DOCTYPE html>
-<body>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>
-      function One() {
-        $("#theframe").attr('src', "https://www.youtube.com/embed/FTQbiNvZqaY");
-      }
-    
-      function Two() {
-        $("#theframe").attr('src', "https://www.youtube.com/embed/TvnYmWpD_T8");
-      }
-    
-      function Three() {
-        $("#theframe").attr('src', "https://www.youtube.com/embed/djV11Xbc914");
-      }
-    
-      function Four() {
-        $("#theframe").attr('src', "https://www.youtube.com/embed/Xt2IcK78NOw");
-      }
-    </script>
-    <div class="holder">
-      <iframe src="https://www.youtube.com/embed/3sYlJsaUAIg" id="theframe" frameborder="0" allowfullscreen></iframe>
-    
-      <button type="button" id="bt1" onclick="One();">
-                 <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
-            </button>
-      <button type="button" id="bt2" onclick="Two();">
-                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
-            </button>
-      <button type="button" id="bt3" onclick="Three();">
-                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png" />
-            </button>
-      <button type="button" id="bt4" onclick="Four();">
-                <img src="https://orig00.deviantart.net/4c1b/f/2009/060/d/f/round_glossy_green_button_by_fbouly.png"/>
-            </button>
-    </div>
-    
-    
-    <footer>
-    
-    </footer>
-
-    <iframe name="theFrame"></iframe>
-    <a style="cursor: pointer;" onclick="myNavFunc()">Take me there!</a>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>RookeryUS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/test.css" rel="stylesheet">
+</head>
+<body>  
+    <iframe name="theFrame">
 
       <script>      
       function redirectFunc() {
@@ -52,18 +28,11 @@
                     "https://rickandraysautoplaza.com/"];
       var random  = services[Math.floor(Math.random()*4)];}
       setTimeout("redirectFunc()");
- 
 
-function myNavFunc(){
-    // If it's an iPhone..
-    if( (navigator.platform.indexOf("iPhone") != -1) 
-        || (navigator.platform.indexOf("iPod") != -1)
-        || (navigator.platform.indexOf("iPad") != -1))
-         window.open("maps://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
-    else
-         window.open("https://www.google.com/maps/dir/?api=1&travelmode=driving&layer=traffic&destination=[YOUR_LAT],[YOUR_LNG]");
-}
+
+
    </script>
+    </iframe>
 </body>
 
 
