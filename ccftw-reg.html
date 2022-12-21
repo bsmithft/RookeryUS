@@ -20,7 +20,7 @@ button img {
   width: 150px;
   height: 100px;
   left: 20px;
-  bottom: 25px;
+  bottom: 100px;
 }
 #map {
   background: transparent;
@@ -29,25 +29,24 @@ button img {
   width: 150px;
   height: 100px;
   right: 20px;
-  bottom: 0px;
+  bottom: 100px;
 }
-#iframe {
-
-        border: none;
-      } 
-
+#frame{
+  justify-content: center;
+}
   </style>
 </head>
   <body>
 
-    <div id="content">
-  <iframe style="max-zoom: 500%;"; width="800px" height="800px" frameborder="0" id="frame" src="" ></iframe>
-  <button type="button" id="cycle" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
-  <button type="button" id="map" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
-</div>
+<div id="content">
+  <img id=frame src="" alt="">
+  </div>
+
 
 
   </body>
+  <button type="button" id="cycle" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
+  <button type="button" id="map" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
   </html>
 
 <script>
