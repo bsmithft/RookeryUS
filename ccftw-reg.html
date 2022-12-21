@@ -35,7 +35,15 @@
   left: 20px;
   bottom: 50px;
 }
-
+#btn1 {
+  background: transparent;
+  border: transparent;
+  position: absolute; 
+  width: 100px;
+  height: 100px;
+  right: 20px;
+  bottom: 50px;
+}
 
 
   </style>
@@ -46,6 +54,7 @@
 
   <iframe id="frame" src="" ></iframe></div>
   <button type="button" id="btn" onclick="One();"><img src="/assets/img/gilbert.png"/></button>
+  <button type="button" id="btn1" onclick="One();"><img src="/assets/img/maps-icon.png"/></button>
 
 
 
@@ -73,6 +82,12 @@
      getRandomUrl(myFrame); 
   
   });
+  btn1.addEventListener("click", function() {
+  
+  getRandomUrl(myFrame); 
+
+});
+
   </script>
 
 
