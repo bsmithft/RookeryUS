@@ -1,125 +1,219 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Community Chest</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
-  <style type="text/css">
-    html {
-        overflow: auto;
-    }
-      
-    html,
-    body,
-    div,
-    iframe {
-        margin: 0px;
-        padding: 0px;
-        height: 100%;
-        border: none;
-    }
-      
-    iframe {
-        width: 100%;
-        border: none;
-        overflow-y: auto;
-        overflow-x: hidden;
-    }
-    button img {
-width: 100%;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
+  <!-- CSS file -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .accordions {
+width: 80%;
+margin: 100px auto;
 }
 
-#btn {
-background: transparent;
-border: transparent;
-position: absolute; 
-width: 110px;
-height: 100px;
-right: 20px;
-bottom: 50px;
-}
-#chest {
-background: transparent;
-border: transparent;
-position: absolute; 
-width: 120px;
-height: 100px;
-left: 20px;
-bottom: 40px;
-}
-.center {
-text-align:center;
+.accordions h3 {
+text-align: center;
+font-weight: bold;
+font-family: "Roboto", sans-serif;
 }
 
-</style>
+.accordion-item {
+background-color: #0b3791;
+border-radius: 5px;
+color: #ffffff;
+margin-bottom: 20px;
+border: 1px solid #100e34;
+}
 
+.accordion-item .accordion-title {
+cursor: pointer;
+padding: 20px;
+transition: transform 0.4s ease-in-out;
+}
+
+.accordion-item .accordion-title.active-title {
+background-color: #100e34;
+color: #ffffff;
+}
+
+.accordion-item .accordion-title h3 {
+font-weight: 700;
+margin: 0;
+justify-content: space-between;
+font-weight: bold;
+font-size: 18px;
+display: flex;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down {
+transform: rotate(0);
+transition: 0.4s;
+}
+
+.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
+transform: rotate(-180deg);
+color: #fa5019;
+}
+
+.accordion-item .accordion-content {
+display: none;
+line-height: 1.7;
+color: #100e34;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 0 0 5px 5px;
+}
+
+.accordion-item .accordion-content.active {
+display: block;
+}
+
+.accordion-item .accordion-content p {
+margin: 0;
+font-size: 16px;
+font-family: "Nunito Sans", sans-serif;
+}
+
+.details {
+background: #dce1f2;
+}
+
+.details .detailed_info {
+margin: 50px auto;
+}
+
+.details img {
+margin: 0 auto;
+display: block;
+}
+
+.details h3 {
+font-weight: bold;
+font-size: 20px;
+font-family: "Poppins", sans-serif;
+}
+
+.details p {
+font-size: 16px;
+line-height: 1.5em;
+font-family: "Nunito Sans", sans-serif;
+}
+
+.details ul li {
+font-size: 16px;
+line-height: 1.7em;
+font-family: "Nunito Sans", sans-serif;
+}
+
+  </style>
 </head>
-<div class="list-group w-100">
-    <a href="#shortExampleAnswer1collapse" data-mdb-toggle="collapse" aria-expanded="false"
-      aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Question 1</h5>
+<body>
+
+   <section id="faq">
+    <div class="container faq">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="accordions">
+
+              <!-- 1st accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item4">
+                  <h3>Free DDOS Protection <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item4">
+                  <p>
+                    Unlike other providers who charge extra for DDoS protection, All of our VPS
+                    servers comes 
+                  </p>
+                </div>
+              </div>
+
+              <!-- 2nd accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item2">
+                  <h3>What is Windows VPS? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item2">
+                  <p>
+                    With a Windows VPS server, you will get a Remote Desktop connection within a few
+                    minutes. You can run Windows applications such as IIS, SQL, Microsoft Exchange
+                    or any software like Docking, 
+                  </p>
+                </div>
+              </div>
+
+              <!-- 3rd accordion menu -->
+              <div class="accordion-item">
+
+  
+                <div class="accordion-title" data-tab="item3">
+                  <h3>Payment Options <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item3">
+                  <p>
+                    Unlike most other providers you don’t have to pay with just Credit Card or
+                    PayPal. You can also 
+                  </p>
+                </div>
+              </div>
+
+              <!-- 4th accordion menu -->
+              <div class="accordion-item">
+                <div class="accordion-title" data-tab="item1">
+                  <h3>Why FutureRDP? <i class="fa fa-chevron-down"></i></h3>
+                </div>
+                <div class="accordion-content" id="item1">
+                  <p>
+                    Germany, Netherlands, and Canada. We have a range
+                    of different solutions for different purposes such as SSD VPS and Storage
+                    servers. All servers are equipped with RAID10 only SSD drives and FREE DDoS
+                    Protection!
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-      <p class="mb-1">
-        Short & concise version of the answer.
-      </p>
-      <small><u>Learn more</u></small>
-      <!-- Collapsed content -->
-      <div class="collapse mt-3" id="shortExampleAnswer1collapse">
-        Detailed and comprehensive answer goes here. pariatur cliche reprehenderit, enim eiusmod
-        high
-        life accusamus terry richardson ad
-        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-        sapiente ea proident.
-      </div>
-    </a>
-    <a href="#shortExampleAnswer2collapse" data-mdb-toggle="collapse" aria-expanded="false"
-      aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Question 2</h5>
-      </div>
-      <p class="mb-1">
-        Short & concise version of the answer.
-      </p>
-      <small class="text-muted"><u>Learn more</u></small>
-      <!-- Collapsed content -->
-      <div class="collapse mt-3" id="shortExampleAnswer2collapse">
-        Detailed and comprehensive answer goes here. pariatur cliche reprehenderit, enim eiusmod
-        high
-        life accusamus terry richardson ad
-        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-        sapiente ea proident.
-      </div>
-    </a>
-    <a href="#shortExampleAnswer3collapse" data-mdb-toggle="collapse" aria-expanded="false"
-      aria-controls="shortExampleAnswer1collapse" class="list-group-item list-group-item-action">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">Question 3</h5>
-      </div>
-      <p class="mb-1">
-        Short & concise version of the answer.
-      </p>
-      <small class="text-muted"><u>Learn more</u></small>
-      <!-- Collapsed content -->
-      <div class="collapse mt-3" id="shortExampleAnswer3collapse">
-        Detailed and comprehensive answer goes here. pariatur cliche reprehenderit, enim eiusmod
-        high
-        life accusamus terry richardson ad
-        squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt
-        sapiente ea proident.
-      </div>
-    </a>
-  </div>
+    </div>
+  </section>
+
+    <script>
+ 
+ $(document).ready(function () {
+    $(".accordion-title").click(function (e) {
+      var accordionitem = $(this).attr("data-tab");
+      $("#" + accordionitem)
+        .slideToggle()
+        .parent()
+        .siblings()
+        .find(".accordion-content")
+        .slideUp();
+
+      $(this).toggleClass("active-title");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title")
+        .removeClass("active-title");
+
+      $("i.fa-chevron-down", this).toggleClass("chevron-top");
+      $("#" + accordionitem)
+        .parent()
+        .siblings()
+        .find(".accordion-title i.fa-chevron-down")
+        .removeClass("chevron-top");
+    });
+  });
+
+    </script>  
+</body>
+</html>
