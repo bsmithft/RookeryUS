@@ -1,232 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" charset="utf-8"></script>
-  <!-- CSS file -->
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>RookeryUS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
   <style>
-    .accordions {
-width: 80%;
-margin: 100px auto;
-}
-
-.accordions h3 {
-color: goldenrod;
-text-align: center;
-font-weight: bold;
-font-family: "Serif", serif;
-}
-
-.accordion-item {
-background-color: #25324b;
-border-radius: 5px;
-color: #ffffff;
-margin-bottom: 20px;
-border: 1px solid #100e34;
-}
-
-.accordion-item .accordion-title {
-cursor: pointer;
-padding: 20px;
-transition: transform 0.4s ease-in-out;
-}
-
-.accordion-item .accordion-title.active-title {
-background-color: #100e34;
-color: #ffffff;
-}
-
-.accordion-item .accordion-title h3 {
-font-weight: 700;
-margin: 0;
-justify-content: space-between;
-font-weight: bold;
-font-size: 18px;
-display: flex;
-}
-
-.accordion-item .accordion-title i.fa-chevron-down {
-transform: rotate(0);
-transition: 0.4s;
-}
-
-.accordion-item .accordion-title i.fa-chevron-down.chevron-top {
-transform: rotate(-180deg);
-color: #757575;
-}
-
-.accordion-item .accordion-content {
-display: none;
-line-height: 1.7;
-color: #100e34;
-padding: 20px;
-background-color: #ffffff;
-border-radius: 0 0 5px 5px;
-}
-
-.accordion-item .accordion-content.active {
-display: block;
-}
-
-.accordion-item .accordion-content p {
-margin: 0;
-font-size: 16px;
-font-family: "Serif", serif;
-}
-
-.details {
-background: #dce1f2;
-}
-
-.details .detailed_info {
-margin: 50px auto;
-}
-
-.details img {
-margin: 0 auto;
-display: block;
-}
-
-.details h3 {
-font-weight: bold;
-font-size: 20px;
-font-family: "Poppins", sans-serif;
-}
-
-.details p {
-font-size: 16px;
-line-height: 1.5em;
-font-family: "Nunito Sans", sans-serif;
-}
-
-.details ul li {
-font-size: 16px;
-line-height: 1.7em;
-font-family: "Nunito Sans", sans-serif;
-}
-#chest {
+    #chest {
   background: transparent;
   border: transparent;
   position: absolute; 
-  width: 100px;
-  height: 100px;
-  left: 0px;
   bottom: 0px;
 }
 button img {
   width: 100%;
 }
   </style>
-      <script>
- 
-        $(document).ready(function () {
-           $(".accordion-title").click(function (e) {
-             var accordionitem = $(this).attr("data-tab");
-             $("#" + accordionitem)
-               .slideToggle()
-               .parent()
-               .siblings()
-               .find(".accordion-content")
-               .slideUp();
-       
-             $(this).toggleClass("active-title");
-             $("#" + accordionitem)
-               .parent()
-               .siblings()
-               .find(".accordion-title")
-               .removeClass("active-title");
-       
-             $("i.fa-chevron-down", this).toggleClass("chevron-top");
-             $("#" + accordionitem)
-               .parent()
-               .siblings()
-               .find(".accordion-title i.fa-chevron-down")
-               .removeClass("chevron-top");
-           });
-         });
-       
-           </script>
 </head>
-<body>
+  <body>
 
-   <section id="faq">
-    <div class="container faq">
-
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="accordions">
-
-              <!-- 1st accordion menu -->
-              <div class="accordion-item">
-                <div class="accordion-title" data-tab="item4">
-                  <h3>How do my coupons and promotions get published in the app? <i class="fa fa-chevron-down"></i></h3>
-                </div>
-                <div class="accordion-content" id="item4">
-                  <p>
-                    Your welcome email sent to you following your registration will contain a link to upload your marketing materials.
-                  </p>
-                </div>
-              </div>
-
-              <!-- 2nd accordion menu -->
-              <div class="accordion-item">
-                <div class="accordion-title" data-tab="item2">
-                  <h3>What happens when I want to change my promotions?  <i class="fa fa-chevron-down"></i></h3>
-                </div>
-                <div class="accordion-content" id="item2">
-                  <p>
-                    The same process as initial setup allows you to change your promotions as often as you see fit. Just remember
-                    you are only allotted 3 promotions at any given point in time. 
-                  </p>
-                </div>
-              </div>
-
-              <!-- 3rd accordion menu -->
-              <div class="accordion-item">
-
-  
-                <div class="accordion-title" data-tab="item3">
-                  <h3>What are the payment options?  <i class="fa fa-chevron-down"></i></h3>
-                </div>
-                <div class="accordion-content" id="item3">
-                  <p>
-                    We use Stripe for subscription payments which allows you many different options for payment. If you don't see an option that 
-                    fits your needs please email us at Contact@RookeryUS.com 
-                  </p>
-                </div>
-              </div>
-
-              <!-- 4th accordion menu -->
-              <div class="accordion-item">
-                <div class="accordion-title" data-tab="item1">
-                  <h3>Are the analytics associated with my promotions available to me?  <i class="fa fa-chevron-down"></i></h3>
-                </div>
-                <div class="accordion-content" id="item1">
-                  <p>
-                    Currently you will receive a monthly analytics report detailing your interactions with our community. 
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>              
-
-  </section>
-  <div><br></div>
-  <section>
-  <div>
-<button type="button" id="chest" onclick="window.location.href='ccftw-main.html'"><img src="/assets/img/chest.png"/></button>
+    <section>
+      <div class="hero-container">
+      
+  <div class="vstack gap-3"> 
+    <p style="font-family:serif; text-align: center; font-size: 20px; margin-top: -10px;">Welcome to the</p>
+        <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -30px;">Community</p>
+        <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -50px;">Chest</p>
+        <p style="font-family:serif; text-align: center; font-size: 15px; margin-top: -40px;">Fort Worth</p>
+        <p style="font-family:serif; text-align: center; font-size: 20px; margin-top: -5px;">CHOOSE CATEGORY BELOW</p>   
+        <p style="font-family:serif; font-size: 15px; text-align: center;">brought to you by</p>
+        <p style="font-family:serif; color: goldenrod; font-size: 20px; text-align: center; margin-top: -30px;">theRookeryUS</p>
+        <a id="chest" href="/ccfaq.html"><img src="/assets/img/81517-status-text-faq-tax-logo-filing.png" alt=""></a>
   </div>
+</div>
+</div>
 </section>
+
 </body>
 </html>
