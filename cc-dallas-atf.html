@@ -52,8 +52,9 @@
     <div class="holder">
 
   <iframe id="frame" src="" ></iframe></div>
-  <button type="button" id="btn" onclick="One();"><img src="/assets/img/Retry.png"/></button>
-  <button type="button" id="chest" onclick="window.location.href='ccftw-main.html'"><img src="/assets/img/home.png"/></button>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
+  <button type="button" id="chest" onclick="window.location.href='cc-dallas-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
 
 
   </body>
@@ -66,23 +67,12 @@
         "https://www.ricksfortworth.com/"];
   
   var myFrame = document.getElementById("frame");
-  getRandomUrl(myFrame);
+  getRandom(myFrame);
   
-  function getRandomUrl(myFrame) {
+  function getRandom(myFrame) {
      var index = Math.floor(Math.random()*cat1.length);
      var url = cat1[index];
      document.getElementById('frame').src = url;
   }
-  
-  btn.addEventListener("click", function() {
-  
-     getRandomUrl(myFrame); 
-  
-  });
-  btn1.addEventListener("click", function() {
-  
-  getRandomUrl(myFrame); 
-
-});
 
   </script>
