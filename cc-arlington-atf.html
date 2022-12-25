@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<head>
+  <style type="text/css">
+      html {
+          overflow: auto;
+      }
+        
+      html,
+      body,
+      div,
+      iframe {
+          margin: 0px;
+          padding: 0px;
+          height: 100%;
+          border: none;
+      }
+        
+      iframe {
+          width: 100%;
+          border: none;
+          overflow-y: auto;
+          overflow-x: hidden;
+      }
+      button img {
+  width: 100%;
+}
+
+#btn {
+      background: transparent;
+      border: transparent;
+      position: absolute; 
+      width: 110px;
+      height: 100px;
+      right: 20px;
+      bottom: 20px;
+    }
+    #chest {
+      background: transparent;
+      border: transparent;
+      position: absolute; 
+      width: 130px;
+      height: 100px;
+      left: 5px;
+      bottom: 40px;
+    }
+
+
+  </style>
+</head>
+  <body>
+
+    <div class="holder">
+
+  <iframe id="frame" src="" ></iframe></div>
+  <button type="button" id="btn" onclick="One();"><img src="/assets/img/CommunityChest/gilbert.png"/></button>
+  <button type="button" id="chest" onclick="window.location.href='ccftw-main.html'"><img src="/assets/img/home.png"/></button>
+
+
+  </body>
+  </html>
+
+<script>
+
+  var cat1 = [
+    src="https://www.boardroomstylinglounge.com/locations/fort-worth-west-7th", 
+        "https://www.ricksfortworth.com/"];
+  
+  var myFrame = document.getElementById("frame");
+  getRandomUrl(myFrame);
+  
+  function getRandomUrl(myFrame) {
+     var index = Math.floor(Math.random()*cat1.length);
+     var url = cat1[index];
+     document.getElementById('frame').src = url;
+  }
+  
+  btn.addEventListener("click", function() {
+  
+     getRandomUrl(myFrame); 
+  
+  });
+  btn1.addEventListener("click", function() {
+  
+  getRandomUrl(myFrame); 
+
+});
+
+  </script>
