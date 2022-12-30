@@ -1,3 +1,4 @@
+//Long touch recognizer
 var onlongtouch; 
 var timer;
 var touchduration = 800; //length of time we want the user to touch before we do something
@@ -27,6 +28,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     window.addEventListener("touchend", touchend, false);
 });
 
+//Randomizer
 var cat1 = ["/assets/img/CommunityChest/perrotties.png"];
           
 var myFrame = document.getElementById("frame");
@@ -38,6 +40,8 @@ function getRandom(myFrame) {
    document.getElementById('frame').src = url;
 }
 
+
+//Gesture recognizer
 // get 'surface' and 'swipe42' elements
 const surface = zuix.field('surface');
 const swipe42 = zuix.field('swipe42');
