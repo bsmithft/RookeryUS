@@ -1,0 +1,81 @@
+html {
+    overflow: auto;
+}
+  
+html,
+body,
+div,
+iframe {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100% !important;
+    border: none;
+}
+  
+iframe {
+    width: 100%;
+}
+button img {
+width: 100%;
+}
+
+#btn {
+background: transparent;
+border: transparent;
+position: absolute; 
+width: 110px;
+height: 100px;
+right: 20px;
+bottom: 20px;
+}
+#chest {
+background: transparent;
+border: transparent;
+position: absolute; 
+width: 130px;
+height: 100px;
+left: 5px;
+bottom: 40px;
+}
+.holds-the-iframe {
+background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
+}   
+
+.surface {
+    /* the surface hosting the ball covers entire document size */
+    width: 100%;
+    height: 100vh;
+    background: white;
+  }
+  .swipe42 {
+    /* center the ball inside the surface */
+    position: relative;
+    left: -75px;
+    top: -75px;
+    margin-top: 50vh;
+    margin-bottom: 50vh;
+    margin-left: 50%;
+    margin-right: 50%;
+    /* ball size and color */ 
+    width: 150px;
+    height: 150px;
+    border: solid 2px rgba(255,0,0,0.25);
+    border-radius: 10%;
+    background-image: radial-gradient(circle at 100px 100px, orange, #000);
+    /* animate border and opacity */
+    transition: border-radius .1s ease-in, opacity .1s ease-in;
+  }
+  .touched {
+    /* change border when the ball is touched */
+    border-radius: 45%;
+    opacity: 0.75;
+  }
+  .swipe42:not(.touched) {
+    /* animate to home position when the ball is released */
+    transition: transform .1s cubic-bezier(0.1, 0.8, 0.2, 1.2);
+  }
+  
+  body {
+      overflow: hidden;
+  }

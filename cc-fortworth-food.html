@@ -1,30 +1,30 @@
-        <!DOCTYPE html>
-        <script src="https://cdn.jsdelivr.net/npm/zuix-dist@1.0.0/js/zuix.min.js"></script>
-        <head>
-          <style type="text/css">
-              html {
-                  overflow: auto;
-              }
-                
-              html,
-              body,
-              div,
-              iframe {
-                  margin: 0px;
-                  padding: 0px;
-                  height: 100%;
-                  width: 100% !important;
-                  border: none;
-              }
-                
-              iframe {
-                  width: 100%;
-              }
-              button img {
-          width: 100%;
-        }
-        
-        #btn {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="/swipe42.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zuix-dist@1.0.0/js/zuix.min.js"></script>
+  <link href="assets/css/swipe42.css" rel="stylesheet">
+  <style type="text/css">
+    html {
+    overflow: auto;
+    }
+    html,
+    body,
+    div,
+    iframe {
+      margin: 0px;
+      padding: 0px;
+      height: 100%;
+      width: 100% !important;
+      border: none;
+    } 
+    iframe {
+      width: 100%;
+    }
+    button img {
+      width: 100%;
+    }
+    #btn {
       background: transparent;
       border: transparent;
       position: absolute; 
@@ -43,116 +43,19 @@
       bottom: 40px;
     }
     .holds-the-iframe {
-  background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
-}   
-.surface {
-  /* the surface hosting the ball covers entire document size */
-  width: 100%;
-  height: 100vh;
-  background: white;
-}
-.ball {
-  /* center the ball inside the surface */
-  position: relative;
-  left: -75px;
-  top: -75px;
-  margin-top: 50vh;
-  margin-bottom: 50vh;
-  margin-left: 50%;
-  margin-right: 50%;
-  /* ball size and color */ 
-  width: 150px;
-  height: 150px;
-  border: solid 2px rgba(255,0,0,0.25);
-  border-radius: 50%;
-  background-image: radial-gradient(circle at 100px 100px, orange, #000);
-  /* animate border and opacity */
-  transition: border-radius .1s ease-in, opacity .1s ease-in;
-}
-.touched {
-  /* change border when the ball is touched */
-  border-radius: 45%;
-  opacity: 0.75;
-}
-.ball:not(.touched) {
-  /* animate to home position when the ball is released */
-  transition: transform .1s cubic-bezier(0.1, 0.8, 0.2, 1.2);
-}
-
-body {
-    overflow: hidden;
-}        
-          </style>
-            <div data-ui-field="surface"
-                 class="surface">
-              
-                <div data-ui-field="ball"
-                     class="ball">
-                </div>
-        </head>
+      background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
+    }   
+  </style>     
+</head>
+<body>
+  <div id="ping">
+  </div>        
+  <div class="holds-the-iframe">
+    <iframe id="frame" src=""></iframe>
+  </div>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
+  <button type="button" id="chest" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
+</body>
+</html>
         
-          <body>
-            
-              
-            </div>
-            <div class="holds-the-iframe">
-            <iframe id="frame" src=""></iframe></div>
-            <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
-            <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
-            <button type="button" id="chest" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
-        
-          </body>
-          </html>
-        
-        <script>
-        
-          var cat1 = ["/assets/img/CommunityChest/perrotties.png"];
-          
-          var myFrame = document.getElementById("frame");
-          getRandom(myFrame);
-          
-          function getRandom(myFrame) {
-             var index = Math.floor(Math.random()*cat1.length);
-             var url = cat1[index];
-             document.getElementById('frame').src = url;
-          }
-
-// get 'surface' and 'ball' elements
-const surface = zuix.field('surface');
-const ball = zuix.field('ball');
-
-// load the gesture helper on the surface
-zuix.load('@lib/controllers/gesture_helper', {
-  view: surface, // <- where to apply the gesture helper
-  on: {
-    'gesture:pan': (e, tp) => {
-      if (ball.hasClass('touched')) {
-        const tr = 'translate('+tp.shiftX+'px,'+tp.shiftY+'px)';
-        ball.css('transform', tr);
-        tp.cancel(); // prevent default
-      }
-    },
-    'gesture:release': () => {
-      ball.removeClass('touched')
-        .css('transform', '');
-    }
-  },
-  passive: false
-});
-
-// load the gesture helper on the ball
-zuix.load('@lib/controllers/gesture_helper', {
-  view: ball, // <- where to apply the gesture helper
-  on: {
-    'gesture:touch': () => {
-      ball.addClass('touched');
-    },
-    'gesture:tap': () => {
-      ball.addClass('animated bounce')
-        .one('animationend', ()=>{
-          ball.removeClass('animated bounce');        
-        });
-    }
-  }
-});
-          </script>
