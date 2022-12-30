@@ -1,0 +1,33 @@
+.top {
+  margin-bottom: 99%;
+  margin-top: 1%;
+  margin-left: 50%;
+  margin-right: 50%;}
+.bottom {
+  position: fixed;
+  margin-top: 99%;
+  margin-bottom: 1%;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+.left {
+  position: fixed;
+  writing-mode:vertical-lr;
+  writing-mode: sideways-lr;
+  margin-right: 99%;
+  margin-left: 1%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+.right {
+  position:fixed;
+  writing-mode:sideways-rl;
+  writing-mode: vertical-rl;
+  margin-right: 10%;
+  margin-left: 90%;
+  margin-top: 50%;
+  margin-bottom: 50%;
+}
+.body {
+  background: rgba(0,0,0,0.5);  
+}
