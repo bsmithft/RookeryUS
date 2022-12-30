@@ -40,14 +40,11 @@
  <h1>Vibration API</h1>
  <div class="buttons-wrapper">
    <button id="button-play-v-once" class="button-demo">Vibrate Once</button>
-   <button id="button-play-v-thrice" class="button-demo">Vibrate Thrice</button>
+   <button id="button-play-v-thrice" class="button-demo">Vibrate twice</button>
    <button id="button-stop-v" class="button-demo">Stop</button>
  </div>
  <span id="v-unsupported" class="hidden">API not supported</span>
- <small class="author">
-   Demo created by <a href="http://www.audero.it">Aurelio De Rosa</a>
-   (<a href="https://twitter.com/AurelioDeRosa">@AurelioDeRosa</a>)
- </small>
+
  <script>
    window.navigator = window.navigator || {};
    if (navigator.vibrate === undefined) {
@@ -57,10 +54,10 @@
        });
    } else {
        document.getElementById('button-play-v-once').addEventListener('click', function() {
-         navigator.vibrate(1000);
+         navigator.vibrate(500);
        });
        document.getElementById('button-play-v-thrice').addEventListener('click', function() {
-         navigator.vibrate([1000, 500, 1000, 500, 2000]);
+         navigator.vibrate([250, 500, 250]);
        });
        document.getElementById('button-stop-v').addEventListener('click', function() {
          navigator.vibrate(0);
