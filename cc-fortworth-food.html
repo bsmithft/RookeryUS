@@ -1,10 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="/swipe42.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/zuix-dist@1.0.0/js/zuix.min.js"></script>
-  <link href="assets/css/swipe42.css" rel="stylesheet">
   <style type="text/css">
+.surface {
+  /* the surface hosting the ball covers entire document size */
+  width: 100%;
+  height: 100vh;
+  background: src=”SWIPE42BKGRND”;;
+}
+.swipe42 {
+  /* center the ball inside the surface */
+  position: absolute;
+  left: -75px;
+  top: -75px;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
+  margin-left: 50%;
+  margin-right: 50%;
+  /* ball size and color */ 
+  width: 150px;
+  height: 150px;
+  border: solid 2px rgba(255,0,0,0.25);
+  background-image: radial-gradient(circle at 100px 100px, orange, #000);
+  /* animate border and opacity */
+  transition: border-radius .1s ease-in, opacity .1s ease-in;
+}
+.touched {
+  /* change border when the ball is touched */
+  border-radius: 45%;
+  opacity: 0.75;
+}
+.swipe42:not(.touched) {
+  /* animate to home position when the ball is released */
+  transition: transform .1s cubic-bezier(0.1, 0.8, 0.2, 1.2);
+}
+
+body {
+    overflow: hidden;
+}
+
+
+    
+    
     html {
     overflow: auto;
     }
@@ -52,11 +90,103 @@
     <img src="/assets/img/CommunityChest/gilbert.png"/> 
   </div>
   <div class="holds-the-iframe">
-    <iframe id="frame" src=""></iframe>
+    <iframe id="frame" src="">
+      <div id="swipe42" style="height:400px; width:400px; display:none;">
+        <img src="/assets/img/CommunityChest/gilbert.png"/> 
+      </div>
+
+    </iframe>
+  </div>
+  <div id="swipe42" style="height:400px; width:400px; display:none;">
+    <img src="/assets/img/CommunityChest/gilbert.png"/> 
   </div>
   <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
   <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
   <button type="button" id="chest" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
 </body>
+<script>
+  //Long touch recognizer
+var onlongtouch; 
+var timer;
+var touchduration = 800; //length of time we want the user to touch before we do something
+
+function touchstart(e) {
+    e.preventDefault();
+    if (!timer) {
+        timer = setTimeout(onlongtouch, touchduration);
+    }
+}
+
+function touchend() {
+    //stops short touches from firing the event
+    if (timer) {
+        clearTimeout(timer);
+        timer = null;
+    }
+}
+
+onlongtouch = function() { 
+    timer = null;
+    document.getElementById('swipe42').innerText+='swipe42\n'; 
+};
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    window.addEventListener("touchstart", touchstart, false);
+    window.addEventListener("touchend", touchend, false);
+});
+
+//Randomizer
+var cat1 = ["/assets/img/CommunityChest/perrotties.png"];
+          
+var myFrame = document.getElementById("frame");
+getRandom(myFrame);
+
+function getRandom(myFrame) {
+   var index = Math.floor(Math.random()*cat1.length);
+   var url = cat1[index];
+   document.getElementById('frame').src = url;
+}
+
+
+//Gesture recognizer
+// get 'surface' and 'swipe42' elements
+const surface = zuix.field('surface');
+const swipe42 = zuix.field('swipe42');
+
+// load the gesture helper on the surface
+zuix.load('@lib/controllers/gesture_helper', {
+view: surface, // <- where to apply the gesture helper
+on: {
+'gesture:pan': (e, tp) => {
+if (swipe42.hasClass('touched')) {
+const tr = 'translate('+tp.shiftX+'px,'+tp.shiftY+'px)';
+swipe42.css('transform', tr);
+tp.cancel(); // prevent default
+}
+},
+'gesture:release': () => {
+swipe42.removeClass('touched')
+.css('transform', '');
+}
+},
+passive: false
+});
+
+// load the gesture helper on the swipe42
+zuix.load('@lib/controllers/gesture_helper', {
+view: swipe42, // <- where to apply the gesture helper
+on: {
+'gesture:touch': () => {
+swipe42.addClass('touched');
+},
+'gesture:tap': () => {
+swipe42.addClass('animated bounce')
+.one('animationend', ()=>{
+swipe42.removeClass('animated bounce');        
+});
+}
+}
+});
+</script>
 </html>
         
