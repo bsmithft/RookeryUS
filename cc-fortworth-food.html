@@ -25,19 +25,16 @@ function touchend() {
 onlongtouch = function() { 
     timer = null;
     navigator.vibrate(50); 
-    document.getElementById('swipe42intro'); 
-
-};
+    var show = (sw42) => {
+    sw42.style.display = 'block';
+}};
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     window.addEventListener("touchstart", touchstart, false);
     window.addEventListener("touchend", touchend, false);
-    var show = (sw42) => {
-    sw42.style.display = 'block';
-};});
+});
 
   </script>
-      <link href="swipe42intro.css" rel="stylesheet">
 
 </head>
 <body class="sw42" style="display: none;">
