@@ -26,9 +26,7 @@ function touchend() {
 onlongtouch = function() { 
     timer = null;
     navigator.vibrate(50); 
-    function myFunction() {
-            document.getElementById("sw42").style.display = " block";
-         }
+    document.getElementById("sw42").style.display = " block";
 };
 
 document.addEventListener("DOMContentLoaded", function(event) { 
@@ -39,6 +37,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 </head>
 <body class="sw42" id="sw42">
-  <div id="sw42" class="sw42">
+  <div>
   </div></body>
 </html>
