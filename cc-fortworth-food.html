@@ -26,8 +26,9 @@ function touchend() {
 onlongtouch = function() { 
     timer = null;
     navigator.vibrate(200); 
-    document.getElementById("sw42").style.display = " block";
-};
+    function myFunction() {
+            document.getElementById("sw42").style.display = " block";
+         }};
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     window.addEventListener("touchstart", touchstart, false);
