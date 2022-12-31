@@ -4,19 +4,16 @@
   <script>
     var onlongtouch; 
 var timer;
-var touchduration = 500; //length of time we want the user to touch before we do something
+var touchduration = 500;
 
-touchstart() {
+function touchstart() {
     timer = setTimeout(onlongtouch, touchduration); 
 }
 
-touchend() {
-
-    //stops short touches from firing the event
+function touchend() {
     if (timer)
-        clearTimeout(timer); // clearTimeout, not cleartimeout..
+        clearTimeout(timer);
 }
-
 onlongtouch = function() { 
   window.navigator.vibrate(300);
  };
