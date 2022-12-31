@@ -31,7 +31,11 @@ onlongtouch = function() {
 document.addEventListener("DOMContentLoaded", function(event) { 
     window.addEventListener("touchstart", touchstart, false);
     window.addEventListener("touchend", touchend, false);
-});
+    function changeStyle(){
+        var element = document.getElementById("swipe42intro");
+        element.style.display = "block";
+}});
+
   </script>
       <link href="swipe42intro.css" rel="stylesheet">
 
