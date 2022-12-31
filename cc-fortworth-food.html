@@ -1,8 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/zuix-dist@1.0.0/js/zuix.min.js"></script>
   <style type="text/css">
-  html {
+.surface {
+  /* the surface hosting the ball covers entire document size */
+  width: 100%;
+  height: 100vh;
+  background: src=”SWIPE42BKGRND”;;
+}
+.swipe42 {
+  /* center the ball inside the surface */
+  position: absolute;
+  left: -75px;
+  top: -75px;
+  margin-top: 50vh;
+  margin-bottom: 50vh;
+  margin-left: 50%;
+  margin-right: 50%;
+  /* ball size and color */ 
+  width: 150px;
+  height: 150px;
+  border: solid 2px rgba(255,0,0,0.25);
+  /* animate border and opacity */
+  transition: border-radius .1s ease-in, opacity .1s ease-in;
+}
+.touched {
+  /* change border when the ball is touched */
+  border-radius: 45%;
+  opacity: 0.75;
+}
+.swipe42:not(.touched) {
+  /* animate to home position when the ball is released */
+  transition: transform .1s cubic-bezier(0.1, 0.8, 0.2, 1.2);
+}
+
+body {
+    overflow: hidden;
+}
+
+
+    
+    
+    html {
     overflow: auto;
     }
     html,
@@ -46,7 +86,7 @@
       width: 130px;
       height: 100px;
       left: 50px;
-      bottom: 10px;
+      bottom: 100px;
     }
     .holds-the-iframe {
       background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
@@ -54,78 +94,104 @@
   </style>     
 </head>
 <body>
+  <div class="holds-the-iframe">
+    <iframe id="frame" src="">
+      </div>
+    </iframe>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
+  <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
+  <button type="button" id="chest1" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
+  <button type="button" id="chest" onclick="window.location.href='/cc-fortworth-main.html', 'button-play-v-once'"><img src="/assets/img/CommunityChest/home.png"/></button>
 
-  <button
-  onclick="vibrate({ duration: 200, interval: 150, count: 3 })">
-  vibrate
-</button>
 </body>
 <script>
-function vibrate(options = { duration: 100, interval: 100, count: 1 }) {
-    if (arguments.length !== 1) {
-        throw new Error("Expected exactly one argument.");
+  function vib(){
+      document.getElementById("chest").innerHTML = window.navigator.vibrate(500);
+  }
+  //Long touch recognizer
+var onlongtouch; 
+var timer;
+var touchduration = 100; //length of time we want the user to touch before we do something
+
+function touchstart(e) {
+    e.preventDefault();
+    if (!timer) {
+        timer = setTimeout(onlongtouch, touchduration);
     }
-
-    if (Object.prototype.toString.call(options) !== "[object Object]") {
-        throw new TypeError("Expected first argument to be an object.");
-    }
-
-    if (typeof options.duration !== "number" || !Number.isInteger(options.duration)) {
-        throw new TypeError("Expected options.duration to be an integer.");
-    }
-
-    if (typeof options.interval !== "number" || !Number.isInteger(options.interval)) {
-        throw new TypeError("Expected options.interval to be an integer.");
-    }
-
-    if (typeof options.count !== "number" || !Number.isInteger(options.count)) {
-        throw new TypeError("Expected options.count to be an integer.");
-    }
-
-    if (options.duration < 0) {
-        throw new RangeError("Expected options.duration to be greater or equal to zero.");
-    }
-
-    if (options.interval < 0) {
-        throw new RangeError("Expected options.interval to be greater or equal to zero.");
-    }
-
-    if (options.count < 0) {
-        throw new RangeError("Expected options.count to be greater or equal to zero.");
-    }
-
-    if (!window) {
-        return;
-    }
-
-    if (!window.navigator) {
-        return;
-    }
-
-    if (!window.navigator.vibrate) {
-        return;
-    }
-
-    const pattern = [];
-
-    for (let index = 0; index < options.count; index++) {
-        pattern.push(options.duration);
-        pattern.push(options.interval);
-    }
-
-    window.navigator.vibrate(pattern);
 }
 
+function touchend() {
+    //stops short touches from firing the event
+    if (timer) {
+        clearTimeout(timer);
+        timer = null;
+    }
+}
+
+onlongtouch = function() { 
+    timer = null;
+    document.getElementById('swipe42').innerText+='swipe42\n'; 
+};
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    window.addEventListener("touchstart", touchstart, false);
+    window.addEventListener("touchend", touchend, false);
+    window.addEventListener("touchstart", button-play-v-once)
+});
 
 //Randomizer
-var cat1 = ["/assets/img/CommunityChest/perrotties.png"];         
+var cat1 = ["/assets/img/CommunityChest/perrotties.png"];
+          
 var myFrame = document.getElementById("frame");
 getRandom(myFrame);
+
 function getRandom(myFrame) {
    var index = Math.floor(Math.random()*cat1.length);
    var url = cat1[index];
    document.getElementById('frame').src = url;
 }
+
+
+//Gesture recognizer
+// get 'surface' and 'swipe42' elements
+const surface = zuix.field('surface');
+const swipe42 = zuix.field('swipe42');
+
+// load the gesture helper on the surface
+zuix.load('@lib/controllers/gesture_helper', {
+view: surface, // <- where to apply the gesture helper
+on: {
+'gesture:pan': (e, tp) => {
+if (swipe42.hasClass('touched')) {
+const tr = 'translate('+tp.shiftX+'px,'+tp.shiftY+'px)';
+swipe42.css('transform', tr);
+tp.cancel(); // prevent default
+}
+},
+'gesture:release': () => {
+swipe42.removeClass('touched')
+.css('transform', '');
+}
+},
+passive: false
+});
+
+// load the gesture helper on the swipe42
+zuix.load('@lib/controllers/gesture_helper', {
+view: swipe42, // <- where to apply the gesture helper
+on: {
+'gesture:touch': () => {
+swipe42.addClass('touched');
+},
+'gesture:tap': () => {
+swipe42.addClass('animated bounce')
+.one('animationend', ()=>{
+swipe42.removeClass('animated bounce');        
+});
+}
+}
+});
+
 </script>
 </html>
         
