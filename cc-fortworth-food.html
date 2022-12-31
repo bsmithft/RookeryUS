@@ -87,7 +87,7 @@ body {
       width: 130px;
       height: 100px;
       left: 50px;
-      bottom: 100px;
+      bottom: 10px;
     }
     .holds-the-iframe {
       background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
@@ -106,6 +106,19 @@ body {
 
 </body>
 <script>
+
+window.navigator = window.navigator || {};
+   if (navigator.vibrate === undefined) {
+       document.getElementById('holds-the-iframe').classList.remove('hidden');
+       ['vib'].forEach(function(elementId) {
+         document.getElementById(elementId).setAttribute('disabled', 'disabled');
+       });
+   } else {
+       document.getElementById('vib').addEventListener('click', function() {
+         navigator.vibrate(500);
+       });
+   }
+
   function vib(){
       document.getElementById("chest").innerHTML = window.navigator.vibrate(500);
   }
@@ -192,23 +205,7 @@ swipe42.removeClass('animated bounce');
 }
 }
 });
-window.navigator = window.navigator || {};
-   if (navigator.vibrate === undefined) {
-       document.getElementById('v-unsupported').classList.remove('hidden');
-       ['button-play-v-once', 'button-play-v-thrice', 'button-stop-v'].forEach(function(elementId) {
-         document.getElementById(elementId).setAttribute('disabled', 'disabled');
-       });
-   } else {
-       document.getElementById('button-play-v-once').addEventListener('click', function() {
-         navigator.vibrate(5);
-       });
-       document.getElementById('button-play-v-thrice').addEventListener('click', function() {
-         navigator.vibrate([21, 15, 21]);
-       });
-       document.getElementById('button-stop-v').addEventListener('click', function() {
-         navigator.vibrate(0);
-       });
-   }
+
 </script>
 </html>
         
