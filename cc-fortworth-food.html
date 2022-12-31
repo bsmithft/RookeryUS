@@ -6,7 +6,7 @@
   <script>
 var onlongtouch; 
 var timer;
-var touchduration = 500; //length of time we want the user to touch before we do something
+var touchduration = 600; //length of time we want the user to touch before we do something
 
 function touchstart(e) {
     e.preventDefault();
@@ -21,8 +21,6 @@ function touchend() {
         clearTimeout(timer);
         timer = null;
     }
-    document.getElementById("sw42").style.display = 'block';
-
 }
 
 onlongtouch = function() { 
@@ -38,6 +36,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
   </script>
 
 </head>
-<body style="display: none" id="sw42">
+<body style="display: none" class="sw42" id="sw42">
 </body>
 </html>
