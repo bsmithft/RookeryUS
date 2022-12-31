@@ -61,48 +61,68 @@
   <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
   <button type="button" id="chest1" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
   <button type="button" id="chest" onclick="window.location.href='/cc-fortworth-main.html', 'button-play-v-once'"><img src="/assets/img/CommunityChest/home.png"/></button>
-  <h1>Vibration API</h1>
-  <div class="buttons-wrapper">
-    <button id="button-play-v-once" class="button-demo">Vibrate Once</button>
-    <button id="button-play-v-thrice" class="button-demo">Vibrate twice</button>
-    <button id="button-stop-v" class="button-demo">Stop</button>
-  </div>
-  <span id="v-unsupported" class="hidden">API not supported</span>
- 
-  <script>
-    window.navigator = window.navigator || {};
-    if (navigator.vibrate === undefined) {
-        document.getElementById('v-unsupported').classList.remove('hidden');
-        ['button-play-v-once', 'button-play-v-thrice', 'button-stop-v'].forEach(function(elementId) {
-          document.getElementById(elementId).setAttribute('disabled', 'disabled');
-        });
-    } else {
-        document.getElementById('button-play-v-once').addEventListener('click', function() {
-          navigator.vibrate(5);
-        });
-        document.getElementById('button-play-v-thrice').addEventListener('click', function() {
-          navigator.vibrate([21, 15, 21]);
-        });
-        document.getElementById('button-stop-v').addEventListener('click', function() {
-          navigator.vibrate(0);
-        });
-    }
-  </script>
-  <p>test 5,21,15,21</p>
-
+  <button
+  onclick="vibrate({ duration: 200, interval: 150, count: 3 })">
+  vibrate
+</button>
 </body>
 <script>
-//vibration response
-window.navigator = window.navigator || {};
-   if (navigator.vibrate === undefined) {
-       ['chest'].forEach(function(elementId) {
-         document.getElementById(elementId).setAttribute('disabled', 'disabled');
-       });
-   } else {
-       document.getElementById('chest').addEventListener('click', function() {
-         navigator.vibrate(500);
-       });
-   }
+function vibrate(options = { duration: 100, interval: 100, count: 1 }) {
+    if (arguments.length !== 1) {
+        throw new Error("Expected exactly one argument.");
+    }
+
+    if (Object.prototype.toString.call(options) !== "[object Object]") {
+        throw new TypeError("Expected first argument to be an object.");
+    }
+
+    if (typeof options.duration !== "number" || !Number.isInteger(options.duration)) {
+        throw new TypeError("Expected options.duration to be an integer.");
+    }
+
+    if (typeof options.interval !== "number" || !Number.isInteger(options.interval)) {
+        throw new TypeError("Expected options.interval to be an integer.");
+    }
+
+    if (typeof options.count !== "number" || !Number.isInteger(options.count)) {
+        throw new TypeError("Expected options.count to be an integer.");
+    }
+
+    if (options.duration < 0) {
+        throw new RangeError("Expected options.duration to be greater or equal to zero.");
+    }
+
+    if (options.interval < 0) {
+        throw new RangeError("Expected options.interval to be greater or equal to zero.");
+    }
+
+    if (options.count < 0) {
+        throw new RangeError("Expected options.count to be greater or equal to zero.");
+    }
+
+    if (!window) {
+        return;
+    }
+
+    if (!window.navigator) {
+        return;
+    }
+
+    if (!window.navigator.vibrate) {
+        return;
+    }
+
+    const pattern = [];
+
+    for (let index = 0; index < options.count; index++) {
+        pattern.push(options.duration);
+        pattern.push(options.interval);
+    }
+
+    window.navigator.vibrate(pattern);
+}
+
+
 //Randomizer
 var cat1 = ["/assets/img/CommunityChest/perrotties.png"];         
 var myFrame = document.getElementById("frame");
