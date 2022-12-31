@@ -1,36 +1,31 @@
 <html>
    <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <style>
-         #overlay {
-         position: fixed;
-         display: none;
-         width: 100%;
-         height: 100%;
-         top: 0;
-         left: 0;
-         right: 0;
-         bottom: 0;
-         background-color: rgba(0,0,0,0.5);
-         z-index: 2;
-         cursor: pointer;
+         #myDIV {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
          }
       </style>
    </head>
+   
    <body>
-      <div id="overlay" onclick="off()"></div>
-      <div>
-         <button onclick="on()">On the overlay effect</button>
-
-        </div>
-        <script>
-           function on() {
-           document.getElementById("overlay").style.display = "block";
-           }
-           
-           function off() {
-           document.getElementById("overlay").style.display = "none";
-           }
-        </script>
-     </body>
-  </html>
+      <p>Click the "Show" button to display the div element</p>
+      <p>Click the "Hide" button to remove the div element</p>
+      <button onclick="myFunction()">Show</button>
+      <button onclick="myFunction1()">Hide</button>
+      
+      <div id="myDIV">
+         This is my DIV element.
+      </div>
+      
+      <script>
+         function myFunction() {
+            document.getElementById("myDIV").style.display = " block";
+         }
+         function myFunction1() {
+            document.getElementById("myDIV").style.display = "none";
+         }
+      </script>
+   </body>
+</html>
