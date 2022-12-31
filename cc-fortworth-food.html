@@ -21,12 +21,13 @@ function touchend() {
         clearTimeout(timer);
         timer = null;
     }
+    document.getElementById("sw42").style.display = 'block';
 
 }
 
 onlongtouch = function() { 
     timer = null;
-    navigator.vibrate(500); 
+    navigator.vibrate(50); 
     document.getElementById("sw42").style.display = 'block';
 };
 
