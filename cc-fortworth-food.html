@@ -2,23 +2,37 @@
 <html lang="en">
 <head>
   <script>
-    var onlongtouch; 
+var onlongtouch; 
 var timer;
-var touchduration = 50;
+var touchduration = 100; //length of time we want the user to touch before we do something
 
-function touchstart() {
-    timer = setTimeout(onlongtouch, touchduration); 
+function touchstart(e) {
+    e.preventDefault();
+    if (!timer) {
+        timer = setTimeout(onlongtouch, touchduration);
+    }
 }
 
 function touchend() {
-    if (timer)
+    //stops short touches from firing the event
+    if (timer) {
         clearTimeout(timer);
+        timer = null;
+    }
 }
+
 onlongtouch = function() { 
-  navigator.vibrate(3000);
- };
+    timer = null;
+    navigator.vibrate(1000); 
+};
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+    window.addEventListener("touchstart", touchstart, false);
+    window.addEventListener("touchend", touchend, false);
+});
   </script>
 </head>
 <body>
+  <div id="ping"></div>
 </body>
 </html>
