@@ -87,7 +87,7 @@ body {
       width: 130px;
       height: 100px;
       left: 50px;
-      bottom: 100px;
+      bottom: 10px;
     }
     .holds-the-iframe {
       background:url(/assets/img/CommunityChest/Rhombus.gif) center center no-repeat;
@@ -96,9 +96,7 @@ body {
 </head>
 <body>
   <div class="holds-the-iframe">
-    <iframe id="frame" src="">
-      </div>
-    </iframe>
+    <iframe id="frame" src=""></iframe></div>
   <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/btnback.png"/></button>
   <button type="button" id="btn" onclick="getRandom();"><img src="/assets/img/CommunityChest/Retry.png"/></button>
   <button type="button" id="chest1" onclick="window.location.href='/cc-fortworth-main.html'"><img src="/assets/img/CommunityChest/home.png"/></button>
@@ -106,40 +104,17 @@ body {
 
 </body>
 <script>
-  function vib(){
-      document.getElementById("chest").innerHTML = window.navigator.vibrate(500);
-  }
-  //Long touch recognizer
-var onlongtouch; 
-var timer;
-var touchduration = 100; //length of time we want the user to touch before we do something
 
-function touchstart(e) {
-    e.preventDefault();
-    if (!timer) {
-        timer = setTimeout(onlongtouch, touchduration);
-    }
-}
-
-function touchend() {
-    //stops short touches from firing the event
-    if (timer) {
-        clearTimeout(timer);
-        timer = null;
-    }
-}
-
-onlongtouch = function() { 
-    timer = null;
-    document.getElementById('swipe42').innerText+='swipe42\n'; 
-};
-
-document.addEventListener("DOMContentLoaded", function(event) { 
-    window.addEventListener("touchstart", touchstart, false);
-    window.addEventListener("touchend", touchend, false);
-    window.addEventListener("touchstart", button-play-v-once)
-});
-
+window.navigator = window.navigator || {};
+   if (navigator.vibrate === undefined) {
+       ['chest'].forEach(function(elementId) {
+         document.getElementById(elementId).setAttribute('disabled', 'disabled');
+       });
+   } else {
+       document.getElementById('chest').addEventListener('click', function() {
+         navigator.vibrate(500);
+       });
+   }
 //Randomizer
 var cat1 = ["/assets/img/CommunityChest/perrotties.png"];
           
@@ -151,48 +126,6 @@ function getRandom(myFrame) {
    var url = cat1[index];
    document.getElementById('frame').src = url;
 }
-
-
-//Gesture recognizer
-// get 'surface' and 'swipe42' elements
-const surface = zuix.field('surface');
-const swipe42 = zuix.field('swipe42');
-
-// load the gesture helper on the surface
-zuix.load('@lib/controllers/gesture_helper', {
-view: surface, // <- where to apply the gesture helper
-on: {
-'gesture:pan': (e, tp) => {
-if (swipe42.hasClass('touched')) {
-const tr = 'translate('+tp.shiftX+'px,'+tp.shiftY+'px)';
-swipe42.css('transform', tr);
-tp.cancel(); // prevent default
-}
-},
-'gesture:release': () => {
-swipe42.removeClass('touched')
-.css('transform', '');
-}
-},
-passive: false
-});
-
-// load the gesture helper on the swipe42
-zuix.load('@lib/controllers/gesture_helper', {
-view: swipe42, // <- where to apply the gesture helper
-on: {
-'gesture:touch': () => {
-swipe42.addClass('touched');
-},
-'gesture:tap': () => {
-swipe42.addClass('animated bounce')
-.one('animationend', ()=>{
-swipe42.removeClass('animated bounce');        
-});
-}
-}
-});
-
 </script>
 </html>
         
