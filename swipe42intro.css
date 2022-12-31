@@ -29,9 +29,5 @@
   margin-bottom: 50%;
 }
 .sw42 {
-  display: none;
-  background-image: "assets/img/CommunityChest/gilbert.png";}
-#sw42 { 
-  display: none;
-  background-image: "assets/img/CommunityChest/gilbert.png";
+  background-image: url("/assets/img/CommunityChest/gilbert.png");
 }
