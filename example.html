@@ -5,78 +5,113 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
-#div1 {
-    width:50px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
-    display: inline;
-    float: left;
-    margin-bottom: 25px;
-    margin-left: 50px
+/* Prevent the text contents of draggable elements from being selectable. */
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
-.drop {
-    width:50px;
-    height:50px;
-    padding:10px;
-    border:1px solid #aaaaaa;
-    display: inline;
-    float: left;
+.column,.target {
+  height: 150px;
+  width: 150px;
+  float: left;
+  border: 2px solid #666666;
+  background-color: #ccc;
+  margin-right: 5px;
+  -webkit-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 3px #000;
+  -ms-box-shadow: inset 0 0 3px #000;
+  box-shadow: inset 0 0 3px #000;
+  text-align: center;
+  cursor: move;
 }
-#bracelet {
-    width:540px;
-    height:75px;
-    padding: 10px;
-    margin-left: 30px;
-    border:1px solid #aaaaaa;
-    background-color: gray;
-}   </style>
+.column header,.target header {
+  color: #fff;
+  text-shadow: #000 0 1px;
+  box-shadow: 5px;
+  padding: 5px;
+  background: -moz-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -webkit-gradient(linear, left top, right top,
+                               color-stop(0, rgb(0,0,0)),
+                               color-stop(0.50, rgb(79,79,79)),
+                               color-stop(1, rgb(21,21,21)));
+  background: -webkit-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  background: -ms-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
+  border-bottom: 1px solid #ddd;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  -ms-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -ms-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+.dragover {
+  border: 2px dashed #000;
+}
+   </style>
 
 </head>
 <body>
-    <div id="bracelet">
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div id="div2" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <img id="drag1" src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Button-Red.svg" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" width="50" height="50">
-    </div>
+    <div class="column" draggable="true"><header>Draggable</header></div>
+    <div class="target"><header>Target</header></div>
     <script>
-function allowDrop(ev) {
-    ev.preventDefault();
+    function handleDragStart(e) {
+    var dragIcon = document.createElement('img');
+    dragIcon.src = 'http://jsfiddle.net/favicon.png';
+    dragIcon.width = 100;
+    e.dataTransfer.setDragImage(dragIcon, -10, -10);
 }
 
-function drag(ev) {
-    var el = ev.target;
-    var parent = el.getAttribute("data-parent");
-    
-    if(!parent){
-        el.setAttribute("data-parent", el.parentNode.id);
-    }
-    
-    ev.dataTransfer.setData("Text", el.id);
+function handleDragOver(e) {
+  if (e.preventDefault) {
+    e.preventDefault(); // Necessary. Allows us to drop.
+  }
+
+  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+
+  return false;
 }
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("Text");
-    ev.target.appendChild(document.getElementById(data));
+function handleDragEnter(e) {
+  // this / e.target is the current hover target.
+  this.classList.add('dragover');
 }
 
-function dragEnd(ev){
-    if(ev.dataTransfer.dropEffect == "none"){
-         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
-        
-        parent.appendChild(ev.target);
-    }
+function handleDragLeave(e) {
+  this.classList.remove('dragover');  // this / e.target is previous target element.
 }
+
+
+function handleDrop(e) {
+  // this / e.target is current target element.
+
+  if (e.stopPropagation) {
+    e.stopPropagation(); // stops the browser from redirecting.
+  }
+
+  // See the section on the DataTransfer object.
+
+  this.classList.remove('dragover');
+  return false;
+}
+
+var columns = document.querySelectorAll('.column');
+[].forEach.call(columns, function(column) {
+  column.addEventListener('dragstart', handleDragStart, false);
+});
+var targets = document.querySelectorAll('.target');
+[].forEach.call(targets, function(target) {
+  target.addEventListener('dragover', handleDragOver, false);
+  target.addEventListener('dragenter', handleDragEnter, false);
+  target.addEventListener('dragleave', handleDragLeave, false);
+  target.addEventListener('drop', handleDrop, false);
+});
    </script>
 </body>
 </html>
