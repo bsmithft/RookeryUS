@@ -4,58 +4,12 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-  html, body {
-  max-width: 100%!important;
-  overflow-x: hidden!important;
-}
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-.draggable {
-  opacity: 50%;
-}
-#d1 {background-color:#f00;}
-#d2 {background-color:#0f0;left: 100px;}
-#d3 {background-color:#00f;left: 200px;}
+    #draggable {width:50px;height:50px;background-color:#f00;position:absolute}
 </style>
 </head>
 <body>
-
+  <div id="draggable" ></div>
 <h2 style="text-align:center">Community Chest</h2>
-<div class="draggable" id="d1" >
-  <img src="/assets/img/CommunityChest/gilbert.png" alt="John" style="width:100%">
-</div>
 <div class="card">
   <h1>Lenny Brewster</h1>
   <p class="title">CEO & Founder, Janitor</p>
@@ -73,19 +27,15 @@ button:hover, a:hover {
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="jquery.draggableTouch.js"></script>
 <script>
-  var nodeList = document.getElementsByClassName('draggable');
- 
-  for(var i=0;i<nodeList.length;i++) {
-    var obj = nodeList[i];
-    obj.addEventListener('touchmove', function(event) {
-      var touch = event.targetTouches[0];
-      
-      // Place element where the finger is
-      event.target.style.left = touch.pageX + 'px';
-      event.target.style.top = touch.pageY + 'px';
-      event.preventDefault();
-    }, false);
-  }
+  var draggable = document.getElementById('draggable');
+  draggable.addEventListener('touchmove', function(event) {
+    var touch = event.targetTouches[0];
+    
+    // Place element where the finger is
+    draggable.style.left = touch.pageX-25 + 'px';
+    draggable.style.top = touch.pageY-25 + 'px';
+    event.preventDefault();
+  }, false);
 </script>
 </body>
 </html>   
