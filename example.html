@@ -5,22 +5,78 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <style>
-    #draggable {width:50px;height:50px;background-color:#f00;position:absolute}
-   </style>
+#div1 {
+    width:50px;
+    height:50px;
+    padding:10px;
+    border:1px solid #aaaaaa;
+    display: inline;
+    float: left;
+    margin-bottom: 25px;
+    margin-left: 50px
+}
+.drop {
+    width:50px;
+    height:50px;
+    padding:10px;
+    border:1px solid #aaaaaa;
+    display: inline;
+    float: left;
+}
+#bracelet {
+    width:540px;
+    height:75px;
+    padding: 10px;
+    margin-left: 30px;
+    border:1px solid #aaaaaa;
+    background-color: gray;
+}   </style>
 
 </head>
 <body>
-  <div id="draggable" ></div>
-   <script>
-  var draggable = document.getElementById('draggable');
-  draggable.addEventListener('touchmove', function(event) {
-    var touch = event.targetTouches[0];
+    <div id="bracelet">
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div id="div2" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="drag1" src="http://upload.wikimedia.org/wikipedia/commons/4/4f/Button-Red.svg" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" width="50" height="50">
+    </div>
+    <script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    var el = ev.target;
+    var parent = el.getAttribute("data-parent");
     
-    // Place element where the finger is
-    draggable.style.left = touch.pageX-25 + 'px';
-    draggable.style.top = touch.pageY-25 + 'px';
-    event.preventDefault();
-  }, false);
+    if(!parent){
+        el.setAttribute("data-parent", el.parentNode.id);
+    }
+    
+    ev.dataTransfer.setData("Text", el.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("Text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+function dragEnd(ev){
+    if(ev.dataTransfer.dropEffect == "none"){
+         var parent = document.getElementById(ev.target.getAttribute("data-parent"));
+        
+        parent.appendChild(ev.target);
+    }
+}
    </script>
 </body>
 </html>
