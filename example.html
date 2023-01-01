@@ -1,54 +1,41 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>jQuery Draggable Touch Example</title>
-    </head>
-    <body>
-        <div class="draggable" style="position:absolute; top:50px; left:20; width:200px; height:200px; background:#f00;"></div>
-        <div class="draggable" style="position:absolute; top:50px; left:20; width:50px; height:50px; background:#f00;"></div>
-
-        <div>
-            <button id="enable">Enable</button>
-            <button id="disable">Disable</button>
-        </div>
-
-        <div id="console"></div>
-
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="jquery.draggableTouch.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#enable").click(function() {
-                    $(".draggable").draggableTouch();
-                });
-                $("#disable").click(function() {
-                    $(".draggable").draggableTouch("disable");
-                });
-
-                $(".draggable").on("dragstart", function(e, pos) {
-                    console.log("dragstart:", this, pos.left + "," + pos.top);
-                }).on("dragend", function(e, pos) {
-                    console.log("dragend:", this, pos.left + "," + pos.top);
-                });
-            });
-
-            // if this is a touch device, we assume we don't have a visible console and use
-            // a crappy homemade one :)
-            if ("ontouchstart" in document.documentElement) {
-                window.console = {
-                    log: function(a, b, c) {
-                        if (a && b && c)
-                            $("<div>" + a + " " + b + " " + c + "</div>").appendTo($("#console"));
-                        else if (a && b)
-                            $("<div>" + a + " " + b + "</div>").appendTo($("#console"));
-                        else if (a)
-                            $("<div>" + a + "</div>").appendTo($("#console"));
-                    }
-                };
-            }
-        </script>
-    </body>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+      #div1, #div2 {
+         float: left;
+         width: 100px;
+         height: 35px;
+         margin: 10px;
+         padding: 10px;
+         border: 1px solid black;
+      }
+   </style>
+   <script>
+      function allowDrop(img) {
+         img.preventDefault();
+      }
+      function drag(img) {
+         img.dataTransfer.setData("text", img.target.id);
+      }
+      function drop(img) {
+         img.preventDefault();
+         var data = img.dataTransfer.getData("text");
+         img.target.appendChild(document.getElementById(data));
+      }
+   </script>
+</head>
+<body>
+   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img src="https://www.tutorialspoint.com/javascript/images/javascript-mini-logo.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+   </div>
+   <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div><br><br><br><br><br>
+   <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <br><br><br><br><br><br>
+   <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+   <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</body>
 </html>
