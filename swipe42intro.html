@@ -47,9 +47,10 @@ button:hover, a:hover {
 <body>
 
 <h2 style="text-align:center">Community Chest</h2>
-
-<div class="card">
+<div class="draggable" id="d1" >
   <img src="/assets/img/CommunityChest/gilbert.png" alt="John" style="width:100%">
+</div>
+<div class="card">
   <h1>Lenny Brewster</h1>
   <p class="title">CEO & Founder, Janitor</p>
   <p>AssFuck University</p>
@@ -66,37 +67,20 @@ button:hover, a:hover {
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="jquery.draggableTouch.js"></script>
 <script>
-    $(document).ready(function() {
-        $("#enable").click(function() {
-            $(".draggable").draggableTouch();
-        });
-        $("#disable").click(function() {
-            $(".draggable").draggableTouch("disable");
-        });
-
-        $(".draggable").on("dragstart", function(e, pos) {
-            console.log("dragstart:", this, pos.left + "," + pos.top);
-        }).on("dragend", function(e, pos) {
-            console.log("dragend:", this, pos.left + "," + pos.top);
-        });
-    });
-
-    // if this is a touch device, we assume we don't have a visible console and use
-    // a crappy homemade one :)
-    if ("ontouchstart" in document.documentElement) {
-        window.console = {
-            log: function(a, b, c) {
-                if (a && b && c)
-                    $("<div>" + a + " " + b + " " + c + "</div>").appendTo($("#console"));
-                else if (a && b)
-                    $("<div>" + a + " " + b + "</div>").appendTo($("#console"));
-                else if (a)
-                    $("<div>" + a + "</div>").appendTo($("#console"));
-            }
-        };
-    }
+  var nodeList = document.getElementsByClassName('draggable');
+ 
+  for(var i=0;i<nodeList.length;i++) {
+    var obj = nodeList[i];
+    obj.addEventListener('touchmove', function(event) {
+      var touch = event.targetTouches[0];
+      
+      // Place element where the finger is
+      event.target.style.left = touch.pageX + 'px';
+      event.target.style.top = touch.pageY + 'px';
+      event.preventDefault();
+    }, false);
+  }
 </script>
-
 </body>
 </html>   
    
