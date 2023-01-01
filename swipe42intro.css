@@ -1,4 +1,7 @@
-
+.draggable {width:50px;height:50px;position:absolute}
+#d1 {background-color:#f00;}
+#d2 {background-color:#0f0;left: 100px;}
+#d3 {background-color:#00f;left: 200px;}
 .sw42 {
   display: none;
   background-image: url("/assets/img/CommunityChest/gilbert.png");
