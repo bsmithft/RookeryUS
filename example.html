@@ -7,6 +7,10 @@
    <style>
     #draggable {width:50px;height:50px;background-color:#f00;position:absolute}
    </style>
+
+</head>
+<body>
+  <div id="draggable" ></div>
    <script>
   var draggable = document.getElementById('draggable');
   draggable.addEventListener('touchmove', function(event) {
@@ -18,9 +22,5 @@
     event.preventDefault();
   }, false);
    </script>
-</head>
-<body>
-  <div id="draggable" ></div>
-
 </body>
 </html>
