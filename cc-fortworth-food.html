@@ -27,8 +27,11 @@ onlongtouch = function() {
     timer = null;
     navigator.vibrate(50); 
     function myFunction() {
-            document.getElementById("sw42").style.display = " block";
+            document.getElementById("sw42").style.display = "block";
          }};
+function myFunction() {
+    document.getElementById("sw42").style.display = "block";
+  };
 
 document.addEventListener("DOMContentLoaded", function(event) { 
     window.addEventListener("touchstart", touchstart, false);
@@ -39,5 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 </head>
 <body id="sw42">
   <div >
+    <span id="sw42"></span>
+    <button onclick="myFunction()"></button>
   </div></body>
 </html>
