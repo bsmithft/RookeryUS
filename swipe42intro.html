@@ -1,42 +1,35 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <style>
-    #draggable {width:50px;height:50px;background-color:#f00;position:absolute}
+  h1 {
+    margin-left: 50%;
+    margin-right: 50%;
+  }
+  #btn {
+    position: relative;
+    margin-left: 50%;
+    margin-right: 50%;
+
+  }
 </style>
-</head>
 <body>
-  <div id="draggable" ></div>
-<h2 style="text-align:center">Community Chest</h2>
-<div class="card">
-  <h1>Lenny Brewster</h1>
-  <p class="title">CEO & Founder, Janitor</p>
-  <p>AssFuck University</p>
-  <div class="draggable"><button>Touch Me</button></div>
-  
-  <div style="margin: 24px 0;">
-    <a href="#"><i class="fa fa-dribbble"></i></a> 
-    <a href="#"><i class="fa fa-twitter"></i></a>  
-    <a href="#"><i class="fa fa-linkedin"></i></a>  
-    <a href="#"><i class="fa fa-facebook"></i></a> 
-  </div>
-  <p><button>Contact</button></p>
+<div class="w3-container">
+  <h1>Title Name</h1>
+  <button id="btn"><img src="/assets/img/CommunityChest/favicon.png" alt=""></button>
 </div>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="jquery.draggableTouch.js"></script>
-<script>
-  var draggable = document.getElementById('draggable');
-  draggable.addEventListener('touchmove', function(event) {
-    var touch = event.targetTouches[0];
-    
-    // Place element where the finger is
-    draggable.style.left = touch.pageX-25 + 'px';
-    draggable.style.top = touch.pageY-25 + 'px';
-    event.preventDefault();
-  }, false);
-</script>
 </body>
-</html>   
-   
+<script>
+  var btn = document.getElementById("btn");
+function drag(e) {
+  btn.style.transform = `translate(${e.pageX - 20}px, ${e.pageY - 20}px)`;
+}
+btn.addEventListener("mousedown", () =>
+  document.addEventListener("mousemove", drag)
+);
+btn.addEventListener("mouseup", () =>
+  document.removeEventListener("mousemove", drag)
+);
+</script>
+</html>
