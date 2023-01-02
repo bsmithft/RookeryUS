@@ -83,8 +83,8 @@
     }
 
     function dragEnd(e) {
-      initialX = currentX;
-      initialY = currentY;
+      initialX = initialX;
+      initialY = initialY;
 
       active = false;
     }
@@ -112,6 +112,15 @@
     function setTranslate(xPos, yPos, el) {
       el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
     }
+    function revertBack(event) {
+       var target = event.target;
+       target.style.webkitTransform =
+       target.style.transform =
+       'translate(0px, 0px)';
+
+       target.setAttribute('data-x', 0);
+       target.setAttribute('data-y', 0);
+ }
   </script>
 </body>
 
