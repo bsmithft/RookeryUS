@@ -1,54 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>jQuery Draggable Touch Example</title>
-    </head>
-    <body>
-        <div class="draggable" style="position:absolute; top:50px; left:20; width:200px; height:200px; background:#f00;"></div>
-        <div class="draggable" style="position:absolute; top:50px; left:20; width:50px; height:50px; background:#f00;"></div>
+  <meta name="viewport" 
+        content="width=device-width, 
+        initial-scale=1.0, 
+        user-scalable=no" />
+  <title>Drag/Drop/Bounce</title>
+  <style>
+    #container {
+      width: 100%;
+      height: 400px;
+      background-color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 7px;
+      touch-action: none;
+    }
+    #item {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(245, 230, 99);
+      border: 10px solid rgba(136, 136, 136, .5);
+      border-radius: 50%;
+      touch-action: none;
+      user-select: none;
+    }
+    #item:active {
+      background-color: rgba(168, 218, 220, 1.00);
+    }
+    #item:hover {
+      cursor: pointer;
+      border-width: 20px;
+    }
+  </style>
+</head>
 
-        <div>
-            <button id="enable">Enable</button>
-            <button id="disable">Disable</button>
-        </div>
+<body>
 
-        <div id="console"></div>
+  <div id="outerContainer">
+    <div id="container">
+      <div id="item">
 
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-        <script src="jquery.draggableTouch.js"></script>
-        <script>
-            $(document).ready(function() {
-                $("#enable").click(function() {
-                    $(".draggable").draggableTouch();
-                });
-                $("#disable").click(function() {
-                    $(".draggable").draggableTouch("disable");
-                });
+      </div>
+    </div>
+  </div>
 
-                $(".draggable").on("dragstart", function(e, pos) {
-                    console.log("dragstart:", this, pos.left + "," + pos.top);
-                }).on("dragend", function(e, pos) {
-                    console.log("dragend:", this, pos.left + "," + pos.top);
-                });
-            });
+  <script>
+    var dragItem = document.querySelector("#item");
+    var container = document.querySelector("#container");
 
-            // if this is a touch device, we assume we don't have a visible console and use
-            // a crappy homemade one :)
-            if ("ontouchstart" in document.documentElement) {
-                window.console = {
-                    log: function(a, b, c) {
-                        if (a && b && c)
-                            $("<div>" + a + " " + b + " " + c + "</div>").appendTo($("#console"));
-                        else if (a && b)
-                            $("<div>" + a + " " + b + "</div>").appendTo($("#console"));
-                        else if (a)
-                            $("<div>" + a + "</div>").appendTo($("#console"));
-                    }
-                };
-            }
-        </script>
-    </body>
+    var active = false;
+    var currentX;
+    var currentY;
+    var initialX;
+    var initialY;
+    var xOffset = 0;
+    var yOffset = 0;
+
+    container.addEventListener("touchstart", dragStart, false);
+    container.addEventListener("touchend", dragEnd, false);
+    container.addEventListener("touchmove", drag, false);
+
+    container.addEventListener("mousedown", dragStart, false);
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", drag, false);
+
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+
+      if (e.target === dragItem) {
+        active = true;
+      }
+    }
+
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+
+      active = false;
+    }
+
+    function drag(e) {
+      if (active) {
+      
+        e.preventDefault();
+      
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+
+        xOffset = currentX;
+        yOffset = currentY;
+
+        setTranslate(currentX, currentY, dragItem);
+      }
+    }
+
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  </script>
+</body>
+
 </html>

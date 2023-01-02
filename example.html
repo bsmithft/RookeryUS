@@ -63,12 +63,25 @@ body {
 #test-full-draggable {
 
 }
+#image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+
+#image {
+  height: 100px;
+  background-image: url(/assets/img/favicon.png);
+}
 </style>
 </head>
   <body>
     <section>
+        <div id="image"></div>
       <div class="hero-container">
-          <div class="vstack gap-3"> 
+          <div style="margin-top: 100px;" class="vstack gap-3"> 
             <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -30px;">BBQ</p>
             <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -50px;">PALACE</p>
             <a href="/cc-city-texas.html" style="font-family:serif; text-align: center; font-size: 15px; margin-top: -40px;">Fort Worth</a>
@@ -213,7 +226,11 @@ function makeDraggable(elmnt) {
     // document.ontouchmove = null; //added touch event
   }
 }
-
+function dragEnd(e) {
+    currentX = initialX;
+    currentY = initialY;
+    active = false;
+}
 /*******************************
       test js */
 
