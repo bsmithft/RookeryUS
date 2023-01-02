@@ -1,127 +1,240 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>RookeryUS</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-   <style>
-/* Prevent the text contents of draggable elements from being selectable. */
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>RookeryUS</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+button img {
+  width: 100%;
 }
-.column,.target {
-  height: 150px;
-  width: 150px;
-  float: left;
-  border: 2px solid #666666;
-  background-color: #ccc;
-  margin-right: 5px;
-  -webkit-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 3px #000;
-  -ms-box-shadow: inset 0 0 3px #000;
-  box-shadow: inset 0 0 3px #000;
-  text-align: center;
+#chest {
+  background: transparent;
+  border: transparent;
+  position: absolute; 
+  bottom: 10px;
+  left: 10px;
+}
+.twobottom {
+    display: flex; 
+    display:grid;
+    justify-content: center;
+}
+body {
+  font-family: sans-serif;
+  touch-action: none;
+  -ms-touch-action: none;
+  /* margin: 0; height: 100%; overflow: hidden; to remove scrolling of window */
+}
+
+.draggable {
+  position: absolute;
+  z-index: 9;
+}
+
+.drag-handle {
+  cursor: move;
+  z-index: 10;
+}
+
+.full-draggable {
   cursor: move;
 }
-.column header,.target header {
+
+/*******************************
+     test css */
+
+.draggable {
+  background-color: #f1f1f1c4;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+.draggable .drag-handle {
+  padding: 10px;
+  background-color: #2196f3;
   color: #fff;
-  text-shadow: #000 0 1px;
-  box-shadow: 5px;
-  padding: 5px;
-  background: -moz-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
-  background: -webkit-gradient(linear, left top, right top,
-                               color-stop(0, rgb(0,0,0)),
-                               color-stop(0.50, rgb(79,79,79)),
-                               color-stop(1, rgb(21,21,21)));
-  background: -webkit-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
-  background: -ms-linear-gradient(left center, rgb(0,0,0), rgb(79,79,79), rgb(21,21,21));
-  border-bottom: 1px solid #ddd;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topleft: 10px;
-  -ms-border-radius-topleft: 10px;
-  border-top-left-radius: 10px;
-  -webkit-border-top-right-radius: 10px;
-  -ms-border-top-right-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  border-top-right-radius: 10px;
 }
-.dragover {
-  border: 2px dashed #000;
-}
-   </style>
 
+#test-draggable2 {
+  left: 200px;
+}
+
+#test-full-draggable {
+    justify-content: center;
+
+}
+</style>
 </head>
-<body>
-    <div class="column" draggable="true"><header>Draggable</header></div>
-    <div class="target"><header>Target</header></div>
-    <script>
-    function handleDragStart(e) {
-    var dragIcon = document.createElement('img');
-    dragIcon.src = 'http://jsfiddle.net/favicon.png';
-    dragIcon.width = 100;
-    e.dataTransfer.setDragImage(dragIcon, -10, -10);
+  <body>
+    <section>
+      <div class="hero-container">
+          <div class="vstack gap-3"> 
+            <p style="font-family:serif; text-align: center; font-size: 20px; margin-top: -10px;">Welcome to the</p>
+            <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -30px;">Community</p>
+            <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -50px;">Chest</p>
+            <a href="/cc-city-texas.html" style="font-family:serif; text-align: center; font-size: 15px; margin-top: -40px;">Fort Worth</a>
+            <p style="font-family:serif; text-align: center; font-size: 20px; margin-top: -5px;">CHOOSE CATEGORY BELOW</p>   
+            <div class="twobottom">
+            <div id="test-full-draggable" class="draggable full-draggable">
+            <button onclick= "window.location.href =  '/test.html'+ vibrate()" style="margin-top: -25px; font-family:serif; color:goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Food and Drink</button>
+            <button onclick= "window.location.href =  '/swipe42intro.html'+ vibrate()" style="font-family:serif; color: goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Entertainment</button>
+            </div>
+            </div>
+            <div class="twobottom">
+            <button href="/cc-fortworth-atf.html" onclick="vibrate()" style="font-family:serif; color:goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">ATF</button>
+            <button href="/cc-fortworth-services.html" onclick="vibrate()" style="font-family:serif; color:goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Services</button>
+            </div>
+            <p style="font-family:serif; font-size: 15px; text-align: center;">brought to you by</p>
+            <a style="font-family:serif; color: goldenrod; font-size: 20px; text-align: center;" href="https://www.rookeryus.com">theRookeryUS</a>
+            <a id="chest" href="/swipe42intro.html"><img src="/assets/img/CommunityChest/faq.png" alt=""></a>
+          </div>
+          <script>
+function vibrate(){
+  window.navigator.vibrate(1000);
 }
 
-function handleDragOver(e) {
-  if (e.preventDefault) {
-    e.preventDefault(); // Necessary. Allows us to drop.
+function makeDraggable(elmnt) {
+  let pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+
+  let dragHandle = elmnt.getElementsByClassName("drag-handle")[0];
+
+  if (dragHandle !== undefined) {
+    // if present, the header is where you move the DIV from:
+    dragHandle.onmousedown = dragMouseDown;
+    // dragHandle.ontouchstart = dragMouseDown; //added touch event
+    dragHandle.addEventListener("touchstart", dragMouseDown, false);
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+    elmnt.addEventListener("touchstart", dragMouseDown, false); //added touch event
   }
 
-  e.dataTransfer.dropEffect = 'move';  // See the section on the DataTransfer object.
+  function dragMouseDown(e) {
+    console.log("dragMouseDown called by event: ", e.type);
+    // e = e || window.event;
+    e.preventDefault();
+    let x;
+    let y;
 
-  return false;
-}
+    //Get touch or click position
+    //https://stackoverflow.com/a/41993300/5078983
+    if (
+      e.type === "touchstart" ||
+      e.type === "touchmove" ||
+      e.type === "touchend" ||
+      e.type === "touchcancel"
+    ) {
+      let evt = typeof e.originalEvent === "undefined" ? e : e.originalEvent;
+      let touch = evt.touches[0] || evt.changedTouches[0];
+      x = touch.pageX;
+      y = touch.pageY;
+    } else if (
+      e.type === "mousedown" ||
+      e.type === "mouseup" ||
+      e.type === "mousemove" ||
+      e.type === "mouseover" ||
+      e.type === "mouseout" ||
+      e.type === "mouseenter" ||
+      e.type === "mouseleave"
+    ) {
+      x = e.clientX;
+      y = e.clientY;
+    }
 
-function handleDragEnter(e) {
-  // this / e.target is the current hover target.
-  this.classList.add('dragover');
-}
+    console.log("drag start x: " + x + " y:" + y);
 
-function handleDragLeave(e) {
-  this.classList.remove('dragover');  // this / e.target is previous target element.
-}
-
-
-function handleDrop(e) {
-  // this / e.target is current target element.
-
-  if (e.stopPropagation) {
-    e.stopPropagation(); // stops the browser from redirecting.
+    // get the mouse cursor position at startup:
+    pos3 = x;
+    pos4 = y;
+    document.onmouseup = closeDragElement;
+    // document.ontouchend = closeDragElement;
+    document.addEventListener("touchend", closeDragElement, false);
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+    // document.ontouchmove = elementDrag;
+    document.addEventListener("touchmove", elementDrag, false);
   }
 
-  // See the section on the DataTransfer object.
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    let x;
+    let y;
 
-  this.classList.remove('dragover');
-  return false;
+    //Get touch or click position
+    //https://stackoverflow.com/a/41993300/5078983
+    if (
+      e.type === "touchstart" ||
+      e.type === "touchmove" ||
+      e.type === "touchend" ||
+      e.type === "touchcancel"
+    ) {
+      let evt = typeof e.originalEvent === "undefined" ? e : e.originalEvent;
+      let touch = evt.touches[0] || evt.changedTouches[0];
+      x = touch.pageX;
+      y = touch.pageY;
+    } else if (
+      e.type === "mousedown" ||
+      e.type === "mouseup" ||
+      e.type === "mousemove" ||
+      e.type === "mouseover" ||
+      e.type === "mouseout" ||
+      e.type === "mouseenter" ||
+      e.type === "mouseleave"
+    ) {
+      x = e.clientX;
+      y = e.clientY;
+    }
+
+    // calculate the new cursor position:
+    pos1 = pos3 - x;
+    pos2 = pos4 - y;
+    pos3 = x;
+    pos4 = y;
+    // set the element's new position:
+    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
+    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+  }
+
+  function closeDragElement() {
+    console.log("drag end x: " + pos3 + " y:" + pos4);
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.ontouchcancel = null; //added touch event
+    document.onmousemove = null;
+    // document.ontouchend = null; //added touch event
+    document.removeEventListener("touchend", closeDragElement, false);
+    document.removeEventListener("touchmove", elementDrag, false);
+    // document.ontouchmove = null; //added touch event
+  }
 }
 
-var columns = document.querySelectorAll('.column');
-[].forEach.call(columns, function(column) {
-  column.addEventListener('dragstart', handleDragStart, false);
-});
-var targets = document.querySelectorAll('.target');
-[].forEach.call(targets, function(target) {
-  target.addEventListener('dragover', handleDragOver, false);
-  target.addEventListener('dragenter', handleDragEnter, false);
-  target.addEventListener('dragleave', handleDragLeave, false);
-  target.addEventListener('drop', handleDrop, false);
-});
-   </script>
-</body>
+/*******************************
+      test js */
+
+//makeDraggable(document.getElementById("test-draggable"));
+//makeDraggable(document.getElementById("test-draggable2"));
+makeDraggable(document.getElementById("test-full-draggable"));
+
+
+  </script>
+      </div>
+    </section>
+  </body>
+  
 </html>
