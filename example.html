@@ -186,6 +186,8 @@ function makeDraggable(elmnt) {
     e.preventDefault();
     let x;
     let y;
+    window.navigator.vibrate(100);
+
 
     //Get touch or click position
     //https://stackoverflow.com/a/41993300/5078983
@@ -239,16 +241,6 @@ function dragEnd(e) {
     currentY = initialY;
     active = false;
 }
-
-    document.addEventListener('drag end', function (e)  {
-        if (e.target.getAttribute('data-draggable') == 'target') {
-            e.target.appendChild(item);
-            e.preventDefault();
-        }
-})
-
-
-
 /*******************************
       test js */
 
