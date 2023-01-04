@@ -36,7 +36,11 @@ body {
   /* margin: 0; height: 100%; overflow: hidden; to remove scrolling of window */
 }
 
-
+#test-full-draggable {
+  background-color: #404355c4;
+    text-align: center;
+    position: absolute;
+}
 
 .full-draggable {
   cursor: move;
@@ -94,12 +98,7 @@ body {
 function vibrate(){
   window.navigator.vibrate(100);
 }
-document.addEventListener('touchend', function (e)  {
-        if (e.target.getAttribute('draggable') == 'target') {
-            e.target.appendChild(item);
-            e.preventDefault();
-        }
-})
+
 
 function makeDraggable(elmnt) {
   let pos1 = 0,
@@ -219,18 +218,14 @@ function makeDraggable(elmnt) {
     document.removeEventListener("touchend", closeDragElement, false);
     document.removeEventListener("touchmove", elementDrag, false);
     // document.ontouchmove = null; //added touch event
-  }
+    ev.target.appendChild(document.getElementById(test-full-draggable));    
 }
-function dragEnd(e) {
-    currentX = initialX;
-    currentY = initialY;
-    active = false;
+   
+            
 }
+
 /*******************************
       test js */
-
-//makeDraggable(document.getElementById("test-draggable"));
-//makeDraggable(document.getElementById("test-draggable2"));
 makeDraggable(document.getElementById("test-full-draggable"));
 
 
