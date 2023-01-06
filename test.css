@@ -42,6 +42,9 @@ button img {
   .like {
       display: none;
       position: absolute;
+      bottom: 50%;
+      top: 50%;
+      right: 10px;
     
   
   }
