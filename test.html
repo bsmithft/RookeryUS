@@ -244,6 +244,7 @@ function makeDraggable(elmnt) {
     document.getElementsByClassName('dislike')[0].style.display = "none";
     document.getElementsByClassName('more')[0].style.display = "none";
     document.getElementsByClassName('less')[0].style.display = "none";
+    window.navigator.vibrate(100);
     console.log("drag end x: " + pos3 + " y:" + pos4);
     // stop moving when mouse button is released:
     document.onmouseup = null;
