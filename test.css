@@ -13,8 +13,7 @@ button img {
   }
   body {
     font-family: sans-serif;
-    background-color: rgb(255, 255, 255));
-    
+    background-color: #ffffffc4;
     /* margin: 0; height: 100%; overflow: hidden; to remove scrolling of window */
   }
   
@@ -42,13 +41,8 @@ button img {
   
   .like {
       display: none;
-      position: relative;
-      right: 0%;
-      margin-left: 50%;
-      margin-top: 0%;
-      max-height: 20px;
-      max-width: 20px;
-      size: 20px;
+      position: absolute;
+    
   
   }
   .dislike {
