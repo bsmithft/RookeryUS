@@ -34,11 +34,11 @@ if (dragHandle !== undefined) {
     }
   
     function dragMouseDown(e) {
+      window.navigator.vibrate(50);
       document.getElementsByClassName('like')[0].style.display = "block";
       document.getElementsByClassName('dislike')[0].style.display = "block";
       document.getElementsByClassName('more')[0].style.display = "block";
       document.getElementsByClassName('less')[0].style.display = "block";
-      window.navigator.vibrate(50);
       
       console.log("dragMouseDown called by event: ", e.type);
       // e = e || window.event;
@@ -137,16 +137,7 @@ if (dragHandle !== undefined) {
       document.getElementsByClassName('dislike')[0].style.display = "none";
       document.getElementsByClassName('more')[0].style.display = "none";
       document.getElementsByClassName('less')[0].style.display = "none";
-      function append() {  
-        var lang = ["C#", "Java", "Python"];  
-        var ul = document.createElement("ul");  
-        for(i = 0; i < lang.length; i++){  
-          var li = document.createElement("li");  
-          li.innerHTML = lang[i];  
-          ul.appendChild(li);  
-        }  
-        document.getElementById("test-full-draggable").appendChild(ul);  
-      }      
+      
       console.log("drag end x: " + pos3 + " y:" + pos4);
       // stop moving when mouse button is released:
       document.onmouseup = null;
