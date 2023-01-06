@@ -55,24 +55,41 @@ body {
     position: absolute;
 
 }
-
-
-
 #image {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
 }
-
-
 #image {
   height: 100px;
   background-image: url(/assets/img/favicon.png);
 }
+.like {
+    display: none;
+    position: relative;
+    right: 0%;
+    margin-left: 50%;
+    margin-top: 0%;
+    max-height: 20px;
+
+}
+.dislike {
+    display: none;
+}
+.more {
+    display: none;
+}
+.less {
+    display: none;
+}
 </style>
 </head>
   <body>
+    <div class="like">
+      <img src="/assets/img/CommunityChest/maps-icon.png" alt="">
+    
+    </div>
           <div style="background-color: #404355c4;" id="image"></div> 
           <div style="margin-top: 150px; margin-left: 25%; margin-right: 25%;" class="vstack gap-3"> 
             <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -30px;">BBQ</p>
@@ -90,6 +107,18 @@ body {
             <a style="font-family:serif; color: goldenrod; font-size: 20px; text-align: center; margin-top: -40px;" href="https://www.rookeryus.com">CommunityChest</a>
             <p style="font-family:serif; font-size: 15px; text-align: center;"></p>
           </div>
+          
+<div class="like">
+  <img src="/assets/img/CommunityChest/maps-icon.png" alt="">
+
+</div>
+<br>
+<div class="dislike">dislike content</div>
+<br>
+<div class="more">more content</div>
+<br>
+<div class="less">less content</div>
+<br>
             <a id="chest" href="/swipe42intro.html"><img src="/assets/img/CommunityChest/faq.png" alt=""></a>
   </body>
 
@@ -111,6 +140,7 @@ function makeDraggable(elmnt) {
   if (dragHandle !== undefined) {
     // if present, the header is where you move the DIV from:
     dragHandle.onmousedown = dragMouseDown;
+
     // dragHandle.ontouchstart = dragMouseDown; //added touch event
     dragHandle.addEventListener("touchstart", dragMouseDown, false);
   } else {
@@ -120,6 +150,11 @@ function makeDraggable(elmnt) {
   }
 
   function dragMouseDown(e) {
+    document.getElementsByClassName('like')[0].style.display = "block";
+    document.getElementsByClassName('dislike')[0].style.display = "block";
+    document.getElementsByClassName('more')[0].style.display = "block";
+    document.getElementsByClassName('less')[0].style.display = "block";
+
     console.log("dragMouseDown called by event: ", e.type);
     // e = e || window.event;
     e.preventDefault();
@@ -127,6 +162,7 @@ function makeDraggable(elmnt) {
     let y;
 
 
+    
     //Get touch or click position
     //https://stackoverflow.com/a/41993300/5078983
     if (
@@ -157,6 +193,7 @@ function makeDraggable(elmnt) {
     // get the mouse cursor position at startup:
     pos3 = x;
     pos4 = y;
+    document.onmouseup = dragStart;
     document.onmouseup = closeDragElement;
     // document.ontouchend = closeDragElement;
     document.addEventListener("touchend", closeDragElement, false);
@@ -165,7 +202,9 @@ function makeDraggable(elmnt) {
     // document.ontouchmove = elementDrag;
     document.addEventListener("touchmove", elementDrag, false);
   }
-
+  function dragStart () {
+    ev.target.appendChild(document.getElementById(test-full-draggable));    
+  }
   function elementDrag(e) {
     e = e || window.event;
     e.preventDefault();
@@ -209,6 +248,11 @@ function makeDraggable(elmnt) {
   }
 
   function closeDragElement() {
+    document.getElementsByClassName('like')[0].style.display = "none";
+    document.getElementsByClassName('dislike')[0].style.display = "none";
+    document.getElementsByClassName('more')[0].style.display = "none";
+    document.getElementsByClassName('less')[0].style.display = "none";
+    window.navigator.vibrate(100);
     console.log("drag end x: " + pos3 + " y:" + pos4);
     // stop moving when mouse button is released:
     document.onmouseup = null;
@@ -223,7 +267,18 @@ function makeDraggable(elmnt) {
    
             
 }
-
+function showlike() {
+        document.getElementsByClassName('like')[0].style.display = "block";
+    }
+function showdislike() {
+        document.getElementsByClassName('dislike')[0].style.display = "block";
+    }    
+function showmore() {
+        document.getElementsByClassName('more')[0].style.display = "block";
+    }    
+function showless() {
+        document.getElementsByClassName('less')[0].style.display = "block";
+    }
 /*******************************
       test js */
 makeDraggable(document.getElementById("test-full-draggable"));

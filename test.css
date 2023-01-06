@@ -1,0 +1,69 @@
+button img {
+    width: 100%;
+  }
+  #chest {
+    background: transparent;
+    border: transparent;
+    position: fixed; 
+    bottom: 10px;
+    left: 10px;
+  }
+  .twobottom {
+      margin-top: 100px;
+  }
+  body {
+    font-family: sans-serif;
+    background-color: rgb(218, 220, 231);
+    
+    /* margin: 0; height: 100%; overflow: hidden; to remove scrolling of window */
+  }
+  
+  #test-full-draggable {
+    background-color: #404355c4;
+      text-align: center;
+      position: absolute;
+  }
+  
+  .full-draggable {
+    cursor: move;
+  }
+  
+  /*******************************
+       test css */
+  
+  .draggable {
+      background-color: #404355c4;
+      text-align: center;
+      position: absolute;
+  
+  }
+  
+  
+  
+  .like {
+      display: none;
+      position: relative;
+      right: 0%;
+      margin-left: 50%;
+      margin-top: 0%;
+      max-height: 20px;
+      max-width: 20px;
+      size: 20px;
+  
+  }
+  .dislike {
+      display: none;
+  }
+  .more {
+      display: none;
+  }
+  .less {
+      display: none;
+  }
+  
+  .drag-over {
+      border: dashed 3px red;
+  }
+  .hide {
+      display: none;
+  }
