@@ -29,7 +29,7 @@ function vibrate(){
       document.getElementsByClassName('more')[0].style.display = "block";
       document.getElementsByClassName('less')[0].style.display = "block";
       window.navigator.vibrate(50);
-  
+      
       console.log("dragMouseDown called by event: ", e.type);
       // e = e || window.event;
       e.preventDefault();
