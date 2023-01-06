@@ -1,17 +1,27 @@
+function append() {  
+    var lang = ["C#", "Java", "Python"];  
+    var ul = document.createElement("ul");  
+    for(i = 0; i < lang.length; i++){  
+      var li = document.createElement("li");  
+      li.innerHTML = lang[i];  
+      ul.appendChild(li);  
+    }  
+    document.getElementById("test-full-draggable").appendChild(ul);  
+  }  
+
 function vibrate(){
     window.navigator.vibrate(100);
   }
-  
-  
-  function makeDraggable(elmnt) {
+
+function makeDraggable(elmnt) {
     let pos1 = 0,
-      pos2 = 0,
-      pos3 = 0,
-      pos4 = 0;
-  
-    let dragHandle = elmnt.getElementsByClassName("drag-handle")[0];
-  
-    if (dragHandle !== undefined) {
+        pos2 = 0,
+        pos3 = 0,
+        pos4 = 0;
+
+let dragHandle = elmnt.getElementsByClassName("drag-handle")[0];
+
+if (dragHandle !== undefined) {
       // if present, the header is where you move the DIV from:
       dragHandle.onmousedown = dragMouseDown;
   
@@ -127,6 +137,16 @@ function vibrate(){
       document.getElementsByClassName('dislike')[0].style.display = "none";
       document.getElementsByClassName('more')[0].style.display = "none";
       document.getElementsByClassName('less')[0].style.display = "none";
+      function append() {  
+        var lang = ["C#", "Java", "Python"];  
+        var ul = document.createElement("ul");  
+        for(i = 0; i < lang.length; i++){  
+          var li = document.createElement("li");  
+          li.innerHTML = lang[i];  
+          ul.appendChild(li);  
+        }  
+        document.getElementById("test-full-draggable").appendChild(ul);  
+      }      
       console.log("drag end x: " + pos3 + " y:" + pos4);
       // stop moving when mouse button is released:
       document.onmouseup = null;
