@@ -15,11 +15,30 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     <link href="test.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="libs/mobile-drag-drop/release/default.css">
+    <script src="libs/mobile-drag-drop/release/index.min.js"></script>
+    
+    <!--optional import of scroll behaviour-->
+    <script src="libs/mobile-drag-drop/release/scroll-behaviour.min.js"></script>
+    
+    <script>
+        // options are optional ;)
+        MobileDragDrop.polyfill({
+            // use this to make use of the scroll behaviour
+            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
+        });
+    </script>
+
+
+
+
   <style>
 
 </style>
 </head>
-  <body>    
+  <body> 
     <div class="like">
       <img src="/assets/img/CommunityChest/R.png" alt="">
     </div>
@@ -37,7 +56,7 @@
             <a href="/cc-city-texas.html" style="font-family:serif; text-align: center; font-size: 15px; margin-top: -40px;">Fort Worth</a>
             <p style="font-family:serif; text-align: center; font-size: 20px;">test 43</p>
             <div style="align-items: center;" class="vstack gap-3">
-            <button id="test-full-draggable" class="align-items: center; draggable full-draggable btn btn-dark btn-lg active" style="text-align: center; font-family:serif; color:goldenrod;" role="button" aria-pressed="true">Swipe42</button>
+            <button id="draggable" class="align-items: center; btn btn-dark btn-lg active" style="text-align: center; font-family:serif; color:goldenrod;" role="button" aria-pressed="true">Swipe42</button>
             </div>
             <button onclick= "vibrate()" style="margin-top: 60px; font-family:serif; color: goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Coupons</button>
             <button onclick= "vibrate()" style="font-family:serif; color: goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Hours</button>
