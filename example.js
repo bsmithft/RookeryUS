@@ -127,7 +127,8 @@ if (dragHandle !== undefined) {
       document.getElementsByClassName('dislike')[0].style.display = "none";
       document.getElementsByClassName('more')[0].style.display = "none";
       document.getElementsByClassName('less')[0].style.display = "none";
-      
+      document.getElementById("draggable");   
+
       console.log("drag end x: " + pos3 + " y:" + pos4);
       // stop moving when mouse button is released:
       document.onmouseup = null;
@@ -138,8 +139,7 @@ if (dragHandle !== undefined) {
       document.removeEventListener("touchmove", elementDrag, false);
       // document.ontouchmove = null; //added touch event
   }
-     
-              
+         
   }
   function showlike() {
           document.getElementsByClassName('like')[0].style.display = "block";
@@ -155,7 +155,7 @@ if (dragHandle !== undefined) {
       }
   /*******************************
         test js */
-  makeDraggable(document.getElementById("test-full-draggable"));
+  makeDraggable(document.getElementById("draggable"));
   
   
   

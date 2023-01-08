@@ -1,73 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>RookeryUS</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link href="test.css" rel="stylesheet">
-
-
-    <link rel="stylesheet" href="libs/mobile-drag-drop/release/default.css">
-    <script src="libs/mobile-drag-drop/release/index.min.js"></script>
-    
-    <!--optional import of scroll behaviour-->
-    <script src="libs/mobile-drag-drop/release/scroll-behaviour.min.js"></script>
-    
-    <script>
-        // options are optional ;)
-        MobileDragDrop.polyfill({
-            // use this to make use of the scroll behaviour
-            dragImageTranslateOverride: MobileDragDrop.scrollBehaviourDragImageTranslateOverride
-        });
-    </script>
-
-
-
-
-  <style>
-
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript - Drag and Drop Demo</title>
+    <link rel="stylesheet" href="test.css">
 </head>
-  <body> 
-    <div class="like">
-      <img src="/assets/img/CommunityChest/R.png" alt="">
-    </div>
-    <br>
-    <div class="dislike"></div>
-    <br>
-    <div class="more"></div>
-    <br>
-    <div class="less"></div>
-    <br>
-          <div style="background-color: #404355c4;" id="image"></div> 
-          <div style="margin-top: 150px; margin-left: 25%; margin-right: 25%;" class="vstack gap-3"> 
-            <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -30px;">BBQ</p>
-            <p style="font-family:serif; text-align: center; color: goldenrod; font-size: 50px; margin-top: -50px;">PALACE</p>
-            <a href="/cc-city-texas.html" style="font-family:serif; text-align: center; font-size: 15px; margin-top: -40px;">Fort Worth</a>
-            <p style="font-family:serif; text-align: center; font-size: 20px;">test 43</p>
-            <div style="align-items: center;" class="vstack gap-3">
-            <button id="draggable" class="align-items: center; btn btn-dark btn-lg active" style="text-align: center; font-family:serif; color:goldenrod;" role="button" aria-pressed="true">Swipe42</button>
-            </div>
-            <button onclick= "vibrate()" style="margin-top: 60px; font-family:serif; color: goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Coupons</button>
-            <button onclick= "vibrate()" style="font-family:serif; color: goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Hours</button>
-            <button href="/cc-fortworth-atf.html" onclick="vibrate()" style="font-family:serif; color:goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Menu</button>
-            <button href="/cc-fortworth-services.html" onclick="vibrate()" style="font-family:serif; color:goldenrod;" class="btn btn-dark btn-lg active" role="button" aria-pressed="true">Catering</button>
-            <p style="font-family:serif; font-size: 15px; text-align: center; margin-top: 60px;">brought to you by</p>
-            <a style="font-family:serif; color: goldenrod; font-size: 20px; text-align: center; margin-top: -40px;" href="https://www.rookeryus.com">CommunityChest</a>
-            <p style="font-family:serif; font-size: 15px; text-align: center;"></p>
-          </div>
-            <a id="chest" href="/swipe42intro.html"><img src="/assets/img/CommunityChest/faq.png" alt=""></a>
-  </body>
-  <script src="test.js"></script>
+
+<body>
+  <div id="bracelet">
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="div2" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img id="drag1" src="/assets/img/CommunityChest/gilbert1.png" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" width="50" height="50">
+</div>
+
+    <script src="test.js"></script>
+</body>
 
 </html>

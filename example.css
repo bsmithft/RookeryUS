@@ -23,12 +23,7 @@ button img {
       position: absolute;
   }
   
-  .full-draggable {
-    cursor: move;
-  }
-  
-  /*******************************
-       test css */
+
   
   .draggable {
       background-color: #404355c4;
@@ -36,7 +31,7 @@ button img {
       position: absolute;
   
   }
-  
+
   
   
   .like {
@@ -58,7 +53,7 @@ button img {
       display: none;
   }
   
-  .drag-over {
+  .box {
       border: dashed 3px red;
   }
   .hide {
