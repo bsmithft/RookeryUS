@@ -1,8 +1,8 @@
 var el = document.getElementById('demo');
 
-el.addEventListener('long-press', function(e) {
-  drag;
+el.addEventListener('long-press', function() {
 });
+window.navigator.vibrate(50);
 function allowDrop(ev) {
     ev.preventDefault();
 }
