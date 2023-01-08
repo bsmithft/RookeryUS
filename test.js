@@ -1,8 +1,14 @@
+var el = document.getElementById('demo');
 
+el.addEventListener('long-press', function(e) {
+  drag;
+});
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
+//document.addEventListener('long-press', function(e) {
+    // do something
+  //});
 function drag(ev) {
     var el = ev.target;
     var parent = el.getAttribute("data-parent");

@@ -6,15 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript - Drag and Drop Demo</title>
     <link rel="stylesheet" href="test.css">
+    <script src="dist/long-press.min.js"></script>
 </head>
 
 <body>
-  <div id="bracelet">
+  <iframe id="demo" data-long-press-delay="500" draggable="true" src="/example.html" frameborder="0"></iframe>
+ <div id="bracelet">
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-</div>
+</div> 
 <br/>
 <br/>
 <br/>
