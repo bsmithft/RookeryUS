@@ -14,3 +14,9 @@ mc.on("panleft panright panup pandown tap press", function(ev) {
     console.log(ev.type +" gesture detected.");
     window.navigator.vibrate(50);
 });
+hammerTime.on('panleft', () => {
+    window.location.href = "https://www.google.com"
+  })
+hammerTime.on("swiperight", () => {
+    window.location.href = "https://www.youtube.com"
+  })
