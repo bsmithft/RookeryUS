@@ -10,8 +10,10 @@
 </head>
 
 <body>
-  <iframe id="demo" data-long-press-delay="300" draggable="true" src="/example.html" frameborder="0"></iframe>
- <div id="bracelet">
+  <div id="div2" class="drop" data-long-press-delay="300" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <iframe  src="/example.html" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" frameborder="0"></iframe>
+</div>
+  <div id="bracelet">
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div> 
