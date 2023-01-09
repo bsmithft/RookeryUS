@@ -1,29 +1,2 @@
-.dock-item {
-  font-size: 14px;
-  font-family: arial;
-  display: inline-block;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  width: 70px;
-  height: 70px;
-  border-radius: 3px;
-  text-align: center;
-  user-select: none;
-}
 
-@keyframes jiggle {
-  0% {
-    transform: rotate(-1deg);
-  }
-  50% {
-    transform: rotate(1deg);
-  }
-}
 
-.dock-item[data-editing="true"] {
-  animation: jiggle 0.2s infinite;
-  border: 1px solid #aaa;
-  box-shadow: 0 0 1px rgba(0,0,0,.85);
-}
