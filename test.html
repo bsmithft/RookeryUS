@@ -10,21 +10,15 @@
 </head>
 
 <body>
-  <div id="div2" class="drop" data-long-press-delay="300" ondrop="drop(event)" ondragover="allowDrop(event)">
-  <iframe  src="/example.html"  style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" frameborder="0"></iframe>
-</div>
-  <div id="bracelet">
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-</div> 
+  <div class="dock-item" data-long-press-delay="500">Press and hold me for .5s</div>
+  <div class="dock-item">Press and hold me for 1.5s</div>
+  <div class="dock-item" data-long-press-delay="5000">Press and hold me for 5s</div>
 <br/>
 <br/>
 <br/>
 <br/>
 <br/>
-<div id="div2" class="drop" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img id="drag1" src="/assets/img/CommunityChest/gilbert1.png" ondragend="dragEnd(event)" draggable="true" ondragstart="drag(event)" width="50" height="50">
-</div>
+
 
     <script src="test.js"></script>
 </body>
