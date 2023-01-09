@@ -1,8 +1,3 @@
-
-function vibrate(){
-    window.navigator.vibrate(50);
-  }
-
 function makeDraggable(elmnt) {
     let pos1 = 0,
         pos2 = 0,
@@ -138,9 +133,11 @@ if (dragHandle !== undefined) {
       document.removeEventListener("touchend", closeDragElement, false);
       document.removeEventListener("touchmove", elementDrag, false);
       // document.ontouchmove = null; //added touch event
-  }
-         
-  }
+  }       
+}
+
+
+
   function showlike() {
           document.getElementsByClassName('like')[0].style.display = "block";
       }

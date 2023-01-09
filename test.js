@@ -1,27 +1,14 @@
-const shopping = document.getElementById('shopping');
-shopping.addEventListener('mousedown' , function() {
-    pressTimer = window.setTimeout(longpressed,1000);
-});
-shopping.addEventListener('mouseup' , function(e) {
-    clearTimeout(pressTimer);
-});
+var myElement = document.getElementById('myElement');
 
-shopping.addEventListener('click' , function(e) {
-    console.log('click');
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+// listen to events...
+mc.on("panleft panright panup pandown tap press", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
 });
-
-function longpressed() {
-    console.log('longpress');
-    window.navigator.vibrate(50);
-    window.addEventListener(
-        'click',
-        captureClick,
-        true // <-- This registers this listener for the capture
-             //     phase instead of the bubbling phase!
-    );
-}
-
-function captureClick(e) {
-    e.stopPropagation(); // Stop the click from being propagated.
-    window.removeEventListener('click', captureClick, true); // cleanup
-}
