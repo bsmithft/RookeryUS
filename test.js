@@ -12,4 +12,5 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft panright panup pandown tap press", function(ev) {
     //myElement.textContent = ;
     console.log(ev.type +" gesture detected.");
+    window.navigator.vibrate(50);
 });
