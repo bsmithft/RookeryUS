@@ -1,6 +1,7 @@
 // listen for long-press events
 document.addEventListener('long-press', function(e) {
     e.target.setAttribute('data-editing', 'true');
+    window.navigator.vibrate(50);
   });
   /*!
    * long-press-event - v2.2.0
