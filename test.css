@@ -17,6 +17,7 @@
   float: left;
 }
 #bracelet {
+  visibility: hidden;
   width:420px;
   height:75px;
   padding: 10px;
