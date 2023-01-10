@@ -12,31 +12,3 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft panright panup pandown tap press", function(ev) {
   myElement.textContent = ev.type +" gesture detected.";
   console.log(ev.type +" gesture detected.")});
-
-mc.on("panleft", function(ev) {
-  console.log(ev.type +" gesture detected.");
-    window.navigator.vibrate(50);
-});
-mc.on("panright", function(ev) {
-  console.log(ev.type +" gesture detected.");
-  window.navigator.vibrate(50);
-
-});
-mc.on("panup", function(ev) {
-  console.log(ev.type +" gesture detected.");
-  window.navigator.vibrate(50);
-
-});
-mc.on("pandown", function(ev) {
-  console.log(ev.type +" gesture detected.");
-  window.navigator.vibrate(50);
-
-});
-mc.on("tap", function(ev) {
-  console.log(ev.type +" gesture detected.");
-  window.navigator.vibrate(50);
-});
-mc.on("press", function(ev) {
-  console.log(ev.type +" gesture detected.");
-  window.navigator.vibrate(50);
-});
