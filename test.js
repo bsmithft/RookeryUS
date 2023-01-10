@@ -13,7 +13,7 @@ mc.on("panleft", function(ev) {
     //myElement.textContent = ;
     console.log(ev.type +" gesture detected.");
     window.navigator.vibrate(50);
-    window.location.href = "https://www.google.com"
+    window.location.href = "geo:124.028582,-29.201930"
 });
 mc.on("panright", function(ev) {
   //myElement.textContent = ;
@@ -40,9 +40,3 @@ mc.on("press", function(ev) {
   console.log(ev.type +" gesture detected.");
   window.navigator.vibrate(50);
 });
-hammerTime.on('panleft', () => {
-    window.location.href = "https://www.google.com"
-  })
-hammerTime.on("swiperight", () => {
-    window.location.href = "https://www.youtube.com"
-  })
