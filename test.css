@@ -1,7 +1,5 @@
-#myElement {
-    width: 30px;
-  }
-#placecard {
-    width: auto;
-    height: auto;
+
+#topImg {
+  width: 100%;
+  height: auto;
 }
