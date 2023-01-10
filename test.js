@@ -8,7 +8,13 @@ var mc = new Hammer(myElement);
 // this will block the vertical scrolling on a touch-device while on the element
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
+
+
 // listen to events...
-mc.on("panleft panright panup pandown tap press", function(ev) {
+mc.on("panleft panright panup pandown tap", function(ev) {
   myElement.textContent = ev.type +" gesture detected.";
   console.log(ev.type +" gesture detected.")});
+  mc.on("press", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.")});
+    window.location.href = 'http://maps.apple.com/?daddr=37.331778,-122.031375'
