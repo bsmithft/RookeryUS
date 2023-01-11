@@ -19,5 +19,5 @@ mc.on("panleft panright panup pandown tap", function(ev) {
 mc.on("press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.")
-    window.location.href = 'tel:+16822396974'
+    window.location.href = 'tel:682-239-6974'
   });
