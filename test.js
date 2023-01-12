@@ -21,4 +21,6 @@ mc.on("press", function(ev) {
     console.log(ev.type +" gesture detected.");
     navigator.vibrate(50);
 });
+
+
     

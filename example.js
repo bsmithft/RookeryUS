@@ -21,13 +21,13 @@ mc.on("press", function(ev) {
     console.log = (window.navigator.geolocation.getCurrentPosition);
     console.log(ev.type +" gesture detected.");
     window.navigator.vibrate(50);
-      });
+     
       
 navigator.permissions.query({name:'geolocation'}).then((result) => {
       if (result.state === 'granted') {
-        showMap();
+        console.log = "location detected.";
       } else if (result.state === 'prompt') {
-        showButtonToEnableMap();
+        console.log = "location not detected.";
       }
       // Don't do anything if the permission was denied.
-    });
+    }); });
