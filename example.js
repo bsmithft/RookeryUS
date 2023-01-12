@@ -18,7 +18,16 @@ mc.on("panleft panright panup pandown tap", function(ev) {
  
 mc.on("press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
+    console.log = (window.navigator.geolocation.getCurrentPosition);
     console.log(ev.type +" gesture detected.");
     window.navigator.vibrate(50);
-    window.location.href = 'tel:+16822396974';
-  });
+      });
+      
+navigator.permissions.query({name:'geolocation'}).then((result) => {
+      if (result.state === 'granted') {
+        showMap();
+      } else if (result.state === 'prompt') {
+        showButtonToEnableMap();
+      }
+      // Don't do anything if the permission was denied.
+    });

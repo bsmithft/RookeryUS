@@ -20,5 +20,5 @@ mc.on("press", function(ev) {
     myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
     navigator.vibrate(50);
-    window.location.href = 'tel:682-239-6974';
-  });
+});
+    
