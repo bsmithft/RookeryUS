@@ -58,4 +58,8 @@
 .schedule {
   font-size: 100%;
 }
-
+.mySlides {
+  max-width: 100%;
+  max-height: 100vw;
+  display:none
+}
