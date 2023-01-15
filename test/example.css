@@ -12,6 +12,7 @@
   background-color: goldenrod;
   font-size: 200%;
   margin-top: 0%;
+  height: 50px;
 }
 .slogan {
   font-size: 100%;
@@ -30,13 +31,13 @@
   justify-content: center;
 }
 .imgleft1 {
-  max-width: 25%;
-  max-height:45%;
+  max-width: 35%;
+  max-height: 0%;
   float: left;
 }
 .imgright1 {
-  max-width: 25%;
-  max-height:45%;
+  max-width: 35%;
+  max-height: 0%;
   float: right;
 }
 .imgleft2 {
