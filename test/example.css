@@ -42,12 +42,12 @@
 .imgleft2 {
   max-width: 25%;
   max-height:45%;
-  float: left;
+  float: center;
 }
 .imgright2 {
   max-width: 25%;
   max-height:45%;
-  float: right;
+  float: center;
 }
 .imgcenter2 {
   max-width: 25%;
@@ -57,3 +57,4 @@
 .schedule {
   font-size: 100%;
 }
+
