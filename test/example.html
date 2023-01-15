@@ -11,6 +11,8 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="/test/example.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
 </head>
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body style="text-align: center;">
@@ -32,7 +34,10 @@
       </div>
       <div>
         <img class="imgleft2" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
-        <img class="imgright2" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
+        <img class="imgright2 w3-hover-opacity" onclick="document.getElementById('menu1').style.display='block'" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
+        <div id="menu1" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'"">
+          <img class="w3-modal-content" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
+        </div>
         <img class="imgcenter2" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg" data-pop-img="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
       </div>
     </div>
