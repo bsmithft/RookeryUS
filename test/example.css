@@ -1,6 +1,15 @@
+#myElement{
+  background-color: aliceblue;
+}
 #logo {
     width: 30%;
   }
+
+
+.container {
+  align-items: center;
+  justify-content: center;
+}
 .name {
   background-color: goldenrod;
   font-size: 50px;
@@ -17,4 +26,13 @@
 .schedule {
   font-size: 14px;
   margin-top: -10px;
+  padding-left: 20px;
+  padding-top: 20%;
+  float: left;
+}
+.dashlogo {
+  width: 40px;
+}
+.imageleft {
+  float: left;
 }
