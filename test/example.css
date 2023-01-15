@@ -4,8 +4,6 @@
 #logo {
     width: 30%;
   }
-
-
 .container {
   align-items: center;
   justify-content: center;
@@ -19,20 +17,28 @@
   font-size: 20px;
   margin-top: -30px;
 }
-.hours {
-  font-size: 12px;
-  margin-top: -10px;
-}
 .schedule {
   font-size: 14px;
-  margin-top: -10px;
-  padding-left: 20px;
-  padding-top: 20%;
-  float: left;
 }
 .dashlogo {
   width: 40px;
 }
-.imageleft {
+.container {
+  align-items: center;
+  justify-content: center;
+}
+
+.imgleft {
+  max-width: 25%;
+  max-height:45%;
   float: left;
+}
+.imgright {
+  max-width: 25%;
+  max-height:45%;
+  float: right;
+}
+.schedule {
+  font-size: 20px;
+
 }
