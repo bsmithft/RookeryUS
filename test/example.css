@@ -14,11 +14,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
-
-img { 
+.logo {
   width: 100%;
   height: auto;
-  opacity: 0.3;
+  opacity: 0.8;
+}
+.gallery {
+  width: 100%;
+  height: auto;
+  opacity: 0.9;
 }
 div.gallery {
   border: 1px solid #ccc;
@@ -46,23 +50,4 @@ div.desc {
   padding: 0 6px;
   float: left;
   width: 33.33333%;
-}
-
-@media only screen and (max-width: 300px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
-}
-
-@media only screen and (max-width: 100px) {
-  .responsive {
-    width: 100%;
-  }
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
 }
