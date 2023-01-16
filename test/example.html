@@ -14,45 +14,43 @@
 </head>
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body style="text-align: center;">
-  <div>
-    <p class="name">PIZZA PLACE</p>
+<hr id="about">
+<!-- About Section -->
+<div class="w3-container w3-padding-32 w3-center">  
+  <h3>Italian Palace </h3><br>
+  <img src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg" alt="Me" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+  <div class="w3-padding-32">
+    <h4><b>I am Who I Am!</b></h4>
+    <h6><i>With Passion For Real, Good Food</i></h6>
+    <p>Just me, myself and I, exploring the universe of unknownment.</p>
   </div>
-    <p class="slogan">New York Style Pizzaria</p>
-    <br>
-    <div class="container">
-      <div>
-        <img class="imgleft1" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
-        <img class="imgright1" src="/assets/img/CommunityChest/examples/Pizza/imageleft.jpeg">
-      </div>
-      <div class="schedule">
-        <p>HOURS OF OPERATION</p>
-        <br>
-        <p>Mon - Thurs</p>
-        <p>8am - 10pm</p>
-        <p>Fri & Sat</p>
-        <p>10am - Midnight</p>
-        <p><img class="dashlogo" src="/assets/img/CommunityChest/examples/doordashlogo.png"></p></div>
-        <p><img class="ubereatslogo" onclick="openModal();currentDiv(1)" src="/assets/img/CommunityChest/examples/menuicon.png"></p>
-      <br>
-      <div class="w3-container">        
-        <div id="myModal" class="w3-modal w3-black">
-         <span class="w3-text-white w3-xxlarge w3-hover-text-grey w3-container w3-display-bottomright" onclick="closeModal()" style="cursor:pointer">×</span>
-         <div class="w3-modal-content">
-          <div class="w3-content" style="max-width:1200px">
-           <img class="mySlides" src="/assets/img/CommunityChest/examples/Pizza/menu1.jpg" style="width:100%">
-           <img class="mySlides" src="/assets/img/CommunityChest/examples/Pizza/menu2.jpg" style="width:100%">
-           <img class="mySlides" src="/assets/img/CommunityChest/examples/Pizza/menu3.jpg" style="width:100%">
-           <div class="w3-row w3-black w3-center">
-            <div class="w3-display-container">
-             <p id="caption"></p>
-             <span class="w3-display-left w3-btn" onclick="plusDivs(-1)">❮</span>
-             <span class="w3-display-right w3-btn" onclick="plusDivs(1)">❯</span>
-            </div>
-           </div>
-          </div>
-         </div>
-        </div>
-        </div>
+</div>
+<hr>
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-third">
+      <img src="/assets/img/CommunityChest/examples/menuicon.png" alt="ratings" style="width:60%">
     </div>
+    <div class="w3-third">
+      <img src="/assets/img/CommunityChest/examples/menuicon.png" alt="menus" style="width:60%">
+    </div>
+    <div class="w3-third">
+      <img src="/assets/img/CommunityChest/examples/menuicon.png" alt="gallery" style="width:60%">
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
 </body>
 </html><script src="/test/example.js"></script>
