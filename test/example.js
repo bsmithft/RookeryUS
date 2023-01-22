@@ -5,6 +5,7 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("tap", function(ev) {
   console.log(ev.type +" gesture detected.")});
   window.navigator.vibrate(30);
+  window.location.href='www.youtube.com'
 
 mc.on("press", function(ev) {
   console.log(ev.type +" gesture detected.")});
