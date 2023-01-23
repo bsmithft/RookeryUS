@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html id="myElement" lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Classic Login Form Example</title>
-  <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet"><link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css?family=Assistant:400,700" rel="stylesheet"><link rel="stylesheet" href="/test/loginstyle.css">
 
 </head>
 <body>
@@ -27,7 +27,14 @@
   <p>Gradient: <a href='https://uigradients.com/#Turquoiseflow'>https://uigradients.com/#Turquoiseflow</a></p>
 </footer>
 <!-- partial -->
-  <script  src="./script.js"></script>
+  <script>
+    var btnLogin = document.getElementById('do-login');
+var idLogin = document.getElementById('login');
+var username = document.getElementById('username');
+btnLogin.onclick = function(){
+  idLogin.innerHTML = '<p>We\'re happy to see you again, </p><h1>' +username.value+ '</h1>';
+}
+  </script>
 
 </body>
 </html>
