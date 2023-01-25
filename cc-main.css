@@ -12,7 +12,7 @@ button {
     margin-right: 15%;
 }
 .btn1 {
-    box-shadow: 0px 5px 10px rgb(47, 3, 42) ;
+    box-shadow: 0px 2px 0px royalblue ;
     background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;   
@@ -20,14 +20,14 @@ button {
 }
 
 .btn2 {
-    box-shadow: 0px 5px 10px rgb(82, 41, 116) ;
+    box-shadow: 0px 2px 0px royalblue  ;
     background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 10px;
 }
 .btn3 {
-    box-shadow: 0px 5px 10px rgb(200, 46, 72) ;
+    box-shadow: 0px 2px 0px royalblue  ;
     background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@ button {
 
 }
 .btn4 {
-    box-shadow: 0px 5px 10px rgb(91, 87, 13) ;
+    box-shadow: 0px 2px 0px royalblue ;
     background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -65,7 +65,7 @@ button {
 #category {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
     color: bisque;
-    font: .6em Georgia, serif;
+    font: .4em Georgia, serif;
 }
 #footer {
     font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: bisque;
