@@ -2,19 +2,13 @@ button img {
     width: 100%;
   }
   #chest {
-    background: transparent;
-    border: transparent;
     position: absolute; 
     bottom: 10px;
     left: 10px;
   }
 button {
-<<<<<<< Updated upstream
-    margin-top: -5px; font-family: Assistant, sans-serif; color:rgb(8, 6, 2);
-=======
-    margin-left: 20px; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
-    margin-right: 20px;
->>>>>>> Stashed changes
+    margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
+    margin-right: 15%;
 }
 #btn1 {
     box-shadow: 10px 5px 5px black ;
@@ -47,6 +41,7 @@ button {
 }
 #name {
     font-family: Assistant, sans-serif; text-align: center; color: bisque; font-size: 50px; margin-top: -10px;
+
 }
 #location {
     font-family:Assistant, sans-serif; text-align: center; font-size: 15px; margin-top: -10px; color: bisque;
