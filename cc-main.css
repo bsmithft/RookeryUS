@@ -1,3 +1,4 @@
+
 button img {
     width: 100%;
   }
@@ -10,58 +11,66 @@ button {
     margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
     margin-right: 15%;
 }
-#btn1 {
-    box-shadow: 10px 5px 5px black ;
-    border-color: black;
-    color: bisque;
-    margin-bottom: 10px;
-}
-#btn2 {
-    box-shadow: 10px 5px 5px black ;
-    border-color: black;
-    color: bisque;
-    margin-bottom: 10px;
-}
-#btn3 {
-    box-shadow: 10px 5px 5px black ;
-    border-color: black;
-    color: bisque;
-    margin-bottom: 10px;
-}
-#btn4 {
-    box-shadow: 10px 5px 5px black ;
-    border-color: black;
-    color: bisque;
+.btn1 {
+    box-shadow: 0px 5px 10px rgb(47, 3, 42) ;
+    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
     margin-bottom: 10px;
 }
 
-
-#welcome {
-    font-family: Assistant, sans-serif; text-align: center; font-size: 20px; margin-top: 10px; color: bisque;
+.btn2 {
+    box-shadow: 0px 5px 10px rgb(82, 41, 116) ;
+    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
+.btn3 {
+    box-shadow: 0px 5px 10px rgb(200, 46, 72) ;
+    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+
+}
+.btn4 {
+    box-shadow: 0px 5px 10px rgb(91, 87, 13) ;
+    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+
+}
+
 #name {
-    font-family: Assistant, sans-serif; text-align: center; color: bisque; font-size: 50px; margin-top: -10px;
-
+    font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
+    }
+#welcome {
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    color: bisque;
+    font: .59em Georgia, serif;
 }
+#community {
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    color: bisque;
+    font: 1.5em Georgia, serif;
+}
+
 #location {
-    font-family:Assistant, sans-serif; text-align: center; font-size: 15px; margin-top: -10px; color: bisque;
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    color: bisque;
+    font: .57em Georgia, serif;
 }
 #category {
-    font-family:Assistant, sans-serif; text-align: center; font-size: 20px; margin-top: -5px; color: bisque;
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    color: bisque;
+    font: .6em Georgia, serif;
 }
-
 #footer {
     font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: bisque;
 }
 
 #link {
     font-family:Assistant, sans-serif; color: bisque; font-size: 20px; text-align: center; bottom: 5px;
-}
-
-body {
-    background: 
-    -webkit-linear-gradient(to bottom, #6d7473, #136a8a);
-  background: 
-    linear-gradient(to bottom, #DAA520, #600a1e);
-
 }
