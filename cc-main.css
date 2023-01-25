@@ -9,7 +9,12 @@ button img {
     left: 10px;
   }
 button {
+<<<<<<< Updated upstream
     margin-top: -5px; font-family: Assistant, sans-serif; color:rgb(8, 6, 2);
+=======
+    margin-left: 20px; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
+    margin-right: 20px;
+>>>>>>> Stashed changes
 }
 #btn1 {
     box-shadow: 10px 5px 5px black ;
