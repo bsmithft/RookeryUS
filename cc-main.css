@@ -44,20 +44,22 @@ button {
 .buttons {
     box-shadow: 0px 2px 8px lightslategrey;
     padding: 30px;
-    margin-top: -10%;
+    margin-top: -10PX;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 #community {
     color: goldenrod;
     box-shadow: 0px 2px 8px lightslategray ;
     font: 100% sans-serif;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px #000000;
     padding: 30px;
-    margin-top: 10%;
+    margin-top: 20PX;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 #category {
     color: grey;
@@ -69,14 +71,14 @@ button {
     font-size: 12px; 
     text-align: center; 
     color: grey;
-    margin-bottom: -10%;
+    margin-bottom: -10PX;
 }
 #link {
     font-family:Assistant, sans-serif; color: grey; font-size: 20px; text-align: center;
-    margin-bottom: 5%;
+    margin-bottom: 5PX;
 }
 .btn4 {
     box-shadow: 0px 2px 8px lightslategray ;
     font-size: 14px;
-    margin-top: -10%;
+    margin-top: -10PX;
 }
