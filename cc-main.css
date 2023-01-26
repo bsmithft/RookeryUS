@@ -7,6 +7,8 @@ button img {
     left: 10px;
 }
 button {
+    outline: 10px double rgb(183, 182, 182);
+
     background-color: grey;
     margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
     margin-right: 15%;
@@ -44,24 +46,13 @@ button {
     font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
     }
 #community {
-    text-shadow: 1px 1px 2px goldenrod, 0 0 0.03em rgb(82, 82, 83);
-    background-image: -webkit-linear-gradient(left, rgb(189, 120, 131), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px goldenrod, 0 0 0.8em rgb(82, 82, 83);
     color: goldenrod;
     font: 100% sans-serif;
     margin-top: 20%;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10%;
-}
-#location {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(116, 143, 224);
-    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: bisque;
-    font: 30% sans-serif;
 }
 #category {
     color: grey;
