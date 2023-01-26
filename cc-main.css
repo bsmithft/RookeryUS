@@ -44,12 +44,6 @@ button {
 #name {
     font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
     }
-#welcome {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
-    color: bisque;
-    font: .59em Georgia, serif;
-    margin-top: 10%;
-}
 #community {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(117, 142, 218);
     background-image: -webkit-linear-gradient(left, rgb(189, 120, 131), rgb(231, 234, 231));
@@ -57,6 +51,7 @@ button {
     -webkit-text-fill-color: transparent;
     color: bisque;
     font: 1.3em Georgia, serif;
+    margin-top: 10%;
 }
 #location {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(116, 143, 224);
@@ -69,12 +64,12 @@ button {
 #category {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
     color: bisque;
-    font: .4em Georgia, serif;
+    font: .3em Georgia, serif;
 
 }
 #footer {
     font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: bisque;
 }
 #link {
-    font-family:Assistant, sans-serif; color: bisque; font-size: 20px; text-align: center; bottom: 5px;
+    font-family:Assistant, sans-serif; color: bisque; font-size: 20px; text-align: center;
 }
