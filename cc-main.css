@@ -30,14 +30,13 @@ button {
 .btn3 {
     box-shadow: 0px 2px 8px lightslategray  ;
     font-size: 24px;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     margin-left: 25%;
     margin-right: 25%;
 }
 .btn4 {
     box-shadow: 0px 2px 8px lightslategray ;
     font-size: 14px;
-    margin-bottom: 10px;
     margin-left: 35%;
     margin-right: 35%;
 }
@@ -45,15 +44,16 @@ button {
     font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
     }
 #community {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(117, 142, 218);
+    text-shadow: 1px 1px 2px goldenrod, 0 0 0.03em rgb(82, 82, 83);
     background-image: -webkit-linear-gradient(left, rgb(189, 120, 131), rgb(231, 234, 231));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: bisque;
+    color: goldenrod;
     font: 100% sans-serif;
-    margin-top: 10%;
+    margin-top: 20%;
     margin-left: 10%;
     margin-right: 10%;
+    margin-bottom: 10%;
 }
 #location {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(116, 143, 224);
@@ -61,17 +61,18 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: bisque;
-    font: .57em sans-serif;
+    font: 30% sans-serif;
 }
 #category {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
-    color: bisque;
+    color: grey;
     font: .3em sans-serif;
 
 }
 #footer {
-    font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: bisque;
+    font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: grey;
+    margin-top: 30px;
 }
 #link {
-    font-family:Assistant, sans-serif; color: bisque; font-size: 20px; text-align: center;
+    font-family:Assistant, sans-serif; color: grey; font-size: 20px; text-align: center;
+    margin-top: -30px;
 }
