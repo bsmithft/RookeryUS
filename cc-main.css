@@ -50,7 +50,7 @@ button {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: bisque;
-    font: 1.3em sans-serif;
+    font: 100% sans-serif;
     margin-top: 10%;
     margin-left: 10%;
     margin-right: 10%;
