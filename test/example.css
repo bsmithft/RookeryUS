@@ -7,7 +7,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   position: relative;
   margin-top: -10%;
 }
-
 .center {
   position: absolute;
   top: 50%;
@@ -30,25 +29,20 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 div.gallery {
   border: 1px solid #ccc;
 }
-
 div.gallery:hover {
   border: 1px solid #777;
 }
-
 div.gallery img {
   width: 100%;
   height: auto;
 }
-
 div.desc {
   padding: 15px;
   text-align: center;
 }
-
 * {
   box-sizing: border-box;
 }
-
 .responsive {
   padding: 0 6px;
   float: left;

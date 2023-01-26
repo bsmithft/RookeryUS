@@ -1,48 +1,46 @@
-
 button img {
     width: 100%;
-  }
-  #chest {
+}
+#chest {
     position: absolute; 
     bottom: 10px;
     left: 10px;
-  }
+}
 button {
+    background-color: grey;
     margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
     margin-right: 15%;
+    border-radius: 8px;
+    border: none;
 }
 .btn1 {
-    box-shadow: 0px 2px 0px royalblue ;
-    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+    box-shadow: 0px 2px 8px lightslategray ;
+    font-size: 24px;
     margin-bottom: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
-
 .btn2 {
-    box-shadow: 0px 2px 0px royalblue  ;
-    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    box-shadow: 0px 2px 8px lightslategray  ;
+    font-size: 24px;
     margin-bottom: 10px;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .btn3 {
-    box-shadow: 0px 2px 0px royalblue  ;
-    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 10px;
-
+    box-shadow: 0px 2px 8px lightslategray  ;
+    font-size: 24px;
+    margin-bottom: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .btn4 {
-    box-shadow: 0px 2px 0px royalblue ;
-    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    box-shadow: 0px 2px 8px lightslategray ;
+    font-size: 14px;
     margin-bottom: 10px;
-
+    margin-left: 35%;
+    margin-right: 35%;
 }
-
 #name {
     font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
     }
@@ -50,15 +48,21 @@ button {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
     color: bisque;
     font: .59em Georgia, serif;
+    margin-top: 10%;
 }
 #community {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(117, 142, 218);
+    background-image: -webkit-linear-gradient(left, rgb(189, 120, 131), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: bisque;
     font: 1.3em Georgia, serif;
 }
-
 #location {
-    text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
+    text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(116, 143, 224);
+    background-image: -webkit-linear-gradient(left, rgb(200, 46, 72), rgb(231, 234, 231));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: bisque;
     font: .57em Georgia, serif;
 }
@@ -66,11 +70,11 @@ button {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em royalblue;
     color: bisque;
     font: .4em Georgia, serif;
+
 }
 #footer {
     font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: bisque;
 }
-
 #link {
     font-family:Assistant, sans-serif; color: bisque; font-size: 20px; text-align: center; bottom: 5px;
 }
