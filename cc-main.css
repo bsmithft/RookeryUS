@@ -52,6 +52,8 @@ button {
     color: bisque;
     font: 1.3em Georgia, serif;
     margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 #location {
     text-shadow: 1px 1px 2px tan, 0 0 0.03em rgb(116, 143, 224);
