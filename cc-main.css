@@ -1,3 +1,4 @@
+
 button img {
     width: 100%;
 }
@@ -6,53 +7,57 @@ button img {
     bottom: 10px;
     left: 10px;
 }
+
 button {
     outline: 10px double rgb(183, 182, 182);
-
-    background-color: grey;
+    background-color: rgb(63, 63, 63);
     margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
     margin-right: 15%;
     border-radius: 8px;
     border: none;
 }
 .btn1 {
-    box-shadow: 0px 2px 8px lightslategray ;
+    box-shadow: 0px 2px 8px lightslategrey;
     font-size: 24px;
+    margin-top: 10%;
     margin-bottom: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 .btn2 {
     box-shadow: 0px 2px 8px lightslategray  ;
     font-size: 24px;
     margin-bottom: 10px;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 .btn3 {
     box-shadow: 0px 2px 8px lightslategray  ;
     font-size: 24px;
     margin-bottom: 10%;
-    margin-left: 25%;
-    margin-right: 25%;
 }
-.btn4 {
-    box-shadow: 0px 2px 8px lightslategray ;
-    font-size: 14px;
-    margin-left: 35%;
-    margin-right: 35%;
-}
+
 #name {
-    font-family: Assistant, sans-serif; text-align: center; color: rgba(26, 199, 52, 0.699); font-size: 50px; margin-top: -10px;
+    position: relative;
+    z-index: 2;
+    font-family: Assistant, sans-serif; 
+    text-align: center; 
+    color: rgba(26, 199, 52, 0.699); 
+    font-size: 50px; 
     }
-#community {
-    text-shadow: 1px 1px 2px goldenrod, 0 0 0.8em rgb(82, 82, 83);
-    color: goldenrod;
-    font: 100% sans-serif;
-    margin-top: 20%;
+.buttons {
+    box-shadow: 0px 2px 8px lightslategrey;
+    padding: 30px;
+    margin-top: -10%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 60px;
+}
+#community {
+    color: goldenrod;
+    box-shadow: 0px 2px 8px lightslategray ;
+    font: 100% sans-serif;
+    padding: 30px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 60px;
 }
 #category {
     color: grey;
@@ -60,10 +65,18 @@ button {
 
 }
 #footer {
-    font-family:Assistant, sans-serif; font-size: 15px; text-align: center; color: grey;
-    margin-top: 30px;
+    font-family:Assistant, sans-serif; 
+    font-size: 12px; 
+    text-align: center; 
+    color: grey;
+    margin-bottom: -10%;
 }
 #link {
     font-family:Assistant, sans-serif; color: grey; font-size: 20px; text-align: center;
-    margin-top: -30px;
+    margin-bottom: 5%;
+}
+.btn4 {
+    box-shadow: 0px 2px 8px lightslategray ;
+    font-size: 14px;
+    margin-top: -10%;
 }
