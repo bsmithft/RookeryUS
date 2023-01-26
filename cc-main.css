@@ -9,8 +9,8 @@ button img {
 }
 
 button {
-    outline: 10px double rgb(183, 182, 182);
-    background-color: rgb(63, 63, 63);
+    outline: 10px double lightslategray;
+    background-color: gray;
     margin-left: 15%; margin-top: -5px; font-family: Assistant, sans-serif; color:goldenrod;
     margin-right: 15%;
     border-radius: 8px;
@@ -38,7 +38,6 @@ button {
     z-index: 2;
     font-family: Assistant, sans-serif; 
     text-align: center; 
-    color: rgba(26, 199, 52, 0.699); 
     font-size: 50px; 
     }
 .buttons {
