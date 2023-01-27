@@ -1,17 +1,16 @@
 
-html {
-    height: 100vh;
-  }
   body {
+    margin: 0;
+    padding: 0;
     background-image: url("/assets/img/CommunityChest/background2.jpg");
-    min-height: 100vh;
+    height: 100vh;
   }
 
 button {
     outline: 7px double lightslategray;
     background-color: rgba(40, 59, 95, 0.8);
     margin-left: 5%; 
-    margin-top: -5px; 
+    margin-top: 10%; 
     font-family: Assistant, sans-serif; 
     color:goldenrod;
     margin-right: 5%;
@@ -20,12 +19,10 @@ button {
 }
 .btn1 {
     font-size: 7vw;
-    margin-top: 10%;
-    margin-bottom: 30px;
+    margin-top: 40%;
 }
 .btn2 {
     font-size: 7vw;
-    margin-bottom: 30px;
 }
 .btn3 {
     font-size: 7vw;
@@ -53,16 +50,28 @@ button {
     box-shadow: 0px 2px 8px grey ;
     font: 10vw sans-serif;
     font-weight: 900;
-    padding-top: 8px;
-    margin-top: 40PX;
+    margin-top: 10%;
+    padding-top: 1%;
     margin-left: 7%;
     margin-right: 7%;
-    border-radius:25px;
+    border-radius:5%;
+    padding-bottom: 8%;
+    color: goldenrod;
+    white-space: nowrap;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    text-shadow: 1px 1px 0 grey, 1px 2px 0 grey, 1px 3px 0 grey, 1px 4px 0 grey,
+      1px 5px 0 grey, 1px 6px 0 grey, 1px 7px 0 grey, 1px 8px 0 grey,
+      5px 13px 15px black;
     
 }
 #chest {
-    margin-top: -60px;
-    max-width: 60px;
+    margin-top: -3%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 110%;
+    font-size: 1rem;
+    text-align: center;
 }
 #category {
     color: grey;
