@@ -3,7 +3,7 @@ html {
     height: 100%;
   }
   body {
-    background-image: url("/assets/img/CommunityChest/background.jpeg");
+    background-image: url("/assets/img/CommunityChest/background2.jpg");
     min-height: 100%;
   }
 button img {
@@ -17,7 +17,7 @@ button img {
 
 button {
     outline: 10px double lightslategray;
-    background-color: rgb(82, 58, 58, 0.8);
+    background-color: rgba(40, 59, 95, 0.8);
     margin-left: 15%; 
     margin-top: -5px; 
     font-family: Assistant, sans-serif; 
@@ -29,11 +29,11 @@ button {
 .btn1 {
     font-size: 5vw;
     margin-top: 10%;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .btn2 {
     font-size: 5vw;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .btn3 {
     font-size: 5vw;
@@ -56,19 +56,19 @@ button {
 }
 #community {
     text-align: center; 
-    background-color: rgb(82, 58, 58, 0.9);
+    background-color: rgba(40, 59, 95, 0.8);
     color: goldenrod;
     box-shadow: 0px 2px 8px grey ;
     font: 10vw sans-serif;
-    font-weight: bolder;
-    text-shadow: 2px 2px 4px lightslategray;
-    padding: 30px;
+    font-style: oblique;
+    font-weight: ;
+    padding: 5px;
     margin-top: 40PX;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
     margin-bottom: 30px;
     border-radius:25px;
-
+    
 }
 #category {
     color: grey;
