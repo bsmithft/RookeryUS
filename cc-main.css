@@ -16,7 +16,7 @@ button img {
 }
 
 button {
-    outline: 10px double lightslategray;
+    outline: 7px double lightslategray;
     background-color: rgba(40, 59, 95, 0.8);
     margin-left: 15%; 
     margin-top: -5px; 
@@ -55,6 +55,7 @@ button {
     margin-bottom: 30px;
 }
 #community {
+    outline: 10px double lightslategray;
     text-align: center; 
     background-color: rgba(40, 59, 95, 0.8);
     color: goldenrod;
