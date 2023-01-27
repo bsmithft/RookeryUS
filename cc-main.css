@@ -1,11 +1,10 @@
-
-  body {
+body {
     margin: 0;
     padding: 0;
     background-image: url("/assets/img/CommunityChest/background2.jpg");
-    height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
   }
-
 button {
     outline: 7px double lightslategray;
     background-color: rgba(40, 59, 95, 0.8);
