@@ -9,7 +9,6 @@ button {
     outline: 7px double lightslategray;
     background-color: rgba(40, 59, 95, 0.8);
     margin-left: 5%; 
-    margin-top: 10%; 
     font-family: Assistant, sans-serif; 
     color:goldenrod;
     margin-right: 5%;
@@ -18,15 +17,24 @@ button {
 }
 .btn1 {
     font-size: 7vw;
-    margin-top: 40%;
 }
 .btn2 {
+    margin-top: 15%;
     font-size: 7vw;
 }
 .btn3 {
+    margin-top: 15%;
+
     font-size: 7vw;
 }
-
+#directions {
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+    margin-top: 30%;
+    color: goldenrod;
+    font-weight: 600;
+}
 #name {
     position: relative;
     z-index: 2;
