@@ -38,6 +38,10 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
+.w3-dropdown-click-mine {
+  position:relative;
+  cursor:pointer;
+}
 .menubox {
   font-size: small;
   margin-right: 5vw;
