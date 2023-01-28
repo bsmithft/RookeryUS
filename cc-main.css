@@ -16,16 +16,18 @@ button {
     border: none;
 }
 .btn1 {
+    box-shadow: 5px 10px 8px #888888;
     margin-top: 10%;
     font-size: 7vw;
 }
 .btn2 {
+    box-shadow: 5px 10px 8px #888888;
     margin-top: 15%;
     font-size: 7vw;
 }
 .btn3 {
+    box-shadow: 5px 10px 8px #888888;
     margin-top: 15%;
-
     font-size: 7vw;
 }
 #directions {
@@ -34,7 +36,7 @@ button {
     text-align: center;
     margin-top: 30%;
     color: goldenrod;
-    font-weight: 600;
+    font-weight: 700;
 }
 #name {
     position: relative;
@@ -51,6 +53,8 @@ button {
     margin-bottom: 30px;
 }
 #community {
+    box-shadow: 5px 10px 8px #888888;
+
     outline: 10px double lightslategray;
     text-align: center; 
     background-color: rgba(40, 59, 95, 0.8);
