@@ -38,9 +38,29 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
+
 .w3-dropdown-click-mine {
   position:relative;
   cursor:pointer;
+}
+.w3-dropdown-content-mine {
+  cursor:auto;
+  color:#000;
+  background-color:#fff;
+  display:none;
+  position:absolute;
+  min-width:500px;
+  margin:0;
+  padding:0;
+  z-index:1
+}
+.w3-bar-item-mine {
+  padding:8px 16px;
+  float:left;
+  width:auto;
+  border:none;
+  display:block;
+  outline:0
 }
 .menubox {
   font-size: small;
