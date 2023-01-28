@@ -8,7 +8,7 @@ body {
   background-color: aliceblue;
 }
 .namebox {
-  background-color: darkolivegreen;
+  background-color: rgb(43, 99, 131);
   background-size: cover;
   height: 10vh;
   margin-right: 5vw;
@@ -17,6 +17,7 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 #dba {
+  color: aliceblue;
   font-size: xx-large;
   padding-top: 2vh;
   text-align: center;
@@ -44,25 +45,23 @@ body {
   cursor:pointer;
 }
 .w3-dropdown-content-mine {
-
   cursor:auto;
-  color:rgb(192, 16, 16);
-  background-color:#fff;
+  color:rgb(0, 64, 138);
+  background-color:rgba(255, 255, 255, 0.0);
   display:none;
-  position:absolute;
+  position:inherit;
   min-width:500px;
-  margin:0;
+  left: 50%;
   padding:0;
   z-index:1
 }
 .w3-bar-item-mine {  
   text-align: center;
   padding:8px 16px;
-  float:inline;
   width:auto;
   border:none;
   display:block;
-  outline:0
+
 }
 .menubox {
   font-size: small;
