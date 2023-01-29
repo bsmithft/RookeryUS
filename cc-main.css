@@ -123,6 +123,7 @@ button {
     display:block;
   }
   .instructionbox {
+    color:rgb(56, 82, 100);
     text-align: center;
     border-radius: 4px;
     font-size: small;
@@ -134,5 +135,6 @@ button {
   
   }
 #explain {
+    color:rgb(56, 82, 100);
     font-size: 2vh;
 }
