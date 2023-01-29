@@ -8,6 +8,7 @@
   <meta content="" name="keywords">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -24,9 +25,17 @@
             <p>COMMUNITY </p>
             <img id="chest" src="/assets/img/CommunityChest/chest.png" alt="">      
           </div>
-          <div>
-            <p id="directions">CHOOSE A CATEGORY BELOW TO BEGIN YOUR JOURNEY</p>
-          </div>
+          <div class="w3-dropdown-click-mine">
+            <div onclick="myFunction1()" class="instructionbox">
+            <h2>HOW IT WORKS! </h2>
+              <div id="Demo1" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom">
+                <a href="#" class="w3-bar-item-mine">you're</a>
+                <a href="#" class="w3-bar-item-mine">gay</a>
+                <a href="#" class="w3-bar-item-mine">you like weiner</a>
+              </div>
+              <h4 id="explain">click here to begin the adventure</h4>
+            </div>
+            </div>
           <div class="buttons vstack">
             <button onclick="window.location.href='/test/example.html', vibrate()" class="btn1" role="button" aria-pressed="true">Entertainment </button>
             <button onclick="window.location.href='/test/example.html', vibrate()" class="btn2" role="button" aria-pressed="true">Food and Drinks </button>
@@ -36,5 +45,15 @@
             <a id="faq" href="/test/example.html" onclick="vibrate()" role="button" aria-pressed="true"> F.A.Q. </a>
             <span id="link" onclick="window.location.href='/test/example.html', vibrate()">theRookeryUS </span>
           </div>
+          <script>
+              function myFunction1() {
+    var x = document.getElementById("Demo1");
+    if (x.className.indexOf("w3-show") == -1) { 
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+          </script>
   </body>
 </html>

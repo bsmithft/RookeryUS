@@ -103,4 +103,37 @@ button {
     font-weight: 900;
     font-size: bzclarge;
 }
-
+.w3-dropdown-click-mine {
+    position:relative;
+    cursor:pointer;
+  }
+  .w3-dropdown-content-mine {
+    text-align: center;
+    cursor:auto;
+    color:rgb(0, 64, 138);
+    background-color:rgba(255, 255, 255, 0.0);
+    display:none;
+    padding:0;
+    z-index:1
+  }
+  .w3-bar-item-mine {  
+    text-align: center;
+    padding:8px 16px;
+    width:auto;
+    border:none;
+    display:block;
+  }
+  .instructionbox {
+    text-align: center;
+    border-radius: 4px;
+    font-size: small;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+    box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  
+  }
+#explain {
+    font-size: 2vh;
+}
