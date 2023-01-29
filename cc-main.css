@@ -71,7 +71,6 @@ button {
     text-shadow:  rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 #chest {
-    opacity: 0.8;
     margin-top: 9%;
     position: absolute;
     transform: translate(-50%, -50%);
