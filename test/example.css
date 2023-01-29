@@ -45,13 +45,11 @@ body {
   cursor:pointer;
 }
 .w3-dropdown-content-mine {
+  text-align: center;
   cursor:auto;
   color:rgb(0, 64, 138);
   background-color:rgba(255, 255, 255, 0.0);
   display:none;
-  position:inherit;
-  min-width:500px;
-  left: 50%;
   padding:0;
   z-index:1
 }
