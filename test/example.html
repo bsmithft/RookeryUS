@@ -15,7 +15,10 @@
 </head>
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body>
-<hr id="about">
+  <div id="Demo2" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom" style="width:300px">
+    <img id="menu1" src="/assets/img/CommunityChest/examples/Pizza/menu1.jpg" alt="Norway" style="width:100%">
+  </div>
+<p id="about">
 <!-- About Section -->
 <div class="namebox">
   <p id="dba">Paulo's Pizzaria</p> </div>
@@ -25,9 +28,9 @@
 </div>
 
 <div class="w3-dropdown-click-mine">
-<div onclick="myFunction()" class="instructionbox">
+<div onclick="myFunction1()" class="instructionbox">
 <h2>Hours of Operation </h2>
-  <div id="Demo" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom">
+  <div id="Demo1" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom">
     <a href="#" class="w3-bar-item-mine">you're</a>
     <a href="#" class="w3-bar-item-mine">gay</a>
     <a href="#" class="w3-bar-item-mine">you like weiner</a>
@@ -36,39 +39,35 @@
 <h4>mon - thrus 12am - fuck off</h4>
 </div>
 </div>
-<div class="w3-dropdown-click">
-  <img src="/assets/img/CommunityChest/examples/menuicon.png" alt="Norway" style="width:20%">
-  <div class="w3-dropdown-content w3-animate-zoom" style="width:300px">
-    <img src="/assets/img/CommunityChest/examples/Pizza/menu1.jpg" alt="Norway" style="width:100%">
-  </div>
+<div class="w3-dropdown-click-mine">
+  <img onclick="myFunction2()" src="/assets/img/CommunityChest/examples/menuicon.png" alt="Norway" style="width:20%">
+
 </div>
 
-<div class="menubox">
-<div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="/assets/img/CommunityChest/examples/Pizza/menu1.jpg">
-      <img id="menu" src="/assets/img/CommunityChest/examples/menuicon.png" alt="Cinque Terre" width="600" height="400">
-    </a>
-  </div>
-</div>
-</div>
-<div id="link">
-  <p id="faq" href="/cc-fortworth-services.html" onclick="vibrate()" role="button" aria-pressed="true">F.A.Q. </p>
-  <span href="https://www.rookeryus.com">theRookeryUS </span>
-</div>
+
+
 
 
 <!-- End page content -->
-</div>
+
 <script>
-  function myFunction() {
-    var x = document.getElementById("Demo");
+  function myFunction1() {
+    var x = document.getElementById("Demo1");
     if (x.className.indexOf("w3-show") == -1) { 
       x.className += " w3-show";
     } else {
       x.className = x.className.replace(" w3-show", "");
     }
   }
+  function myFunction2() {
+    var x = document.getElementById("Demo2");
+    if (x.className.indexOf("w3-show-mine") == -1) { 
+      x.className += " w3-show-mine";
+    } else {
+      x.className = x.className.replace(" w3-show-mine", "");
+    }
+  }
   </script>
 </body>
+
 </html><script src="/test/example.js"></script>
