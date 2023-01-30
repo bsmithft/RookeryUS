@@ -114,7 +114,13 @@ body {
   display: flex;
   align-items: center;
   min-height: calc(100% - 0rem);
-  top: 5px;
+  margin-top: -190px;
+}
+#howto {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 0rem);
+  margin-top: -140px;
 }
 #faq {
   margin-bottom: .05vh;
