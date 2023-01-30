@@ -140,7 +140,7 @@ body {
   position: absolute;
   top: -400%; 
 }
-
+.w3-animate-zoom-mine {animation:animatezoom 0.4s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
 .btn1 {
   background-color: rgb(255, 255, 255, 0.2);
   color:rgb(56, 82, 100);
