@@ -1,5 +1,7 @@
 html {
   background-image: url(/assets/img/CommunityChest/citytest.jpg);
+  max-height: 100vh;
+  max-width: 100vw;
 }
 body {
   text-align: center;
@@ -17,10 +19,27 @@ body {
   margin-bottom: 5vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+.logobox {
+  font-weight: 800;
+  border-radius: 8px;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  height: 15vh;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
 #dba {
   color: aliceblue;
   font-size: xx-large;
   padding-top: 2vh;
+  text-align: center;
+}
+#community {
+  position: relative;
+  color: goldenrod;
+  font-size: 6.25vh;
   text-align: center;
 }
 .mottobox {
@@ -51,7 +70,17 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
+#chest {
+  margin-top: -20px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  height: 10vh;
+  font-size: 1rem;
+  text-align: center;
+  -webkit-filter: drop-shadow(5px 5px 5px rgb(140, 167, 185));
+  filter: drop-shadow(5px 5px 5px rgb(130, 165, 189));
 
+}
 .w3-dropdown-click-mine {
   position:relative;
   cursor:pointer;
@@ -108,4 +137,30 @@ body {
   height: 100px;
   position: absolute;
   top: -400%; 
+}
+button {
+  border-radius: 4px;
+  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  margin-left: 5%; 
+  font-family: Assistant, sans-serif; 
+  color:rgb(56, 82, 100);
+  margin-right: 5%;
+  border: none;
+}
+.btn1 {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin-top: 10%;
+  font-size: 6vw;
+}
+.btn2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 15%;
+  font-size: 6vw;
+}
+.btn3 {
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: 15%;
+  font-size: 6vw;
 }
