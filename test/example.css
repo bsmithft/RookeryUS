@@ -39,7 +39,7 @@ body {
 #community {
   position: relative;
   color: goldenrod;
-  font-size: 6.25vh;
+  font-size: 40px;
   text-align: center;
 }
 .mottobox {
@@ -62,11 +62,12 @@ body {
 
 }
 #menulink {
-  border-radius: 4px;
-  font-size: xx-large;
-  margin-right: 5vw;
-  margin-left: 5vw;
-  margin-bottom: 5vh;
+  border-radius: 8px;
+  font-size: large;
+  margin-top: 100px;
+  margin-right: 25vw;
+  margin-left: 25vw;
+  margin-bottom: 80px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
@@ -139,28 +140,31 @@ body {
   top: -400%; 
 }
 button {
-  border-radius: 4px;
+  width: 300px;
+  border-radius: 8px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  margin-left: 5%; 
   font-family: Assistant, sans-serif; 
   color:rgb(56, 82, 100);
-  margin-right: 5%;
   border: none;
 }
 .btn1 {
   margin-left: 15vw;
   margin-right: 15vw;
-  background-color: rgba(255, 255, 255, 0.3);
-  margin-top: 10%;
-  font-size: 6vw;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+  font-size: 25px;
 }
 .btn2 {
-  background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 15%;
-  font-size: 6vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin-top: 40px;
+  font-size: 25px;
 }
 .btn3 {
-  background-color: rgba(255, 255, 255, 0.7);
-  margin-top: 15%;
-  font-size: 6vw;
+  margin-left: 15vw;
+  margin-right: 15vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin-top: 40px;
+  font-size: 25px;
 }
