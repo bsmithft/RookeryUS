@@ -73,10 +73,10 @@ body {
 
 }
 #chest {
-  margin-top: -20px;
+  margin-top: -0px;
   position: fixed;
   transform: translate(-50%, -50%);
-  height: 10vh;
+  height: 15vh;
   font-size: 1rem;
   text-align: center;
   -webkit-filter: drop-shadow(5px 5px 5px rgb(140, 167, 185));
