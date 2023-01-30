@@ -59,10 +59,20 @@ body {
   margin-right: 5vw;
   margin-left: 5vw;
   margin-bottom: 5vh;
-  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
 }
 #menulink {
+  color:rgb(56, 82, 100);
+  border-radius: 8px;
+  font-size: large;
+  margin-top: 100px;
+  margin-right: 25vw;
+  margin-left: 25vw;
+  margin-bottom: 80px;
+  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
+#hourslink {
   color:rgb(56, 82, 100);
   border-radius: 8px;
   font-size: large;
@@ -92,12 +102,12 @@ body {
   text-align: center;
   cursor:auto;
   color:rgb(0, 64, 138);
-  background-color:rgba(255, 255, 255, 0.0);
   display:none;
   padding:0;
   z-index:1
 }
 .w3-bar-item-mine {  
+  background: none;
   text-align: center;
   padding:8px 16px;
   width:auto;
@@ -132,7 +142,7 @@ body {
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  opacity: .4;
+  opacity: .85;
 }
 
 #link {
