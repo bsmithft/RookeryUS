@@ -179,18 +179,16 @@ body {
 
 }
 #pick {
-  padding: 10vw;
   font-size: xx-large;
-  padding: 5vw;
   color: aliceblue;
 }
 #adventure {
   padding: 10vw;
-  font-size: xx-large;
+  font-size: x-large;
   margin-top: 30vh;
   color: aliceblue;
 }
-.howto {
+#howto {
   position: fixed;
   top: 0;
   left: 0;
@@ -200,7 +198,6 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  opacity: .85;
 }
 .menu {
   color:rgb(56, 82, 100);
@@ -222,7 +219,31 @@ body {
   margin-bottom: 80px;
   box-shadow: rgb(219, 166, 31, 0.35) 0px 14px 28px, rgb(219, 166, 31, 0.15) 0px 10px 10px;
 }
-.w3-modal-content-howto {
+.layer1 {
+  z-index:3;
+  display:none;
+  padding-top:100px;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.6)
+}
+.layer1-content-howto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.layer1-content-menu {
   position: fixed;
   top: 0;
   left: 0;
@@ -234,19 +255,7 @@ body {
   overflow: hidden;
   opacity: .85;
 }
-.w3-modal-content-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  opacity: .85;
-}
-.w3-modal-content-hours {
+.layer1-content-hours {
   position: fixed;
   top: 0;
   left: 0;
