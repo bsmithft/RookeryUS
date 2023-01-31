@@ -15,7 +15,6 @@
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body>
 
-<p id="about">
 <!-- About Section -->
 <div class="namebox">
   <p id="dba">Paulo's Pizzaria</p> </div>
@@ -24,7 +23,7 @@
     <p>With Passion For Real, Good Food </p> 
 </div>
 
-
+<!-- How To -->
 <div class="w3-container">
   <P onclick="onClick(this)" id="menulink" class="w3-hover-opacity">HOW IT WORKS! </P>
 </div>
@@ -33,6 +32,8 @@
   <div id="menu1"><p id="test">test </p> </div>
 </div>
 </div>
+
+<!-- Hours -->
 <div class="w3-container">
   <P onclick="onClick(this)" id="hourslink" class="w3-hover-opacity">HOURS </P>
 </div>
@@ -41,12 +42,13 @@
   <div id="hours1"><p id="test">test </p> </div>
 </div>
 </div>
+
+<!-- JavaScript -->
 <script>
 function onClick(element) {
 document.getElementById("test").src = element.src;
 document.getElementById("menu").style.display = "block";
 }
 </script>
-<!-- End page content -->
 </body>
 </html><script src="/test/example.js"></script>

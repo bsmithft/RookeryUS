@@ -130,6 +130,7 @@ body {
 }
 
 #guide {
+  margin-top: 100px;
   font-size: xx-large;
   color: aliceblue;
   position: fixed;
@@ -141,9 +142,8 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  opacity: .85;
-
 }
+
 #menu1 {
   font-size: xx-large;
   color: aliceblue;
@@ -157,7 +157,6 @@ body {
   height: 100vh;
   overflow: hidden;
   opacity: .85;
-
 }
 #hours1 {
   font-size: xx-large;
