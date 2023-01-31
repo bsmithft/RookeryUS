@@ -69,7 +69,7 @@ body {
   margin-right: 25vw;
   margin-left: 25vw;
   margin-bottom: 80px;
-  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgb(219, 166, 31, 0.35) 0px 14px 28px, rgb(219, 166, 31, 0.15) 0px 10px 10px;
 
 }
 #hourslink {
