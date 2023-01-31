@@ -30,15 +30,14 @@
 
 
 <div id="howto" class="w3-modal" onclick="this.style.display='none'">
-  <div class="w3-modal-content-howto w3-animate-zoom">
-    <p class="howto">Pick a Category Below! </p>
-    <p id="guide">test </p>
+  <div class="w3-modal-content w3-animate-zoom">
+    <div id="guide"><p id="test">test </p> </div>
   </div>
 </div>
 
 <script>
 function onClick(element) {
-  document.getElementById("guide").src = element.src;
+  document.getElementById("test").src = element.src;
   document.getElementById("howto").style.display = "block";
 }
 </script>
