@@ -23,17 +23,25 @@
 </div>
 <!--  -->
 
-<!-- Instructions -->
-<div class="w3-dropdown-click-mine">
-<div onclick="myFunction3()">
-  <p id="menulink">HOW IT WORKS!</p>
-</div>
-<div id="instructionbox">
-  <p>Pick a category below! </p>
-</div>
-</div>
-<!--  -->
 
+  <div class="w3-container">
+    <P onclick="onClick(this)" class="w3-hover-opacity">HOW IT WORKS! </P>
+  </div>
+
+
+<div id="howto" class="w3-modal" onclick="this.style.display='none'">
+  <div class="w3-modal-content-howto w3-animate-zoom">
+    <p class="howto">Pick a Category Below! </p>
+    <p id="guide">test </p>
+  </div>
+</div>
+
+<script>
+function onClick(element) {
+  document.getElementById("guide").src = element.src;
+  document.getElementById("howto").style.display = "block";
+}
+</script>
 <!-- Categories -->
 <div onclick="location.href='/test/example.html'">
   <p class="btn1" >Entertainment </p>
@@ -47,32 +55,7 @@
 <!--  -->
 
 <!-- JavaScripts -->
-<script>
-  function myFunction1() {
-    var x = document.getElementById("Demo1");
-    if (x.className.indexOf("w3-show") == -1) { 
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  function myFunction2() {
-    var x = document.getElementById("Demo2");
-    if (x.className.indexOf("w3-show-mine") == -1) { 
-      x.className += " w3-show-mine";
-    } else {
-      x.className = x.className.replace(" w3-show-mine", "");
-    }
-  }
-  function myFunction3() {
-  var x = document.getElementById("instructionbox");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
+
 <!--  -->
 </body>
 </html>
