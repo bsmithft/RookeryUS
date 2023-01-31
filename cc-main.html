@@ -22,10 +22,10 @@
   <img id="chest" src="/assets/img/CommunityChest/chestlight.png" alt="">
 </div>
 <div class="w3-dropdown-click-mine">
-  <div onclick="myFunction2()">
+  <div onclick="myFunction3()">
   <p id="menulink">HOW IT WORKS!</p>
-<div id="Demo2" class="w3-dropdown-content-mine w3-bar-block">
-  <img id="howto" src="/assets/img/CommunityChest/guidecategory.png" alt="Norway">
+<div >
+  <img id="Demo2" src="/assets/img/CommunityChest/guidecategory.png" alt="Norway">
 </div>
 </div>
 </div>
@@ -66,6 +66,14 @@
       x.className = x.className.replace(" w3-show-mine", "");
     }
   }
+  function myFunction3() {
+  var x = document.getElementById("Demo2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
   </script>
 </body>
 
