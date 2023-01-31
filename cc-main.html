@@ -15,20 +15,26 @@
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body>
 
-<p id="about">
-<!-- About Section -->
+
+<!-- Tile -->
 <div class="logobox">
   <p id="community">COMMUNITY </p> 
   <img id="chest" src="/assets/img/CommunityChest/chestlight.png" alt="">
 </div>
+<!--  -->
+
+<!-- Instructions -->
 <div class="w3-dropdown-click-mine">
-  <div onclick="myFunction3()">
+<div onclick="myFunction3()">
   <p id="menulink">HOW IT WORKS!</p>
-<div >
-  <img id="Demo2" src="/assets/img/CommunityChest/guidecategory.png" alt="Norway">
+</div>
+<div id="instructionbox">
+  <p>Pick a category below! </p>
 </div>
 </div>
-</div>
+<!--  -->
+
+<!-- Categories -->
 <div onclick="location.href='/test/example.html'">
   <p class="btn1" >Entertainment </p>
 </div>
@@ -38,17 +44,9 @@
 <div onclick="location.href='/test/example.html'">
   <p class="btn3">Nightlife </p>
 </div>
+<!--  -->
 
-
-
-
-
-
-
-
-
-<!-- End page content -->
-
+<!-- JavaScripts -->
 <script>
   function myFunction1() {
     var x = document.getElementById("Demo1");
@@ -67,14 +65,14 @@
     }
   }
   function myFunction3() {
-  var x = document.getElementById("Demo2");
+  var x = document.getElementById("instructionbox");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {
     x.style.display = "none";
   }
 }
-  </script>
+</script>
+<!--  -->
 </body>
-
 </html>

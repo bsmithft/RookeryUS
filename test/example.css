@@ -39,7 +39,7 @@ body {
 }
 #community {
   position: relative;
-  color: goldenrod;
+  color: rgb(160, 26, 32);
   font-size: 40px;
   text-align: center;
 }
@@ -53,12 +53,19 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.instructionbox {
-  border-radius: 4px;
-  font-size: small;
-  margin-right: 5vw;
-  margin-left: 5vw;
-  margin-bottom: 5vh;
+#instructionbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: blue;
+  opacity: .85;
 
 }
 #menulink {

@@ -136,17 +136,16 @@ button {
     top: -400%; 
   }
 
-  .instructionbox {
+  #instructionbox {
+    height: 100vh;
+    width: 100vw;
+    
+    position: fixed;
+    background-size: cover;
+    background-color: rgb(32, 32, 32, 0.25);
+    display: none;
     color:rgb(56, 82, 100);
-    text-align: center;
-    border-radius: 4px;
-    font-size: small;
-    margin-right: 10vw;
-    margin-left: 10vw;
-    margin-top: 15vh;
-    margin-bottom: 4vh;
-    box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  
+    text-align: center;  
   }
   .w3-show-mine {
     text-align:center;
