@@ -39,20 +39,42 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(0, 202, 238);
+  color: rgb(20, 243, 0);
   font-size: 40px;
   text-align: center;
 }
 .mottobox {
+  padding: 2vw;
   border-radius: 4px;
   font-size: small;
   margin-right: 5vw;
   margin-left: 5vw;
-  margin-bottom: 5vh;
   color: black;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
+#menulink {
+  background-color: rgb(255, 255, 255, 0.1);
+  padding: 2vw;
+  color:rgb(56, 82, 100);
+  border-radius: 8px;
+  font-size: xx-large;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
+}
+#hourslink {
+  margin-top: -1vh;
+  background-color: rgba(241, 241, 241, 0.7);
+  padding: 2vw;
+  color:rgb(56, 82, 100);
+  border-radius: 8px;
+  font-size: x-large;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+}
 #instructionbox {
   display: none;
   position: fixed;
@@ -68,28 +90,8 @@ body {
   opacity: .85;
 
 }
-#menulink {
-  color:rgb(56, 82, 100);
-  border-radius: 8px;
-  font-size: large;
-  margin-top: 100px;
-  margin-right: 25vw;
-  margin-left: 25vw;
-  margin-bottom: 80px;
-  box-shadow: rgb(219, 166, 31, 0.35) 0px 14px 28px, rgb(219, 166, 31, 0.15) 0px 10px 10px;
 
-}
-#hourslink {
-  color:rgb(56, 82, 100);
-  border-radius: 8px;
-  font-size: large;
-  margin-top: 100px;
-  margin-right: 25vw;
-  margin-left: 25vw;
-  margin-bottom: 80px;
-  box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
-}
 #chest {
   margin-top: -0px;
   position: fixed;
@@ -179,6 +181,7 @@ body {
 
 }
 #pick {
+  padding: 10vw;
   font-size: xx-large;
   color: aliceblue;
 }
@@ -209,20 +212,18 @@ body {
   margin-bottom: 80px;
   box-shadow: rgb(219, 166, 31, 0.35) 0px 14px 28px, rgb(219, 166, 31, 0.15) 0px 10px 10px;
 }
-.hours {
+#hours {
+  background-color: rgba(255, 255, 255, 0.9);
   color:rgb(56, 82, 100);
   border-radius: 8px;
-  font-size: large;
-  margin-top: 100px;
-  margin-right: 25vw;
-  margin-left: 25vw;
-  margin-bottom: 80px;
-  box-shadow: rgb(219, 166, 31, 0.35) 0px 14px 28px, rgb(219, 166, 31, 0.15) 0px 10px 10px;
+  font-size: xx-large;
+  margin-right: 5vw;
+  margin-left: 5vw;
+  box-shadow: rgba(9, 143, 233, 0.5) 0px 14px 28px, rgba(0, 0, 0, 0.5) 0px 10px 10px;
 }
 .layer1 {
   z-index:3;
   display:none;
-  padding-top:100px;
   position:fixed;
   left:0;
   top:0;
