@@ -143,7 +143,12 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
+.arrowleft {
+  float: left;
+}
+.arrowright {
+  float: right;
+}
 #menu1 {
   font-size: xx-large;
   color: aliceblue;
