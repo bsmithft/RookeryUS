@@ -166,8 +166,6 @@ body {
   opacity: .85;
 }
 #hours1 {
-  font-size: xx-large;
-  color: aliceblue;
   position: fixed;
   top: 0;
   left: 0;
@@ -177,11 +175,19 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  opacity: .85;
+  opacity: .90;
 
 }
-.test {
-  background-color: aqua;
+#pick {
+  padding: 10vw;
+  font-size: xx-large;
+  padding: 5vw;
+  color: aliceblue;
+}
+#adventure {
+  padding: 10vw;
+  font-size: xx-large;
+  margin-top: 30vh;
   color: aliceblue;
 }
 .howto {

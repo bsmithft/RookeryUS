@@ -30,16 +30,17 @@
 <div id="howto" class="w3-modal" onclick="this.style.display='none'">
   <div class="w3-modal-content-howto w3-animate-zoom">
     <div class="w3-cell-row"  id="guide">
-      <p id="test">Pick a Category Below!! </p>
+      <p id="pick">Pick a Category Below!! </p>
       <img class="arrowleft" src="/assets/img/CommunityChest/leftarrow.png" alt="">
       <img class="arrowright" src="/assets/img/CommunityChest/rightarrow.png" alt="">
+      <p id="adventure">Let's take an adventure together!</p>
 
      </div>
   </div>
 </div>
 <script>
 function onClick(element) {
-  document.getElementById("test").src = element.src;
+  document.getElementById("pick").src = element.src;
   document.getElementById("howto").style.display = "block";
 }
 </script>
