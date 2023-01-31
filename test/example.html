@@ -23,51 +23,30 @@
     <p>I am Who I Am! </p>
     <p>With Passion For Real, Good Food </p> 
 </div>
-<div class="w3-dropdown-click-mine">
-  <div onclick="myFunction2()" class="menucontainer">
-  <p id="menulink">MENU </p>
-<div id="Demo2" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom-mine">
-  <img id="menu1" src="/assets/img/CommunityChest/examples/Pizza/menu1.jpg" alt="Norway">
+
+
+<div class="w3-container">
+  <P onclick="onClick(this)" id="menulink" class="w3-hover-opacity">HOW IT WORKS! </P>
+</div>
+<div id="menu" class="w3-modal" onclick="this.style.display='none'">
+<div class="w3-modal-content-menu w3-animate-zoom">
+  <div id="menu1"><p id="test">test </p> </div>
 </div>
 </div>
+<div class="w3-container">
+  <P onclick="onClick(this)" id="hourslink" class="w3-hover-opacity">HOURS </P>
 </div>
-<div class="w3-dropdown-click-mine">
-<div onclick="myFunction1()" class="instructionbox">
-<h2 id="hourslink">Hours of Operation </h2>
-  <div id="Demo1" class="w3-dropdown-content-mine w3-bar-block w3-animate-zoom-mine" style="background: none;">
-    <a href="#" class="w3-bar-item-mine">you're</a>
-    <a href="#" class="w3-bar-item-mine">gay</a>
-    <a href="#" class="w3-bar-item-mine">you like weiner</a>
-  </div>
+<div id="hours" class="w3-modal" onclick="this.style.display='none'">
+<div class="w3-modal-content-hours w3-animate-zoom">
+  <div id="hours1"><p id="test">test </p> </div>
 </div>
 </div>
-
-
-
-
-
-
-
-<!-- End page content -->
-
 <script>
-  function myFunction1() {
-    var x = document.getElementById("Demo1");
-    if (x.className.indexOf("w3-show") == -1) { 
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
-    }
-  }
-  function myFunction2() {
-    var x = document.getElementById("Demo2");
-    if (x.className.indexOf("w3-show-mine") == -1) { 
-      x.className += " w3-show-mine";
-    } else {
-      x.className = x.className.replace(" w3-show-mine", "");
-    }
-  }
-  </script>
+function onClick(element) {
+document.getElementById("test").src = element.src;
+document.getElementById("menu").style.display = "block";
+}
+</script>
+<!-- End page content -->
 </body>
-
 </html><script src="/test/example.js"></script>
