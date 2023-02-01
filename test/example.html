@@ -25,7 +25,7 @@
 
 <!-- How To -->
 <div class="w3-container">
-  <P onclick="onClick(this)" id="menulink" class="w3-hover-opacity">MENU </P>
+  <P onclick="menu(this)" id="menulink" class="w3-hover-opacity">MENU </P>
 </div>
 <div id="menu" class="layer1" onclick="this.style.display='none'">
 <div class="layer1-content-menu w3-animate-zoom">
@@ -35,18 +35,24 @@
 
 <!-- Hours -->
 <div class="w3-container">
-  <P onclick="onClick(this)" id="hourslink" class="w3-hover-opacity">HOURS </P>
+  <P onclick="hours(this)" id="hourslink" class="w3-hover-opacity">HOURS </P>
 </div>
 <div id="hours" class="layer1" onclick="this.style.display='none'">
 <div class="layer1-content-hours w3-animate-zoom">
-  <div id="hours1"><p id="test">test </p> </div>
+  <div id="hours1">
+    <p>Mon-Fri 10am to 10pm </p>
+    <p>Sat 10am to Midnight </p>
+    <p>Closed on Sunday</p> 
+</div>
 </div>
 </div>
 
 <!-- JavaScript -->
 <script>
-function onClick(element) {
-document.getElementById("test").src = element.src;
+function hours(element) {
+  document.getElementById("hours").style.display = "block";
+}
+function menu(element) {
 document.getElementById("menu").style.display = "block";
 }
 </script>
