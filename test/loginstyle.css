@@ -20,7 +20,8 @@ body {
     linear-gradient(to bottom, rgb(179, 195, 241, 0.75), rgb(54, 54, 78, 0.75));
   margin: auto;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-
+  margin-right: 10vw;
+  margin-left: 10vw;
   border-radius: 8px;
   padding: 25px;
 }
