@@ -8,7 +8,7 @@ body {
     url(/assets/img/CommunityChest/citytest.jpg);
   font-family: Assistant, sans-serif;
   display: flex;
-  min-height: 90vh;
+  min-height: 80vh;
 }
 .chestlogin {
   margin-top: -30px;
