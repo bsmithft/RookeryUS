@@ -1,6 +1,14 @@
+var menu1 = document.getElementById('menu1');
+var mc = new Hammer(menu1);
+mc.get('pinch').set({ enable: true });
+
 var myElement = document.getElementById('myElement');
 var mc = new Hammer(myElement);
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+mc.on("pinch", function(ev) {
+  console.log(ev.type ="gesture detected.")
+});
 
 mc.on("tap", function(ev) {
   console.log(ev.type +" gesture detected.")});
