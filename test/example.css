@@ -7,9 +7,7 @@ body {
   overflow: hidden;
   text-align: center;
 }
-#myElement{
-  background-color: aliceblue;
-}
+
 .namebox {
   border-radius: 4px;
   background-color: rgb(43, 99, 131);
@@ -39,7 +37,7 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(95, 6, 51);
+  color: rgb(247, 250, 105);
   font-size: 40px;
   text-align: center;
 }
