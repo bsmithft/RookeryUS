@@ -9,21 +9,21 @@ body {
 }
 
 .namebox {
+  width: 80vw;
   border-radius: 4px;
   background-color: rgb(43, 99, 131);
   background-size: cover;
   height: 10vh;
-  margin-right: 5vw;
-  margin-left: 5vw;
-  margin-bottom: 5vh;
+  margin-bottom: vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .logobox {
   font-weight: 800;
   border-radius: 8px;
-  background-color: rgb(255, 255, 255);
+  background: 
+  linear-gradient(to bottom, rgb(179, 195, 241, 0.75), rgb(54, 54, 78, 0.75));
   background-size: cover;
-  height: 15vh;
+  height: 22vh;
   margin-right: 5vw;
   margin-left: 5vw;
   margin-bottom: 5vh;
@@ -37,7 +37,7 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(255, 147, 5);
+  color: bisque;
   font-size: 40px;
   text-align: center;
 }
@@ -91,7 +91,7 @@ body {
 
 
 #chest {
-  margin-top: -0px;
+  margin-top: 30px;
   position: fixed;
   transform: translate(-50%, -50%);
   height: 15vh;
@@ -292,32 +292,33 @@ body {
   from{transform:scale(0)} to{transform:scale(1)}
 }
 .btn1 {
+  margin-top: 5vh;
+  width: 80vw;
+  border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.2);
   color:rgb(56, 82, 100);
   border-radius: 8px;
   font-size: x-large;
-  margin-right: 15vw;
-  margin-left: 15vw;
   margin-bottom: 50px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn2 {
+  width: 80vw;
+  border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.4);
   color:rgb(56, 82, 100);
   border-radius: 8px;
   font-size: x-large;
-  margin-right: 15vw;
-  margin-left: 15vw;
   margin-bottom: 50px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn3 {
+  width: 80vw;
+  border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.6);
   color:rgb(56, 82, 100);
   border-radius: 8px;
   font-size: x-large;
-  margin-right: 15vw;
-  margin-left: 15vw;
   margin-bottom: 50px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
