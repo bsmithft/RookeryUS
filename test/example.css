@@ -39,7 +39,7 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(46, 39, 43);
+  color: rgb(10, 241, 230);
   font-size: 40px;
   text-align: center;
 }
@@ -321,4 +321,15 @@ body {
   margin-left: 15vw;
   margin-bottom: 50px;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+  html {
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    width: 100vh;
+    overflow-x: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
 }

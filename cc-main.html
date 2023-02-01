@@ -6,6 +6,7 @@
   <title>Community Chest</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <link rel="stylesheet" href="/test/example.css">
@@ -25,7 +26,7 @@
 
 
 <div class="w3-container">
-  <P onclick="onClick(this)" class="w3-hover-opacity" style="margin-top: 10vh; margin-bottom: 5vh;">HOW IT WORKS! </P>
+  <P onclick="howto(this)" class="w3-hover-opacity" style="margin-top: 10vh; margin-bottom: 5vh;">HOW IT WORKS! </P>
 </div>
 <div id="howto" class="layer1" onclick="this.style.display='none'">
   <div class="layer1-content-howto w3-animate-zoom">
@@ -39,8 +40,7 @@
   </div>
 </div>
 <script>
-function onClick(element) {
-  document.getElementById("pick").src = element.src;
+function howto(element) {
   document.getElementById("howto").style.display = "block";
 }
 </script>
