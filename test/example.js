@@ -1,6 +1,8 @@
 
 var myElement = document.getElementById('myElement');
 var mc = new Hammer(myElement);
+var sw42menu = document.getElementById('sw42menu');
+var mc = new Hammer(sw42menu);
 mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
 mc.on("tap", function(ev) {
