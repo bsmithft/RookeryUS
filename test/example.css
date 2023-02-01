@@ -39,7 +39,7 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(20, 243, 0);
+  color: rgb(245, 12, 156);
   font-size: 40px;
   text-align: center;
 }
@@ -153,19 +153,17 @@ body {
   width: 40vw;
   float: right;
 }
+#test {
+  background-image: url(/assets/img/CommunityChest/examples/Pizza/menu1.jpg);
+}
 #menu1 {
-  font-size: xx-large;
-  color: aliceblue;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  opacity: .85;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 #hours1 {
   position: fixed;
