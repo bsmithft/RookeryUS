@@ -11,7 +11,8 @@ body {
   min-height: 80vh;
 }
 .chestlogin {
-  width: 120px; 
+  margin-top: -5px;
+  width: 140px; 
 }
 .login {
   text-align: center;
