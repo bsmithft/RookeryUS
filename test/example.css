@@ -150,10 +150,12 @@ body {
   overflow: hidden;
 }
 .leftcatarrow {
+  margin-top: 15vh;
   width: 40vw;
   float: left;
 }
 .rightcatarrow {
+  margin-top: 15vh;
   width: 40vw;
   float: right;
 }
@@ -188,7 +190,7 @@ body {
 }
 
 #pick {
-  margin-top: 120px;
+  margin-top: 80px;
   float: center;
   font-size: xx-large;
   color: aliceblue;
@@ -202,7 +204,7 @@ body {
 #adventure {
   padding: 10vw;
   font-size: x-large;
-  margin-top: 30vh;
+  margin-top: 40vh;
   color: aliceblue;
 }
 #howto1 {
