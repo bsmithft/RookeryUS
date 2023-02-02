@@ -97,8 +97,8 @@ body {
   margin-top: 30px;
   position: fixed;
   transform: translate(-50%, -50%);
-  width: 250px;
-  font-size: 1rem;
+  width: 220px;
+  font-size: 0.6rem;
   text-align: center;
   -webkit-filter: drop-shadow(5px 5px 5px rgb(140, 167, 185));
   filter: drop-shadow(5px 5px 5px rgb(130, 165, 189));
