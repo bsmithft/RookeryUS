@@ -40,7 +40,7 @@ body {
 }
 #community {
   position: relative;
-  color: bisque;
+  color: rgb(42, 5, 253);
   font-size: 40px;
   text-align: center;
 }
@@ -133,10 +133,7 @@ body {
 }
 
 #guide {
-  margin-top: 100px;
-  font-size: xx-large;
   color: aliceblue;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -169,6 +166,8 @@ body {
 }
 
 #pick {
+  float: center;
+  position: static;
   font-size: xx-large;
   color: aliceblue;
 }
