@@ -224,7 +224,7 @@ body {
   height:100vh;
   overflow:auto;
   background-color:rgb(0,0,0);
-  background-color:rgba(0,0,0,0.6)
+  background-color:rgba(0,0,0,0.7)
 }
 .layer1-content-howto {
   position: fixed;
