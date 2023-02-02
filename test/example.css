@@ -139,7 +139,6 @@ body {
 }
 
 #guide {
-  color: aliceblue;
   top: 0;
   left: 0;
   right: 0;
@@ -196,26 +195,26 @@ body {
   margin-top: 80px;
   float: center;
   font-size: xx-large;
-  color: aliceblue;
+  color: rgb(255, 237, 215);
 }
 #pick2 {
   padding: 10%;
   margin-top: 20%;
   float: center;
   font-size: xx-large;
-  color: aliceblue;
+  color: rgb(255, 237, 215);
 }
 #adventure {
   padding: 10%;
   font-size: x-large;
   margin-top: 80%;
-  color: aliceblue;
+  color: rgb(255, 237, 215);
 }
 #adventure2 {
   padding: 10%;
   font-size: x-large;
   margin-top: 30%;
-  color: aliceblue;
+  color: rgb(255, 237, 215);
 }
 #howto1 {
   position: fixed;
@@ -240,7 +239,7 @@ body {
   overflow: hidden;
 }
 .layer1 {
-  color: aliceblue;
+  color: rgb(255, 237, 215);
 
   display:none;
   position: fixed;
