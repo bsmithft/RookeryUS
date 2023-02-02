@@ -293,7 +293,7 @@ body {
   from{transform:scale(0)} to{transform:scale(1)}
 }
 .btn1 {
-  padding: 10px;
+  padding: 5px;
   width: 80vw;
   border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.4);
@@ -304,7 +304,7 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn2 {
-  padding: 10px;
+  padding: 5px;
   width: 80vw;
   border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.7);
@@ -315,7 +315,7 @@ body {
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn3 {
-  padding: 10px;
+  padding: 5px;
   width: 80vw;
   border-color: aliceblue;
   background-color: rgb(255, 255, 255, 0.8);
