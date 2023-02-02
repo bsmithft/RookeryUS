@@ -26,15 +26,15 @@
 
 
 <div class="w3-container">
-  <P onclick="howto(this)" class="w3-hover-opacity" style="margin-top: 3vh; margin-bottom: 5vh;   background:rgb(255, 255, 255,);
+  <P onclick="howto1(this)" class="w3-hover-opacity" style="margin-top: 3vh; margin-bottom: 5vh;   background:rgb(255, 255, 255,);
   color:rgb(56, 82, 100);
   text-shadow:1px 1px 10px rgb(153, 173, 187), 1px 1px 10px rgb(147, 173, 192);
   font-size:20px;
   text-align:center;
   opacity: .7;">HOW IT WORKS! </P>
 </div>
-<div id="howto" class="layer1" onclick="this.style.display='none'">
-  <div class="layer1-content-howto w3-animate-zoom">
+<div id="howto1" class="layer1" onclick="howto2()">
+  <div class="layer1-content-howto w3-animate-opacity">
     <div class="w3-cell-row"  id="guide">
       <p id="pick">Pick a Category Below!! </p>
       <br>
@@ -48,7 +48,22 @@
      </div>
   </div>
 </div>
+<div id="howto2" class="layer2" onclick="this.style.display='none'">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row"  id="guide">
+      
 
+      <img class="arrowright" src="/assets/img/CommunityChest/rightarrow.png" alt="">
+      <img class="arrowleft" src="/assets/img/CommunityChest/leftarrow.png" alt="">
+      <br>
+      <br>
+      <br>
+      <br>
+      <p id="pick2">Pick a Category Below!! </p>
+      <p id="adventure">Let's take an adventure together!</p>
+     </div>
+  </div>
+</div>
 
 <!-- Categories -->
 <div class="w3-container">
@@ -65,8 +80,13 @@
 
 </body>
 <script>
-  function howto(element) {
-    document.getElementById("howto").style.display = "block";
+  function howto1(element) {
+    document.getElementById("howto1").style.display = "block";
+  }  
+  function howto2(element) {
+    document.getElementById("howto1").style.display = "none";
+    document.getElementById("howto2").style.display = "block";
+  
   }
   </script>
 </html>

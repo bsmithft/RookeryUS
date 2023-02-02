@@ -4,6 +4,8 @@ html {
   max-width: 100vw;
 }
 body {
+  max-height: 100vh;
+  max-width: 100vw;
   overflow: hidden;
   text-align: center;
 }
@@ -175,13 +177,19 @@ body {
   font-size: xx-large;
   color: aliceblue;
 }
+#pick2 {
+  margin-top: 120px;
+  float: center;
+  font-size: xx-large;
+  color: aliceblue;
+}
 #adventure {
   padding: 10vw;
   font-size: x-large;
   margin-top: 30vh;
   color: aliceblue;
 }
-#howto {
+#howto1 {
   position: fixed;
   top: 0;
   left: 0;
@@ -192,7 +200,17 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-
+#howt02 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 .layer1 {
   color: aliceblue;
 
@@ -206,7 +224,31 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color:rgba(0,0,0,0.8)
+  background-color:rgba(0,0,0,0.8);
+}
+.layer2-content-howto {
+  background-color:rgba(0,0,0,0.8);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.layer2 {
+  color: aliceblue;
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 .layer1-content-howto {
   position: fixed;
