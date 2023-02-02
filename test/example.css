@@ -302,7 +302,7 @@ body {
   color:rgb(56, 82, 100, 0.8);
   border-radius: 8px;
   font-size: x-large;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn2 {
@@ -313,7 +313,7 @@ body {
   color:rgb(56, 82, 100, 0.8);
   border-radius: 8px;
   font-size: x-large;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn3 {
@@ -324,6 +324,6 @@ body {
   color:rgb(56, 82, 100, 0.8);
   border-radius: 8px;
   font-size: x-large;
-  margin-bottom: 50px;
+  margin-bottom: 5vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
