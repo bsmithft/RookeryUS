@@ -149,12 +149,28 @@ body {
   height: 100vh;
   overflow: hidden;
 }
-.arrowleft {
+.leftcatarrow {
   width: 40vw;
   float: left;
 }
-.arrowright {
+.rightcatarrow {
   width: 40vw;
+  float: right;
+}
+.uparrow {
+  float: center;
+  width: 20vh;
+}
+.downarrow {
+  float: center;
+  width: 20vh;
+}
+.leftarrow {
+  width: 20vw;
+  float: left;
+}
+.rightarrow {
+  width: 20vw;
   float: right;
 }
 #test {
