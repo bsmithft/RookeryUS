@@ -207,6 +207,12 @@ body {
   margin-top: 40vh;
   color: aliceblue;
 }
+#adventure2 {
+  padding: 10vw;
+  font-size: x-large;
+  margin-top: 20vh;
+  color: aliceblue;
+}
 #howto1 {
   position: fixed;
   top: 0;
