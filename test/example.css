@@ -40,7 +40,7 @@ body {
 }
 #community {
   position: relative;
-  color: rgb(189, 21, 21);
+  color: rgb(70, 211, 112);
   font-size: 40px;
   text-align: center;
 }
@@ -166,8 +166,8 @@ body {
 }
 
 #pick {
+  margin-top: 120px;
   float: center;
-  position: static;
   font-size: xx-large;
   color: aliceblue;
 }
