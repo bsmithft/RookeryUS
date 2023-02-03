@@ -1,4 +1,10 @@
+//Ref: https://datatables.net/forums/discussion/comment/145428/#Comment_145428
+//Ref: https://datatables.net/examples/styling/bootstrap4
 
+/*
+# CREATED BY: BPWEBS.COM
+# URL: https://www.bpwebs.com
+*/
 
 function doGet() {
   return HtmlService.createTemplateFromFile('Index').evaluate();
@@ -15,13 +21,7 @@ function getData() {
   return values;
 }
 
-//INCLUDE JAVASCRIPT AND CSS FILES
-//REF: https://developers.google.com/apps-script/guides/html/best-practices#separate_html_css_and_javascript
-
 function include(filename) {
   return HtmlService.createHtmlOutputFromFile(filename)
     .getContent();
 }
-
-//Ref: https://datatables.net/forums/discussion/comment/145428/#Comment_145428
-//Ref: https://datatables.net/examples/styling/bootstrap4
