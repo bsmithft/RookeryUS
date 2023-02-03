@@ -33,7 +33,7 @@
   text-align:center;
   opacity: .7;">HOW IT WORKS! </P>
 </div>
-<div id="howto1" class="layer1" onclick="howto2()">
+<div id="howto1" class="layercategory" onclick="howto2()">
   <div class="layer1-content-howto w3-animate-opacity">
     <div class="w3-cell-row"  id="guide">
 
@@ -47,7 +47,7 @@
      </div>
   </div>
 </div>
-<div id="howto2" class="layer2" onclick="howto3()">
+<div id="howto2" class="layerexample" onclick="howto3()">
   <div class="layer2-content-howto w3-animate-opacity">
     <div class="w3-cell-row">
       <div id="pick2">
@@ -118,6 +118,7 @@
     document.getElementById("howto2").style.display = "block";
   }
   function howto3(element) {
+    window.location.href="/test/example.html";
     document.getElementById("howto2").style.display = "none";
     document.getElementById("howto3").style.display = "block";
   }

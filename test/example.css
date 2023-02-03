@@ -320,7 +320,6 @@ body {
 }
 .layer1 {
   color: rgb(255, 237, 215);
-
   display:none;
   position: fixed;
   top: 0;
@@ -331,10 +330,45 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color:rgba(0,0,0,0.8);
+  background: rgb(48, 48, 48, 0.25);
+}
+.layercategory {
+  color: rgb(255, 237, 215);
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(/assets/img/CommunityChest/categorybackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.layerexample {
+  color: rgb(255, 237, 215);
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(/assets/img/CommunityChest/examplebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .layer2-content-howto {
-  background-color:rgba(0,0,0,0.8);
   top: 0;
   left: 0;
   right: 0;
