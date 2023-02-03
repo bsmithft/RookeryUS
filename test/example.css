@@ -156,7 +156,7 @@ body {
 }
 #takeme {
   color: bisque;
-  font-size: xx-large;
+  font-size: x-large;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -178,7 +178,7 @@ body {
 }
 #next {
   color: bisque;
-  font-size: xx-large;
+  font-size: x-large;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -187,7 +187,7 @@ body {
 }
 #maybe {
   color: bisque;
-  font-size: xx-large;
+  font-size: x-large;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -202,7 +202,17 @@ body {
 }
 #bye {
   color: bisque;
-  font-size: xx-large;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+
+}
+#motto {
+  color: bisque;
+  font-size: x-large;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -252,72 +262,7 @@ body {
   margin-top: 30%;
   color: rgb(255, 237, 215);
 }
-#howto1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howto2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howto3 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howto4 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howto5 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howto6 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
+
 .layer1 {
   color: rgb(255, 237, 215);
   display:none;
