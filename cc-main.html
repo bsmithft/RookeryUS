@@ -47,25 +47,45 @@
      </div>
   </div>
 </div>
-<div id="howto2" class="layer2" onclick="this.style.display='none'">
+<div id="howto2" class="layer2" onclick="howto3()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <p id="pick2">Interact with the sections of the card or swipe the card to see another! </p>
+     </div>
+  </div>
+</div>
+
+
+<div id="howto3" class="layer2" onclick="howto4()">
   <div class="layer2-content-howto w3-animate-opacity">
     <div class="w3-cell-row">
       <img class="uparrow" src="/assets/img/CommunityChest/uparrow.png" alt="">
       <p id="maybe">Maybe</p>
+     </div>
+  </div>
+</div>
 
-
-      <p id="pick2">Interact with the sections of the card or swipe the card to see another! </p>
-
-      
-      <img class="rightarrow" src="/assets/img/CommunityChest/rightarrow.png" alt="">
-      <p id="takeme">Take me there </p>
-      <img class="leftarrow" src="/assets/img/CommunityChest/leftarrow.png" alt="">
-      <p id="bye">Don't show again </p>
-
-
-      
+<div id="howto4" class="layer2" onclick="howto5()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
       <img class="downarrow" src="/assets/img/CommunityChest/downarrow.png" alt="">
       <p id="next">Next time</p>
+     </div>
+  </div>
+</div>
+<div id="howto5" class="layer2" onclick="howto6()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <img class="leftarrow" src="/assets/img/CommunityChest/leftarrow.png" alt="">
+      <p id="bye">Don't show again </p>
+     </div>
+  </div>
+</div>
+<div id="howto6" class="layer2" onclick="this.style.display='none'">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <img class="rightarrow" src="/assets/img/CommunityChest/rightarrow.png" alt="">
+      <p id="takeme">Take me there </p>
      </div>
   </div>
 </div>
@@ -91,7 +111,22 @@
   function howto2(element) {
     document.getElementById("howto1").style.display = "none";
     document.getElementById("howto2").style.display = "block";
-  
+  }
+  function howto3(element) {
+    document.getElementById("howto2").style.display = "none";
+    document.getElementById("howto3").style.display = "block";
+  }
+  function howto4(element) {
+    document.getElementById("howto3").style.display = "none";
+    document.getElementById("howto4").style.display = "block";
+  }
+  function howto5(element) {
+    document.getElementById("howto4").style.display = "none";
+    document.getElementById("howto5").style.display = "block";
+  }
+  function howto6(element) {
+    document.getElementById("howto5").style.display = "none";
+    document.getElementById("howto6").style.display = "block";
   }
   </script>
 </html>
