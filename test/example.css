@@ -138,16 +138,6 @@ body {
 
 }
 
-#guide {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 .leftcatarrow {
   margin-top: 15vh;
   width: 40vw;
@@ -158,9 +148,31 @@ body {
   width: 40vw;
   float: right;
 }
+.rightarrow {
+  margin-top: -40%;
+  width: 15%;
+  float: right;
+}
+#takeme {
+  color: bisque;
+  margin-top: -60%;
+  position: fixed;
+  right: 15%;
+  font-size: medium;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
 .uparrow {
   float: center;
   width: 20vh;
+}
+#maybe {
+  color: bisque;
+  font-size: medium;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
 }
 .downarrow {
   position: fixed;
@@ -169,14 +181,39 @@ body {
   transform: translate(-50%, -50%);
   margin: 0 auto;  width: 20vh;
 }
+#next {
+  color: bisque;
+  font-size: medium;
+  position: fixed;
+  left: 50%;
+  bottom: 15%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+}
+#maybe {
+  color: bisque;
+  font-size: medium;
+  position: fixed;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+}
 .leftarrow {
-  width: 20vw;
+  margin-top: -40%;
+  width: 15%;
   float: left;
 }
-.rightarrow {
-  width: 20vw;
-  float: right;
+#bye {
+  color: bisque;
+  margin-top: -60%;
+  position: fixed;
+  left: 15%;
+  font-size: medium;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
 }
+
 #test {
   background-image: url(/assets/img/CommunityChest/examples/Pizza/menu1.jpg);
 }
@@ -198,10 +235,12 @@ body {
   color: rgb(255, 237, 215);
 }
 #pick2 {
-  padding: 10%;
-  margin-top: 20%;
+  margin-top: 30%;
+  text-align: center;
+  margin-right: 40%;
+  margin-left: 40%;
   float: center;
-  font-size: xx-large;
+  font-size: medium;
   color: rgb(255, 237, 215);
 }
 #adventure {
