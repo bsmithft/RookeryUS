@@ -232,12 +232,12 @@ body {
   color: rgb(255, 237, 215);
 }
 #pick2 {
-  margin-top: 30%;
+  margin-top: 15%;
   text-align: center;
   margin-right: 20%;
   margin-left: 20%;
   float: center;
-  font-size: xx-large;
+  font-size: 5.25vw;
   color: rgb(255, 237, 215);
 }
 #adventure {
