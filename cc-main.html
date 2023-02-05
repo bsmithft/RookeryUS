@@ -33,11 +33,24 @@
   text-align:center;
   opacity: .7;">HOW IT WORKS! </P>
 </div>
-<div id="howto1" class="layer1" onclick="howto2()">
+<div id="howto1" class="layercategory" onclick="howto2()">
   <div class="layer1-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <div id="pick2">
+      <p>Once you've chosen a category our radom card generator will present you with a businesses information </p>
+       <p>You can click around in pinch to zoom menus and when you make a decision 
+        you can swipe the card away in one of four directions.  </p>
+        <p>Let's take a look at the possibilities provided by Swipe42. </p>
+      </div>
+     </div>
+  </div>
+</div>
+<div id="howto2" class="layerexample" onclick="howto3()">
+  <div class="layer2-content-howto w3-animate-opacity">
     <div class="w3-cell-row"  id="guide">
 
       <p id="pick">Pick a Category Below!! </p>
+      
 
       <img class="leftcatarrow" src="/assets/img/CommunityChest/leftcatarrow.png" alt="">
       <img class="rightcatarrow" src="/assets/img/CommunityChest/rightcatarrow.png" alt="">
@@ -47,22 +60,45 @@
      </div>
   </div>
 </div>
-<div id="howto2" class="layer2" onclick="this.style.display='none'">
+
+
+<div id="howto3" class="layerexample" onclick="howto4()">
   <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row"  id="guide">
+    <div class="w3-cell-row">
       <img class="uparrow" src="/assets/img/CommunityChest/uparrow.png" alt="">
+      <p id="maybe">Swiping up is like saying maybe and will place the card back into your results </p>
+     </div>
+  </div>
+</div>
 
-
-      <p id="pick2">Interact with the sections of the card or swipe the card to see another! </p>
-
-
-      <img class="rightarrow" src="/assets/img/CommunityChest/rightarrow.png" alt="">
-      <img class="leftarrow" src="/assets/img/CommunityChest/leftarrow.png" alt="">
-
-
-      <p id="adventure2">Let the adventure begin!</p>
+<div id="howto4" class="layerexample" onclick="howto5()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
       <img class="downarrow" src="/assets/img/CommunityChest/downarrow.png" alt="">
-
+      <p id="next">Down will remove the business from the current results until next time </p>
+     </div>
+  </div>
+</div>
+<div id="howto5" class="layerexample" onclick="howto6()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <img class="leftarrow" src="/assets/img/CommunityChest/leftarrow.png" alt="">
+      <p id="bye">To the left will remove the business from your results permenantly </p>
+     </div>
+  </div>
+</div>
+<div id="howto6" class="layerexample" onclick="howto7()">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <img class="rightarrow" src="/assets/img/CommunityChest/rightarrow.png" alt="">
+      <p id="takeme">To the right will allow you to navigate to the business or choose other locaitons </p>
+     </div>
+  </div>
+</div>
+<div id="howto7" class="layerexample" onclick="this.style.display='none'">
+  <div class="layer2-content-howto w3-animate-opacity">
+    <div class="w3-cell-row">
+      <p id="motto">Small businesses is American made! </p>
      </div>
   </div>
 </div>
@@ -88,7 +124,26 @@
   function howto2(element) {
     document.getElementById("howto1").style.display = "none";
     document.getElementById("howto2").style.display = "block";
-  
+  }
+  function howto3(element) {
+    document.getElementById("howto2").style.display = "none";
+    document.getElementById("howto3").style.display = "block";
+  }
+  function howto4(element) {
+    document.getElementById("howto3").style.display = "none";
+    document.getElementById("howto4").style.display = "block";
+  }
+  function howto5(element) {
+    document.getElementById("howto4").style.display = "none";
+    document.getElementById("howto5").style.display = "block";
+  }
+  function howto6(element) {
+    document.getElementById("howto5").style.display = "none";
+    document.getElementById("howto6").style.display = "block";
+  }
+  function howto7(element) {
+    document.getElementById("howto6").style.display = "none";
+    document.getElementById("howto7").style.display = "block";
   }
   </script>
 </html>

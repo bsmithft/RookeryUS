@@ -138,16 +138,6 @@ body {
 
 }
 
-#guide {
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
 .leftcatarrow {
   margin-top: 15vh;
   width: 40vw;
@@ -158,25 +148,79 @@ body {
   width: 40vw;
   float: right;
 }
+.rightarrow {
+  position: fixed;
+  top: 50%;
+  width: 15%;
+  right: 0px;
+}
+#takeme {
+  color: bisque;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+}
 .uparrow {
+  margin-top: 5px;
   float: center;
   width: 20vh;
 }
+
 .downarrow {
   position: fixed;
   left: 50%;
-  bottom: 0px;
+  bottom: 0%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+}
+#next {
+  color: bisque;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+}
+#maybe {
+  color: bisque;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;  width: 20vh;
 }
 .leftarrow {
-  width: 20vw;
-  float: left;
+  position: fixed;
+  left: 0px;
+  top: 50%;
+  width: 15%;
 }
-.rightarrow {
-  width: 20vw;
-  float: right;
+#bye {
+  color: bisque;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+
 }
+#motto {
+  color: bisque;
+  font-size: x-large;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;  width: 20vh;
+
+}
+
 #test {
   background-image: url(/assets/img/CommunityChest/examples/Pizza/menu1.jpg);
 }
@@ -198,10 +242,12 @@ body {
   color: rgb(255, 237, 215);
 }
 #pick2 {
-  padding: 10%;
-  margin-top: 20%;
+  margin-top: 15%;
+  text-align: center;
+  margin-right: 20%;
+  margin-left: 20%;
   float: center;
-  font-size: xx-large;
+  font-size: 5.25vw;
   color: rgb(255, 237, 215);
 }
 #adventure {
@@ -216,31 +262,9 @@ body {
   margin-top: 30%;
   color: rgb(255, 237, 215);
 }
-#howto1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
-#howt02 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-}
+
 .layer1 {
   color: rgb(255, 237, 215);
-
   display:none;
   position: fixed;
   top: 0;
@@ -251,10 +275,45 @@ body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background-color:rgba(0,0,0,0.8);
+  background: rgb(48, 48, 48, 0.25);
+}
+.layercategory {
+  color: rgb(255, 237, 215);
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(/assets/img/CommunityChest/categorybackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.layerexample {
+  color: rgb(255, 237, 215);
+  display:none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: url(/assets/img/CommunityChest/examplebackground.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .layer2-content-howto {
-  background-color:rgba(0,0,0,0.8);
   top: 0;
   left: 0;
   right: 0;
