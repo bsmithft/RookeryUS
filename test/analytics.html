@@ -34,8 +34,33 @@
   <P onclick="hours(this)" class="results-item w3-hover-opacity">45 </P>
 </div>
 
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <button type="submit">Send</button>
+</form>
+
+<form name="submit-to-google-sheet">
+  <input name="email" type="email" placeholder="Email" required>
+  <input name="firstName" type="text" placeholder="First Name">
+  <input name="lastName" type="text" placeholder="Last Name">
+  <button type="submit">Send</button>
+</form>
+
+
 <!-- JavaScript -->
 <script>
+  const scriptURL = '<https://script.google.com/macros/s/AKfycbzsfnSvAusTp4KxvedoRlqlWvkh1pgYDooaMnfIwGdTs3KXQjcH3vNy0Nw4KWaGx48g_g/exec>'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+
+
+
 function hours(element) {
   document.getElementById("hours").style.display = "block";
 }
