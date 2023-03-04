@@ -16,92 +16,23 @@
 <body>
 
 <div>
-  <img src="/assets/img/render.png" alt="" style="width: 200px; float: left;"> 
-</div>
-<section>
-<div class="w3-container">
-  <P onclick="howto1(this)" class="w3-hover-opacity" style="text-align: center; position: fixed; bottom: 0px; background:rgb(255, 255, 255,);
-  color:rgb(56, 82, 100);
-  text-shadow:1px 1px 10px rgb(153, 173, 187), 1px 1px 10px rgb(147, 173, 192);
-  font-size:20px;
-  text-align:center;
-  opacity: .7;">HOW IT WORKS! </P>
-</div>
-<div id="howto1" class="layercategory" onclick="howto2()">
-  <div class="layer1-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <div id="pick2">
-      <p>Once you've chosen a category our radom card generator will present you with a businesses information </p>
-       <p>You can click around in pinch to zoom menus and when you make a decision 
-        you can swipe the card away in one of four directions.  </p>
-        <p>Let's take a look at the possibilities provided by Swipe42. </p>
-      </div>
-     </div>
-  </div>
-</div>
-<div id="howto2" class="layerexample" onclick="howto3()">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row"  id="guide">
-
-      <p id="pick">Pick a Category Below!! </p>
-      
-
-      <img class="leftcatarrow" src="/assets/img/CommunityChest/leftcatarrow.png" alt="">
-      <img class="rightcatarrow" src="/assets/img/CommunityChest/rightcatarrow.png" alt="">
-      <br>
-      <p id="adventure">Let's take an adventure together!</p>
-
-     </div>
-  </div>
+  <img src="/assets/img/coyotebanner.png" alt="" style="width: 100vw; max-height: 60px; margin-bottom: 30px;">
 </div>
 
 
-<div id="howto3" class="layerexample" onclick="howto4()">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <img class="uparrow" src="/assets/img/CommunityChest/uparrow.png" alt="">
-      <p id="maybe">Swiping up is like saying maybe and will place the card back into your results </p>
-     </div>
-  </div>
-</div>
 
-<div id="howto4" class="layerexample" onclick="howto5()">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <img class="downarrow" src="/assets/img/CommunityChest/downarrow.png" alt="">
-      <p id="next">Down will remove the business from the current results until next time </p>
-     </div>
-  </div>
-</div>
-<div id="howto5" class="layerexample" onclick="howto6()">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <img class="leftarrow" src="/assets/img/CommunityChest/leftarrow.png" alt="">
-      <p id="bye">To the left will remove the business from your results permenantly </p>
-     </div>
-  </div>
-</div>
-<div id="howto6" class="layerexample" onclick="howto7()">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <img class="rightarrow" src="/assets/img/CommunityChest/rightarrow.png" alt="">
-      <p id="takeme">To the right will allow you to navigate to the business or choose other locaitons </p>
-     </div>
-  </div>
-</div>
-<div id="howto7" class="layerexample" onclick="this.style.display='none'">
-  <div class="layer2-content-howto w3-animate-opacity">
-    <div class="w3-cell-row">
-      <p id="motto">Small businesses is American made! </p>
-     </div>
-  </div>
-</div>
-</div>
-</section>
 <div id="myElement">
-    <img src="/assets/img/coyote.png" alt="" style="position: inherit; height: 90vw; float: center; margin-bottom: 5vh;">
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3Urz6Uf6cB0inQru00Ntiu?utm_source=generator" width="90%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+    <img src="/assets/img/coyote.png" alt="" style="position: inherit; height: 300px; float: center; margin-bottom: 40px;">
+    <div class="sw42-particles">
+    </div>
+</div>    
+<iframe style="border-radius:12px; margin-bottom: -10px;" src="https://open.spotify.com/embed/artist/3Urz6Uf6cB0inQru00Ntiu?utm_source=generator" width="90%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
     </iframe>
+<div class="w3-container" id="mediascroller">
+    <img src="/assets/img/spotifylogo.png" alt="" style="height: 30px ">
+  </div>
+<div id="sw42locker" style="border-color: gray;border-width: 5px;">
+  <img src="/assets/img/render.png" alt="" style="bottom: 10px;  position: absolute; left: 0; right: 0; margin-left: auto; margin-right: auto; width: 100px; /* Need a specific value to work */">
 </div>
 </body>
 <script>
@@ -171,6 +102,25 @@ mc.on("tap", function(ev) {
     console.log(ev.type +" gesture detected.")
 });
 mc.on("press", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+});
+
+
+var myElement = document.getElementById('mediascroller');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+mc.on("panleft", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.")
+});
+mc.on("panright", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.")
 });

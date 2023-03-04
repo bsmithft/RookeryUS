@@ -345,4 +345,43 @@ body {
   margin-bottom: 5vh;
   box-shadow: rgba(9, 143, 233, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
- 
+
+
+
+/* Add a black background color to the top navigation bar */
+.topnav {
+  height: 4vh;
+  overflow: hidden;
+  background-color: #ddd;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(10, 9, 9);
+  text-align: center;
+  padding: 1vh 1vh;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #ddd;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+  background-color: #ddd;
+}
