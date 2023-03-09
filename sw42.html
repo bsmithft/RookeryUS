@@ -32,12 +32,12 @@ transform: translate(-50%, -50%); text-align: center;">
 <div>
   <p id="keys"></p>
 </div>
-<div  style="border: 20px; background-color: aliceblue; margin-left: 40px; margin-right: 40px; padding: 10px; text-align: center;">
+<div  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 20px; border-radius: 5px; background-color: rgba(197, 197, 197, 0.8); margin-left: 40px; margin-right: 40px; padding: 10px; text-align: center;">
   <p>Keys Generated</p>
   <p><a id="clicks">0</a></p>
 
 </div>
-<button  style="border: 5px; background-color: aliceblue; width: 150px; margin-left: 40px; margin-top: 10px; margin-right: 40px; padding: 10px; text-align: center;" onClick="window.location.reload();">Reload Key Counter </button>
+<button  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 5px; border-radius: 5px; background-color: rgba(202, 202, 202, 0.8); width: 150px; margin-left: 40px; margin-top: 10px; margin-right: 40px; padding: 10px; text-align: center;" onClick="window.location.reload();">Reload Key Counter </button>
 </body>
 <script>
  var clicks = 0;  
@@ -64,7 +64,7 @@ mc.on("panleft", function(ev) {
     document.getElementById("tap").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";
-    clicks += 1 * (clicks * 0.5);
+    clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("panright", function(ev) {
@@ -76,7 +76,7 @@ mc.on("panright", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";
-    clicks += 1 * (clicks * 0.5);
+    clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
   });
 mc.on("panup", function(ev) {
@@ -88,7 +88,7 @@ mc.on("panup", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("tap").style.display = "none";
     document.getElementById("divide").style.display = "none";
-    clicks += 1 * (clicks * 0.5);
+    clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("pandown", function(ev) {
@@ -100,7 +100,7 @@ mc.on("pandown", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("tap").style.display = "none";
-    clicks += 1 * (clicks * 0.5);
+    clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("tap", function(ev) {
@@ -112,7 +112,7 @@ mc.on("tap", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";
-    clicks += 1 * (clicks * 0.5);
+    clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("press", function(ev) {
