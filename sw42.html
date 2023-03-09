@@ -27,12 +27,18 @@ transform: translate(-50%, -50%); text-align: center;">
 <p class="divide" id="divide" style="display: none; font-size: 30px;";>Divide Response</p>
 </div>   
 <div>
-    <img id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 200px; margin-left: 15vw;">
+    <img mc.on="clickMe()" id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 200px; margin-left: 15vw;">
 </div> 
-
+<div>
+  <p id="keys"></p>
+</div>
+<p>Clicks: <a id="clicks">0</a></p>
 </body>
 <script>
-  var myElement = document.getElementById('myElement');
+ var clicks = 0;  
+ var potentialclicks = (clicks * clicks);
+
+var myElement = document.getElementById('myElement');
 
 // create a simple instance
 // by default, it only adds horizontal recognizers
@@ -52,6 +58,8 @@ mc.on("panleft", function(ev) {
     document.getElementById("tap").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("panright", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
@@ -61,7 +69,10 @@ mc.on("panright", function(ev) {
     document.getElementById("tap").style.display = "none";
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
-    document.getElementById("divide").style.display = "none";});
+    document.getElementById("divide").style.display = "none";
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
+  });
 mc.on("panup", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
@@ -71,6 +82,8 @@ mc.on("panup", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("tap").style.display = "none";
     document.getElementById("divide").style.display = "none";
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("pandown", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
@@ -81,6 +94,8 @@ mc.on("pandown", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("tap").style.display = "none";
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("tap", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
@@ -91,6 +106,8 @@ mc.on("tap", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("press", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
@@ -101,8 +118,8 @@ mc.on("press", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";});
-
-
+    clicks += 1 * clicks;
+    document.getElementById("clicks").innerHTML = clicks;
 </script>
 
 </html>
