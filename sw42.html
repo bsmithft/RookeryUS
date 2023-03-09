@@ -32,11 +32,16 @@ transform: translate(-50%, -50%); text-align: center;">
 <div>
   <p id="keys"></p>
 </div>
-<p>Clicks: <a id="clicks">0</a></p>
+<div  style="border: 20px; background-color: aliceblue; margin-left: 40px; margin-right: 40px; padding: 40px; text-align: center;">
+  <p>Keys Generated</p>
+  <p><a id="clicks">0</a></p>
+
+</div>
 </body>
 <script>
  var clicks = 0;  
  var potentialclicks = (clicks * clicks);
+  document.getElementById("clicks").innerHTML = potentialclicks;
 
 var myElement = document.getElementById('myElement');
 
@@ -118,7 +123,7 @@ mc.on("press", function(ev) {
     document.getElementById("negative").style.display = "none";
     document.getElementById("multiply").style.display = "none";
     document.getElementById("divide").style.display = "none";});
-    clicks += 1 * clicks;
+    clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
 </script>
 

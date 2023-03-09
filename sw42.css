@@ -76,9 +76,3 @@ html {
       0 0 100px rgb(247, 246, 209),
       0 0 150px rgb(253, 253, 214);
   }
-  #keys{
-    width: 80vw;
-    height: 10vh;
-    padding: 20px;
-    box-shadow: #a6b3ff;
-  }
