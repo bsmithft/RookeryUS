@@ -3,3 +3,76 @@ html {
     max-height: 100vh;
     max-width: 100vw;
   }
+  .press {
+    color: #ff0505;
+    text-shadow:
+      0 0 5px #c75454,
+      0 0 10px #5e2525,
+      0 0 20px #b98080,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px rgb(189, 255, 67),
+      0 0 100px #0ff,
+      0 0 150px rgb(0, 238, 59);
+  }
+
+  .tap {
+    color: #ffffff;
+    text-shadow:
+      0 0 5px #c75454,
+      0 0 10px #5e2525,
+      0 0 20px #b98080,
+      0 0 40px #0ff,
+      0 0 80px #0ff,
+      0 0 90px rgb(189, 255, 67),
+      0 0 100px #0ff,
+      0 0 150px rgb(0, 238, 59);
+  }
+  .positive {
+    color: #000000;
+    text-shadow:
+      0 0 5px #1403ff,
+      0 0 10px #2825f8,
+      0 0 20px #7494fc,
+      0 0 40px rgb(138, 136, 248),
+      0 0 80px rgb(182, 215, 253),
+      0 0 90px #a6b3ff,
+      0 0 100px rgb(165, 197, 255),
+      0 0 150px rgb(206, 221, 255);
+  }
+  .negative {
+    color: #000000;
+    text-shadow:
+      0 0 5px #ff0505,
+      0 0 10px #ff3e3e,
+      0 0 20px #ff6565,
+      0 0 40px rgb(255, 128, 128),
+      0 0 80px rgb(252, 187, 187),
+      0 0 90px rgb(252, 199, 199),
+      0 0 100px rgb(255, 248, 248),
+      0 0 150px rgb(252, 234, 234);
+  }
+  .multiply {
+    color: #000000;
+    text-shadow:
+      0 0 5px #15ff00,
+      0 0 10px #53fc31,
+      0 0 20px #7cfd70,
+      0 0 40px rgb(145, 250, 118),
+      0 0 80px rgb(177, 250, 167),
+      0 0 90px rgb(194, 252, 179),
+      0 0 100px rgb(198, 255, 193),
+      0 0 150px rgb(176, 250, 158);
+  }
+  .divide {
+    color: #000000;
+    text-shadow:
+      0 0 5px #ffee00,
+      0 0 10px #ffd903,
+      0 0 20px #ffef60,
+      0 0 40px rgb(245, 233, 127),
+      0 0 80px rgb(239, 248, 156),
+      0 0 90px rgb(250, 245, 216),
+      0 0 100px rgb(247, 246, 209),
+      0 0 150px rgb(253, 253, 214);
+  }
