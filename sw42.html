@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Swipe 42</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="sw42.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" media="screen and (orientation: portrait)">
+</head>
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
+<body>
+<div style="position: fixed; position: fixed;
+top: 20%;
+left: 54%;
+transform: translate(-50%, -50%); text-align: center;">
+
+<p id="press" style="display: none";>Touch me harder yo!</p>
+<p id="tap" style="display: none";>Tap Tap Tap</p>
+<p id="positive" style="display: none";>Affirmative Response</p>
+<p id="negative" style="display: none";>Negative Response</p>
+<p id="multiply" style="display: none";>Expand Response</p>
+<p id="divide" style="display: none";>Divide Response</p>
+</div>   
+<div>
+    <img id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 200px; margin-left: 15vw;">
+</div> 
+
+</body>
+<script>
+  var myElement = document.getElementById('myElement');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+
+// listen to events...
+mc.on("panleft", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("negative").style.display = "block";
+    document.getElementById("press").style.display = "none";
+    document.getElementById("positive").style.display = "none";
+    document.getElementById("tap").style.display = "none";
+    document.getElementById("multiply").style.display = "none";
+    document.getElementById("divide").style.display = "none";
+});
+mc.on("panright", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("positive").style.display = "block";
+    document.getElementById("press").style.display = "none";
+    document.getElementById("tap").style.display = "none";
+    document.getElementById("negative").style.display = "none";
+    document.getElementById("multiply").style.display = "none";
+    document.getElementById("divide").style.display = "none";});
+mc.on("panup", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("multiply").style.display = "block";
+    document.getElementById("press").style.display = "none";
+    document.getElementById("positive").style.display = "none";
+    document.getElementById("negative").style.display = "none";
+    document.getElementById("tap").style.display = "none";
+    document.getElementById("divide").style.display = "none";
+});
+mc.on("pandown", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("divide").style.display = "block";
+    document.getElementById("press").style.display = "none";
+    document.getElementById("positive").style.display = "none";
+    document.getElementById("negative").style.display = "none";
+    document.getElementById("multiply").style.display = "none";
+    document.getElementById("tap").style.display = "none";
+});
+mc.on("tap", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("tap").style.display = "block";
+    document.getElementById("press").style.display = "none";
+    document.getElementById("positive").style.display = "none";
+    document.getElementById("negative").style.display = "none";
+    document.getElementById("multiply").style.display = "none";
+    document.getElementById("divide").style.display = "none";
+});
+mc.on("press", function(ev) {
+    //myElement.textContent = ev.type +" gesture detected.";
+    console.log(ev.type +" gesture detected.");
+    document.getElementById("press").style.display = "block";
+    document.getElementById("tap").style.display = "none";
+    document.getElementById("positive").style.display = "none";
+    document.getElementById("negative").style.display = "none";
+    document.getElementById("multiply").style.display = "none";
+    document.getElementById("divide").style.display = "none";});
+
+
+</script>
+
+</html>
