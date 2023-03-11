@@ -16,21 +16,10 @@
 <body>
   <div>
     <h1>Validiti Securities</h1>
-  </div>
-<div class="unselectable" style="position: fixed; position: fixed;
-top: 17.5%;
-left: 48.25%;
-transform: translate(-50%, -50%); text-align: center;">
-
-<p class="press" id="press" style="display: none; font-size: 30px;";>Touch me harder yo!</p>
-<p class="tap" id="tap" style="display: none; font-size: 30px;";>Tap Tap Tap</p>
-<p class="positive" id="positive" style="display: none; font-size: 30px;";>+</p>
-<p class="negative" id="negative" style="display: none; font-size: 40px;";>-</p>
-<p class="multiply" id="multiply" style="display: none; font-size: 30px;";>x</p>
-<p class="divide" id="divide" style="display: none; font-size: 20px;";>/</p>
-</div>   
+    <h6>Touch and swipe on the icon below</h6>
+  </div> 
 <div>
-    <img mc.on="clickMe()" id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 40px;margin-bottom: 40px;">
+    <img id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 40px;margin-bottom: 40px;">
 
 </div> 
 <div>
@@ -62,74 +51,39 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    document.getElementById("negative").style.display = "block";
-    document.getElementById("press").style.display = "none";
-    document.getElementById("positive").style.display = "none";
-    document.getElementById("tap").style.display = "none";
-    document.getElementById("multiply").style.display = "none";
-    document.getElementById("divide").style.display = "none";
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("panright", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    document.getElementById("positive").style.display = "block";
-    document.getElementById("press").style.display = "none";
-    document.getElementById("tap").style.display = "none";
-    document.getElementById("negative").style.display = "none";
-    document.getElementById("multiply").style.display = "none";
-    document.getElementById("divide").style.display = "none";
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
   });
 mc.on("panup", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    document.getElementById("multiply").style.display = "block";
-    document.getElementById("press").style.display = "none";
-    document.getElementById("positive").style.display = "none";
-    document.getElementById("negative").style.display = "none";
-    document.getElementById("tap").style.display = "none";
-    document.getElementById("divide").style.display = "none";
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("pandown", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    document.getElementById("divide").style.display = "block";
-    document.getElementById("press").style.display = "none";
-    document.getElementById("positive").style.display = "none";
-    document.getElementById("negative").style.display = "none";
-    document.getElementById("multiply").style.display = "none";
-    document.getElementById("tap").style.display = "none";
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("tap", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    document.getElementById("tap").style.display = "block";
-    document.getElementById("press").style.display = "none";
-    document.getElementById("positive").style.display = "none";
-    document.getElementById("negative").style.display = "none";
-    document.getElementById("multiply").style.display = "none";
-    document.getElementById("divide").style.display = "none";
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("press", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
-    console.log(ev.type +" gesture detected.");
-    document.getElementById("press").style.display = "block";
-    document.getElementById("tap").style.display = "none";
-    document.getElementById("positive").style.display = "none";
-    document.getElementById("negative").style.display = "none";
-    document.getElementById("multiply").style.display = "none";
-    document.getElementById("divide").style.display = "none";});
+    console.log(ev.type +" gesture detected.");});
     clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
+
 </script>
 
 </html>
