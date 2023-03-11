@@ -14,30 +14,45 @@
 </head>
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <body>
+  <div>
+    <h1>Validiti Securities</h1>
+  </div>
 <div style="position: fixed; position: fixed;
-top: 5%;
-left: 52%;
+top: 17.5%;
+left: 48.25%;
 transform: translate(-50%, -50%); text-align: center;">
 
 <p class="press" id="press" style="display: none; font-size: 30px;";>Touch me harder yo!</p>
 <p class="tap" id="tap" style="display: none; font-size: 30px;";>Tap Tap Tap</p>
-<p class="positive" id="positive" style="display: none; font-size: 30px;";>Affirmative Response</p>
-<p class="negative" id="negative" style="display: none; font-size: 30px;";>Negative Response</p>
-<p class="multiply" id="multiply" style="display: none; font-size: 30px;";>Expand Response</p>
-<p class="divide" id="divide" style="display: none; font-size: 30px;";>Divide Response</p>
+<p class="positive" id="positive" style="display: none; font-size: 90px;";>+</p>
+<p class="negative" id="negative" style="display: none; font-size: 120px;";>-</p>
+<p class="multiply" id="multiply" style="display: none; font-size: 90px;";>x</p>
+<p class="divide" id="divide" style="display: none; font-size: 80px;";>/</p>
 </div>   
 <div>
-    <img mc.on="clickMe()" id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 100px; margin-left: 12vw;">
+    <img mc.on="clickMe()" id="myElement" src="/assets/img/CommunityChest/sw42.png" alt="" style="height: 70vw; margin-top: 100px;">
+    <div style="position: fixed; position: fixed;
+top: 17.5%;
+left: 48.25%;
+transform: translate(-50%, -50%); text-align: center;">
+
+<p class="press" id="press" style="display: none; font-size: 30px;";>Touch me harder yo!</p>
+<p class="tap" id="tap" style="display: none; font-size: 30px;";>Tap Tap Tap</p>
+<p class="positive" id="positive" style="display: none; font-size: 90px;";>+</p>
+<p class="negative" id="negative" style="display: none; font-size: 120px;";>-</p>
+<p class="multiply" id="multiply" style="display: none; font-size: 90px;";>x</p>
+<p class="divide" id="divide" style="display: none; font-size: 80px;";>/</p>
+</div> 
 </div> 
 <div>
   <p id="keys"></p>
 </div>
-<div  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 20px; border-radius: 5px; background-color: rgba(197, 197, 197, 0.8); margin-left: 40px; margin-right: 40px; padding: 10px; text-align: center;">
+<div  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 20px; border-radius: 5px; background-color: rgba(197, 197, 197, 0.8);margin-left: 50%; transform: translate(-50%, -50%); width: 250px; margin-top: 10px; padding: 10px; text-align: center;">
   <p>Keys Generated</p>
   <p><a id="clicks">0</a></p>
 
 </div>
-<button  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 5px; border-radius: 5px; background-color: rgba(202, 202, 202, 0.8); width: 150px; margin-left: 40px; margin-top: 10px; margin-right: 40px; padding: 10px; text-align: center;" onClick="window.location.reload();">Reload Key Counter </button>
+<button  style="box-shadow: 10px 10px 5px rgb(255, 255, 255, 0.5); border: 5px; border-radius: 5px; background-color: rgba(202, 202, 202, 0.8); width: 150px; margin-top: 10px; padding: 10px; text-align: center;" onClick="window.location.reload();">Reload Key Counter </button>
 </body>
 <script>
  var clicks = 0;  
