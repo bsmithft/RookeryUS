@@ -13,7 +13,26 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" media="screen and (orientation: portrait)">
 </head>
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
-<body>
+<script>
+window.onload = function () {
+  document.getElementById('id01').style.display='block';
+};
+</script>
+<div class="w3-container">
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <p>By continuing you are agreeing to terms of service. Thank you.</p>
+        <a href="/tos.html">terms of service</a>
+        <br>
+        <br>
+        <br>
+      </div>
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-bottommiddle">ACCEPT</span>
+    </div>
+  </div>
+</div>
+
   <div>
     <h1>Validiti Securities</h1>
     <h6>Touch and swipe on the icon below</h6>
@@ -38,6 +57,7 @@
  var potentialclicks = (clicks * clicks);
   document.getElementById("clicks").innerHTML = potentialclicks;
 
+  
 var myElement = document.getElementById('myElement');
 
 // create a simple instance
@@ -52,30 +72,35 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
+    console.log(ev.srcEvent.offsetX - ev.srcEvent.offsetY);
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("panright", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
+    console.log(ev.srcEvent.offsetX + ev.srcEvent.offsetY);
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
   });
 mc.on("panup", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
+    console.log(ev.srcEvent.offsetX * ev.srcEvent.offsetY);
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("pandown", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
+    console.log(ev.srcEvent.offsetX / ev.srcEvent.offsetY);
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("tap", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
+    console.log(ev.srcEvent.offsetX = ev.srcEvent.offsetY);
     clicks += (clicks * 0.5);
     document.getElementById("clicks").innerHTML = clicks;
 });
@@ -83,8 +108,6 @@ mc.on("press", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");});
     clicks += 1;
-    document.getElementById("clicks").innerHTML = clicks;
-
 </script>
 
 </html>
