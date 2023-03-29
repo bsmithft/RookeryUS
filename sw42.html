@@ -73,42 +73,42 @@ mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 mc.on("panleft", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    console.log(ev.srcEvent.offsetX - ev.srcEvent.offsetY);
-    Math.round(clicks += (clicks * 1));
+    console.log((ev.srcEvent.offsetX - ev.srcEvent.offsetY)*3.14159);
+    clicks += clicks;
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("panright", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    console.log(ev.srcEvent.offsetX + ev.srcEvent.offsetY);
-    clicks += (clicks * 1);
+    console.log((ev.srcEvent.offsetX + ev.srcEvent.offsetY)*3.14159);
+    clicks += clicks;
     document.getElementById("clicks").innerHTML = clicks;
   });
 mc.on("panup", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    console.log(ev.srcEvent.offsetX * ev.srcEvent.offsetY);
-    clicks += (clicks * 1);
+    console.log((ev.srcEvent.offsetX * ev.srcEvent.offsetY)*3.14159);
+    clicks += clicks;
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("pandown", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    console.log(ev.srcEvent.offsetX / ev.srcEvent.offsetY);
-    clicks += (clicks * 1);
+    console.log((ev.srcEvent.offsetX / ev.srcEvent.offsetY)*3.14159);
+    clicks += clicks;
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("tap", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");
-    console.log(ev.srcEvent.offsetX = ev.srcEvent.offsetY);
-    clicks += (clicks * 1);
+    console.log((ev.srcEvent.offsetX = ev.srcEvent.offsetY)*3.14159);
+    clicks += clicks;
     document.getElementById("clicks").innerHTML = clicks;
 });
 mc.on("press", function(ev) {
     //myElement.textContent = ev.type +" gesture detected.";
     console.log(ev.type +" gesture detected.");});
-    Math.round(clicks += 1);
+    Math.round(clicks += .314159);
 </script>
 
 </html>
