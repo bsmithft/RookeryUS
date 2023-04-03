@@ -3,10 +3,10 @@ body, html {
 
   }
 .bgimg-1 {
-    background-image: url('/assets/img/pexels-trace-hudson-2529973.jpg');
+    background-image: url('/assets/img/widebg.jpg');
     height: 100vh;
-          -webkit-animation: slidein 100s;
-          animation: slidein 100s;
+          -webkit-animation: slidein 200s;
+          animation: slidein 200s;
   
           -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
