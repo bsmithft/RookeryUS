@@ -1,7 +1,10 @@
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
 body, html { 
-    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
-    background-size:cover;
+
+  }
+.bgimg-1 {
+    background-image: url('/assets/img/pexels-trace-hudson-2529973.jpg');
+    height: 100vh;
           -webkit-animation: slidein 100s;
           animation: slidein 100s;
   
@@ -24,11 +27,11 @@ body, html {
   from {background-position: top;background-size:3000px; }
   to {background-position: -100px 0px;background-size:2750px;}
   
-  }
-
+}
 #about {
     background-color: rgb(255, 255, 255. 0.25);
 }
+
 /* Second image (Portfolio) */
 .bgimg-2 {
   background-color: rgba(90, 93, 99, 0.85);
